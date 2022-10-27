@@ -16,3 +16,20 @@
   text-decoration: underline;
   margin: 0px 0px 50px 0px;
 }
+
+@media only screen and (max-width: $desktop) {
+  .card {
+    padding: 75px 75px;
+    border-radius: 12.5px;
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .card {
+    padding: 50px 47.5px;
+  }
+
+  .title {
+    margin: 0px 0px 25px 0px;
+  }
+} ;
