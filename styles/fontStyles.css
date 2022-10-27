@@ -1,17 +1,23 @@
-.xxl-title {
+.xxl-title-font {
   font-size: 9rem;
   line-height: 8rem;
   font-weight: 700;
 }
 
-.xl-title {
+.title-font {
   font-size: 3.5rem;
   line-height: 3.5rem;
   font-weight: 500;
 }
 
-.title {
+.subtitle-font {
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 500;
+}
+
+.paragraph-font {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 400;
 }
