@@ -29,4 +29,7 @@
 }
 
 @media only screen and (max-width: $tablet) {
+  .names-container {
+    row-gap: 10px;
+  }
 }

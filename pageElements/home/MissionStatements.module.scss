@@ -7,12 +7,11 @@
   flex-direction: row;
   background-color: $light-gray;
   border: 4px solid $off-black;
-  border-right: none;
 
   height: 700px;
 }
 
-.accordion-container > div {
+.accordion-container > div:not(:last-child) {
   border-right: 4px solid $off-black;
 }
 
@@ -93,13 +92,15 @@
   .accordion-container {
     flex-direction: column;
     height: auto;
-    border: 2px solid $off-black;
     border-bottom: none;
   }
 
   .accordion-container > div {
-    border-right: none;
     border-bottom: 2px solid $off-black;
+  }
+
+  .accordion-container > div:not(:last-child) {
+    border-right: none;
   }
 
   .header-section {

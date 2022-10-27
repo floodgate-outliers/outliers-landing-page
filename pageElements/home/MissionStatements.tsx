@@ -1,4 +1,5 @@
 import { FC, Fragment, useState } from 'react';
+import { motion, Variants, AnimatePresence } from 'framer-motion';
 
 import styles from './MissionStatements.module.scss';
 
@@ -59,17 +60,21 @@ export const MissionStatements: FC = () => {
                 </p>
                 <span className="details-font">{id}</span>
               </div>
-              <div
-                className={styles['text-section']}
-                style={{
-                  display: selectedMission === mission ? 'block' : 'none',
-                }}
-              >
-                <p className={styles['subtitle'] + ' subtitle-font'}>
-                  {subtitle}
-                </p>
-                <p className={styles['text']}>{text}</p>
-              </div>
+              {/* <AnimatePresence> */}
+              {selectedMission === mission && (
+                <motion.div
+                  className={styles['text-section']}
+                  // style={{
+                  //   display: selectedMission === mission ? 'block' : 'none',
+                  // }}
+                >
+                  <p className={styles['subtitle'] + ' subtitle-font'}>
+                    {subtitle}
+                  </p>
+                  <p className={styles['text']}>{text}</p>
+                </motion.div>
+              )}
+              {/* </AnimatePresence> */}
             </Fragment>
           );
         })}
