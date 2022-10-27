@@ -54,7 +54,9 @@ export const MissionStatements: FC = () => {
                   setSelectedMission(mission);
                 }}
               >
-                <p className="subtitle-font">{mission}</p>
+                <p className={styles['mission-text'] + ' subtitle-font'}>
+                  {mission}
+                </p>
                 <span className="details-font">{id}</span>
               </div>
               <div
@@ -66,7 +68,7 @@ export const MissionStatements: FC = () => {
                 <p className={styles['subtitle'] + ' subtitle-font'}>
                   {subtitle}
                 </p>
-                <p>{text}</p>
+                <p className={styles['text']}>{text}</p>
               </div>
             </Fragment>
           );
