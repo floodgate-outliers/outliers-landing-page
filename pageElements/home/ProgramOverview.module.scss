@@ -4,7 +4,7 @@
 .card {
   background-color: $light-gray;
   padding: 100px 75px;
-  border-radius: 25px;
+  // border-radius: 25px;
   border: 4px solid $off-black;
 }
 
@@ -20,7 +20,7 @@
 @media only screen and (max-width: $desktop) {
   .card {
     padding: 75px 75px;
-    border-radius: 12.5px;
+    // border-radius: 12.5px;
   }
 }
 

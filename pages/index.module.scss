@@ -4,7 +4,7 @@
 }
 
 .section-container:not(:first-child) {
-  border-top: 2px solid $gray;
+  border-top: 2px solid $light-gray;
 }
 
 @media only screen and (max-width: $tablet) {

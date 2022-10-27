@@ -18,8 +18,14 @@
 }
 
 .outliers {
+  display: block;
   color: $floodgate;
   text-decoration: underline;
+  width: fit-content;
+}
+
+.outliers > p {
+  color: inherit;
 }
 
 @media only screen and (max-width: $tablet) {

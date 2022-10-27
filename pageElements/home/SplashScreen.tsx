@@ -15,8 +15,8 @@ export const SplashScreen: FC = () => {
       </div>
       <div></div>
       <div>
-        <a href="#program-overview">
-          <p className={styles['outliers'] + ' title-font'}>Outliers</p>
+        <a href="#program-overview" className={styles['outliers']}>
+          <p className="title-font">Outliers</p>
         </a>
       </div>
     </div>
