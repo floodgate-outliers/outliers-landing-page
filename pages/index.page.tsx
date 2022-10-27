@@ -6,7 +6,7 @@ import { FeaturedGuests } from '../pageElements/home/FeaturedGuests';
 import { MissionStatements } from '../pageElements/home/MissionStatements';
 import { ProgramOverview } from '../pageElements/home/ProgramOverview';
 import { SplashScreen } from '../pageElements/home/SplashScreen';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <div className={styles['section-container']}>
         <SplashScreen />
       </div>
-      <div className={styles['section-container']}>
+      <div id="program-overview" className={styles['section-container']}>
         <ProgramOverview />
       </div>
       <div className={styles['section-container']}>

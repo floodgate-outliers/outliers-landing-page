@@ -1,7 +1,0 @@
-.section-container > div {
-  padding: 150px calc((100% - var(--width-clamp)) / 2);
-}
-
-.section-container:not(:first-child) {
-  border-top: 2px solid var(--gray);
-}

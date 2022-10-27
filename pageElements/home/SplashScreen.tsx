@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import styles from './SplashScreen.module.css';
+import styles from './SplashScreen.module.scss';
 
 export const SplashScreen: FC = () => {
   return (
@@ -15,7 +15,9 @@ export const SplashScreen: FC = () => {
       </div>
       <div></div>
       <div>
-        <p className={styles['outliers'] + ' subtitle-font'}>Outliers</p>
+        <a href="#program-overview">
+          <p className={styles['outliers'] + ' title-font'}>Outliers</p>
+        </a>
       </div>
     </div>
   );

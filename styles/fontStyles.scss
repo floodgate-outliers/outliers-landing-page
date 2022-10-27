@@ -1,5 +1,5 @@
 .xxl-title-font {
-  font-size: 9rem;
+  font-size: 8rem;
   line-height: 8rem;
   font-weight: 700;
 }
@@ -20,4 +20,26 @@
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 400;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: $desktop) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: $laptop) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  html {
+    font-size: 7px;
+  }
 }

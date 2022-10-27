@@ -12,11 +12,15 @@
 .main-title {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   row-gap: 20px;
   margin: 100px 0px 100px 0px;
 }
 
 .outliers {
-  color: var(--floodgate);
+  color: $floodgate;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: $tablet) {
 }

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import styles from './ProgramOverview.module.css';
+import styles from './ProgramOverview.module.scss';
 
 export const ProgramOverview: FC = () => {
   return (
