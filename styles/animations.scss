@@ -7,7 +7,25 @@
   }
 }
 
-@keyframes solid-shadow-sm {
+@keyframes solid-shadow-desktop {
+  0% {
+    box-shadow: 0px 0px $off-black;
+  }
+  100% {
+    box-shadow: 15px 15px $off-black;
+  }
+}
+
+@keyframes solid-shadow-laptop {
+  0% {
+    box-shadow: 0px 0px $off-black;
+  }
+  100% {
+    box-shadow: 12.5px 12.5px $off-black;
+  }
+}
+
+@keyframes solid-shadow-mobile {
   0% {
     box-shadow: 0px 0px $off-black;
   }
@@ -20,8 +38,20 @@
   animation: solid-shadow 0.5s ease-in-out 0.25s forwards;
 }
 
-@media only screen and (max-width: $tablet) {
+@media only screen and (max-width: $desktop) {
   .solid-shadow-animation {
-    animation: solid-shadow-sm 0.5s ease-in-out 0.25s forwards;
+    animation: solid-shadow-desktop 0.5s ease-in-out 0.25s forwards;
+  }
+}
+
+@media only screen and (max-width: $laptop) {
+  .solid-shadow-animation {
+    animation: solid-shadow-laptop 0.5s ease-in-out 0.25s forwards;
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .solid-shadow-animation {
+    animation: solid-shadow-mobile 0.5s ease-in-out 0.25s forwards;
   }
 } ;

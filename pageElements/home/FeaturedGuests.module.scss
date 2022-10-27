@@ -1,11 +1,13 @@
+.container {
+  overflow: hidden;
+}
+
 .title-header {
   margin: 0px 0px 75px 0px;
 }
 
 .cards-container {
-  display: flex;
-  flex-direction: row;
-  column-gap: 100px;
+  overflow: visible !important;
 }
 
 .card {
@@ -32,8 +34,8 @@ $profile-image-dimension: 300px;
 }
 
 .profile-image-container > img {
-  border: 5px solid $off-black;
   border-radius: calc($profile-image-dimension / 2);
+  border: 5px solid $off-black;
   box-sizing: border-box;
 }
 
@@ -62,3 +64,90 @@ $company-image-dimension: 75px;
 .title {
   margin: 10px 0px 0px 0px;
 }
+
+@media only screen and (max-width: $desktop) {
+  .card {
+    width: 425px;
+    padding: 75px 0px 50px 0px;
+  }
+
+  .text-container {
+    margin: 30px 0px 0px 0px;
+  }
+
+  $profile-image-dimension: 275px;
+  .profile-image-container {
+    height: $profile-image-dimension;
+    width: $profile-image-dimension;
+  }
+
+  .profile-image-container > img {
+    border-width: 4px;
+    border-radius: calc($profile-image-dimension / 2);
+  }
+}
+
+@media only screen and (max-width: $laptop) {
+  .card {
+    width: 400px;
+    padding: 75px 0px 50px 0px;
+  }
+
+  $profile-image-dimension: 250px;
+  .profile-image-container {
+    height: $profile-image-dimension;
+    width: $profile-image-dimension;
+  }
+
+  .profile-image-container > img {
+    border-width: 4px;
+    border-radius: calc($profile-image-dimension / 2);
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .card {
+    width: 375px;
+    padding: 50px 0px 50px 0px;
+    border-width: 2px;
+  }
+
+  .text-container {
+    margin: 20px 0px 0px 0px;
+  }
+
+  $profile-image-dimension: 225px;
+  .profile-image-container {
+    height: $profile-image-dimension;
+    width: $profile-image-dimension;
+  }
+
+  .profile-image-container > img {
+    border-width: 4px;
+    border-radius: calc($profile-image-dimension / 2);
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .card {
+    width: 300px;
+    padding: 75px 0px 50px 0px;
+  }
+
+  $profile-image-dimension: 200px;
+  .profile-image-container {
+    height: $profile-image-dimension;
+    width: $profile-image-dimension;
+  }
+
+  .profile-image-container > img {
+    border-width: 3px;
+    border-radius: calc($profile-image-dimension / 2);
+  }
+
+  $company-image-dimension: 60px;
+  .company-image-container {
+    height: $company-image-dimension;
+    width: $company-image-dimension;
+  }
+} ;
