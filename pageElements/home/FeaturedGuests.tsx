@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import styles from './FeaturedGuests.module.css';
+
 export const FeaturedGuests: FC = () => {
   return (
     <div>

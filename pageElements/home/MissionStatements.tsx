@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import styles from './MissionStatements.module.css';
+
 export const MissionStatements: FC = () => {
   return (
     <div className="mx-xOffset">

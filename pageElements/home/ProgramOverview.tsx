@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import styles from './ProgramOverview.module.css';
+
 export const ProgramOverview: FC = () => {
   return (
     <div className="mx-xOffset">

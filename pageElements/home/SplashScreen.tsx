@@ -1,18 +1,21 @@
 import { FC } from 'react';
 
+import styles from './SplashScreen.module.css';
+
 export const SplashScreen: FC = () => {
   return (
-    <div className="mx-xOffset flex h-[calc(100vh-150px)] flex-col justify-between py-28">
-      <div className="flex flex-col gap-y-2 text-6xl">
+    <div className={styles['container']}>
+      <div className={styles['names-container'] + ' xl-title'}>
         <p>Floodgate</p>
         <p>Standard Crypto</p>
       </div>
-      <div className="">
-        <h1 className="text-xxl font-semibold">Create the Future</h1>
-        <h2 className="text-6xl">Builders x Crypto</h2>
+      <div className={styles['main-title']}>
+        <h1 className="xxl-title">Create the Future</h1>
+        <h2 className="xl-title">Builders x Crypto</h2>
       </div>
+      <div></div>
       <div>
-        <p className="text-5xl text-floodgate">Outliers</p>
+        <p className={styles['outliers'] + ' title'}>Outliers</p>
       </div>
     </div>
   );

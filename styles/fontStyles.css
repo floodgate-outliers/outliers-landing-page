@@ -1,0 +1,17 @@
+.xxl-title {
+  font-size: 9rem;
+  line-height: 8rem;
+  font-weight: 700;
+}
+
+.xl-title {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+}

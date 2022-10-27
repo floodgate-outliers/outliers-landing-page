@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import styles from './AlumniTestimonials.module.css';
+
 export const AlumniTestimonials: FC = () => {
   return (
     <div>
