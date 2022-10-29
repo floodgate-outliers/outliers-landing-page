@@ -55,7 +55,7 @@ export const FeaturedGuests: FC = () => {
         className={styles['cards-container']}
         breakpoints={{
           1200: {
-            slidesPerView: 2.1,
+            slidesPerView: 2.2,
           },
           850: {
             slidesPerView: 1.75,

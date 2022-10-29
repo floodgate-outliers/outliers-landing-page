@@ -1,0 +1,70 @@
+.title {
+  margin: 0px 0px 75px 0px;
+}
+
+$cards-container-gap: 30px;
+.parent-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: $cards-container-gap;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: $cards-container-gap;
+}
+
+.card {
+  break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: fit-content;
+  background-color: $off-white;
+  border: 4px solid $off-black;
+  padding: 20px 30px 30px 30px;
+  border-radius: 4px;
+}
+
+$profile-image-dimension: 75px;
+.profile-image-container {
+  flex-shrink: 0;
+  position: relative;
+  height: $profile-image-dimension;
+  width: $profile-image-dimension !important;
+}
+
+.profile-image-container > img {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-weight: 700;
+}
+
+.handle {
+  text-decoration: none;
+}
+
+.handle,
+.date {
+  color: $gray;
+}
+
+.name,
+.testimonial {
+  color: $off-black;
+}

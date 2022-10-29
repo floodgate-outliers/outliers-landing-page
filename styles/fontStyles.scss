@@ -5,26 +5,32 @@
 }
 
 .title-font {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-  font-weight: 500;
-}
-
-.subtitle-font {
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 500;
 }
 
+.subtitle-font {
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+}
+
 .paragraph-font,
 body {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
   font-weight: 400;
 }
 
 .details-font {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.subdetails-font {
+  font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
