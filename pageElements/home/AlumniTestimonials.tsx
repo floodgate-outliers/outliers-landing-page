@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FC } from 'react';
+import { motion, Variants } from 'framer-motion';
 
 import styles from './AlumniTestimonials.module.scss';
 
@@ -13,15 +14,15 @@ type AlumniTestimonial = {
 
 const AlumniTestimonialInfo: AlumniTestimonial[] = [
   {
-    name: 'Santiago_Hernandez',
+    name: 'Santiago Hernandez',
     handle: 'santiaghini',
     date: 'July 15, 2021',
     profileImage: '/alumniTestimonials/SantiagoHernandez.jpeg',
     testimonial:
-      'I found people here that turned into great friends; people to start the next breaktrhough company with, to chat about some niche new technology, or just to go on a hike and talk about life.',
+      'I found people here that turned into great friends; people to start the next breakthrough company with, to chat about some niche new technology, or just to go on a hike and talk about life.',
   },
   {
-    name: 'Kaili_Wang',
+    name: 'Kaili Wang',
     handle: 'kaili_jenner',
     date: 'July 28, 2021',
     profileImage: '/alumniTestimonials/KailiWang.jpeg',
@@ -29,7 +30,7 @@ const AlumniTestimonialInfo: AlumniTestimonial[] = [
       'The community and mentorship of Outliers impacted my life in two major ways: 1) relationships with bright, wonderful minds that’ll last for decades to come, and 2) self-realization of what I want in life: using my strengths to make real impact and pursuing a life full of learning + building.',
   },
   {
-    name: 'Michael_Daigler',
+    name: 'Michael Daigler',
     handle: '0xmerkle',
     date: 'Aug 03, 2021',
     profileImage: '/alumniTestimonials/MichaelDaigler.jpeg',
@@ -37,15 +38,15 @@ const AlumniTestimonialInfo: AlumniTestimonial[] = [
       'Outliers made me more confident in taking a carrer path that might be different for the norm for people my age. I play into my strengths now regardless of what others think.',
   },
   {
-    name: 'Santiago_Hernandez',
+    name: 'Santiago Hernandez',
     handle: 'santiaghini',
     date: 'July 15, 2021',
     profileImage: '/alumniTestimonials/SantiagoHernandez.jpeg',
     testimonial:
-      'I found people here that turned into great friends; people to start the next breaktrhough company with, to chat about some niche new technology, or just to go on a hike and talk about life.',
+      'I found people here that turned into great friends; people to start the next breakthrough company with, to chat about some niche new technology, or just to go on a hike and talk about life.',
   },
   {
-    name: 'Kaili_Wang',
+    name: 'Kaili Wang',
     handle: 'kaili_jenner',
     date: 'July 28, 2021',
     profileImage: '/alumniTestimonials/KailiWang.jpeg',
@@ -53,7 +54,7 @@ const AlumniTestimonialInfo: AlumniTestimonial[] = [
       'The community and mentorship of Outliers impacted my life in two major ways: 1) relationships with bright, wonderful minds that’ll last for decades to come, and 2) self-realization of what I want in life: using my strengths to make real impact and pursuing a life full of learning + building.',
   },
   {
-    name: 'Michael_Daigler',
+    name: 'Michael Daigler',
     handle: '0xmerkle',
     date: 'Aug 03, 2021',
     profileImage: '/alumniTestimonials/MichaelDaigler.jpeg',
@@ -61,6 +62,17 @@ const AlumniTestimonialInfo: AlumniTestimonial[] = [
       'Outliers made me more confident in taking a carrer path that might be different for the norm for people my age. I play into my strengths now regardless of what others think.',
   },
 ];
+
+const cardVariants: Variants = {
+  initial: {
+    scale: 1,
+    boxShadow: '0px 0px #000',
+  },
+  hover: {
+    scale: 1.01,
+    boxShadow: '10px 10px #000',
+  },
+};
 
 const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
   name,
@@ -70,7 +82,13 @@ const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
   testimonial,
 }) => {
   return (
-    <div key={handle} className={styles['card'] + ' details-font'}>
+    <motion.div
+      key={handle}
+      variants={cardVariants}
+      initial="initial"
+      whileHover="hover"
+      className={styles['card'] + ' details-font'}
+    >
       <div className={styles['card-header']}>
         <div className={styles['profile-image-container']}>
           <Image fill src={profileImage} alt="profile" />
@@ -89,7 +107,7 @@ const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
       </div>
       <p className={styles['testimonial']}>{testimonial}</p>
       <p className={styles['date'] + ' subdetails-font'}>{date}</p>
-    </div>
+    </motion.div>
   );
 };
 

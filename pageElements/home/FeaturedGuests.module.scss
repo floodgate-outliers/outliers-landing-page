@@ -67,22 +67,21 @@ $company-image-dimension: 75px;
 
 @media only screen and (max-width: $desktop) {
   .card {
-    width: 425px;
-    padding: 75px 0px 50px 0px;
+    width: 350px;
+    padding: 100px 0px 50px 0px;
   }
 
   .text-container {
-    margin: 30px 0px 0px 0px;
+    margin: 40px 0px 0px 0px;
   }
 
-  $profile-image-dimension: 275px;
+  $profile-image-dimension: 225px;
   .profile-image-container {
     height: $profile-image-dimension;
     width: $profile-image-dimension;
   }
 
   .profile-image-container > img {
-    border-width: 4px;
     border-radius: calc($profile-image-dimension / 2);
   }
 }
@@ -100,7 +99,6 @@ $company-image-dimension: 75px;
   }
 
   .profile-image-container > img {
-    border-width: 4px;
     border-radius: calc($profile-image-dimension / 2);
   }
 }
@@ -123,7 +121,6 @@ $company-image-dimension: 75px;
   }
 
   .profile-image-container > img {
-    border-width: 4px;
     border-radius: calc($profile-image-dimension / 2);
   }
 }

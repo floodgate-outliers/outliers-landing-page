@@ -16,7 +16,7 @@ $cards-container-gap: 30px;
 }
 
 .card {
-  break-inside: avoid;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -29,7 +29,6 @@ $cards-container-gap: 30px;
 
 $profile-image-dimension: 75px;
 .profile-image-container {
-  flex-shrink: 0;
   position: relative;
   height: $profile-image-dimension;
   width: $profile-image-dimension !important;
@@ -39,7 +38,7 @@ $profile-image-dimension: 75px;
   height: inherit;
   width: inherit;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .card-header {
@@ -68,3 +67,49 @@ $profile-image-dimension: 75px;
 .testimonial {
   color: $off-black;
 }
+
+@media only screen and (max-width: $desktop) {
+  $profile-image-dimension: 65px;
+  .profile-image-container {
+    height: $profile-image-dimension;
+    width: $profile-image-dimension !important;
+  }
+
+  .profile-image-container > img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  $cards-container-gap: 30px;
+  .parent-cards-container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: $cards-container-gap;
+  }
+
+  .card {
+    border-width: 2px;
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .card {
+    padding: 20px 25px;
+  }
+
+  $profile-image-dimension: 50px;
+  .profile-image-container {
+    height: $profile-image-dimension;
+    width: $profile-image-dimension !important;
+  }
+
+  .profile-image-container > img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+} ;

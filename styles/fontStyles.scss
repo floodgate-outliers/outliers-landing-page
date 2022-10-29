@@ -19,7 +19,7 @@
 .paragraph-font,
 body {
   font-size: 1.75rem;
-  line-height: 1.75rem;
+  line-height: 2rem;
   font-weight: 400;
 }
 
@@ -41,18 +41,18 @@ html {
 
 @media only screen and (max-width: $desktop) {
   html {
-    font-size: 10px;
+    font-size: 13px;
   }
 }
 
 @media only screen and (max-width: $laptop) {
   html {
-    font-size: 8px;
+    font-size: 11px;
   }
 }
 
-@media only screen and (max-width: $tablet) {
+@media only screen and (max-width: $mobile) {
   html {
-    font-size: 7px;
+    font-size: 10px;
   }
 }
