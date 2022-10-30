@@ -5,26 +5,32 @@
 }
 
 .title-font {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-  font-weight: 500;
-}
-
-.subtitle-font {
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 500;
 }
 
+.subtitle-font {
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+}
+
 .paragraph-font,
 body {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 1.75rem;
+  line-height: 2rem;
   font-weight: 400;
 }
 
 .details-font {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.subdetails-font {
+  font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
@@ -35,18 +41,18 @@ html {
 
 @media only screen and (max-width: $desktop) {
   html {
-    font-size: 10px;
+    font-size: 13px;
   }
 }
 
 @media only screen and (max-width: $laptop) {
   html {
-    font-size: 8px;
+    font-size: 11px;
   }
 }
 
-@media only screen and (max-width: $tablet) {
+@media only screen and (max-width: $mobile) {
   html {
-    font-size: 7px;
+    font-size: 10px;
   }
 }

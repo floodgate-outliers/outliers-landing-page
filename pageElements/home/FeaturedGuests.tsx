@@ -5,6 +5,7 @@ import styles from './FeaturedGuests.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
+import { CardWithShadow } from 'components/cards/CardWithShadow';
 
 type FeaturedGuest = {
   id: string;
@@ -55,7 +56,7 @@ export const FeaturedGuests: FC = () => {
         className={styles['cards-container']}
         breakpoints={{
           1200: {
-            slidesPerView: 2.1,
+            slidesPerView: 2.2,
           },
           850: {
             slidesPerView: 1.75,
@@ -68,21 +69,25 @@ export const FeaturedGuests: FC = () => {
           ({ id, profileImageURL, companyImageURL, name, title }) => {
             return (
               <SwiperSlide key={id}>
-                <div className={styles['card'] + ' solid-shadow-animation'}>
-                  <p className={styles['id'] + ' title-font'}>{id}</p>
-                  <div className={styles['images-container']}>
-                    <div className={styles['profile-image-container']}>
-                      <Image fill src={profileImageURL} alt="profile" />
-                      <div className={styles['company-image-container']}>
-                        <Image fill src={companyImageURL} alt="company" />
+                <CardWithShadow animateWhile="always">
+                  <div className={styles['card']}>
+                    <p className={styles['id'] + ' title-font'}>{id}</p>
+                    <div className={styles['images-container']}>
+                      <div className={styles['profile-image-container']}>
+                        <Image fill src={profileImageURL} alt="profile" />
+                        <div className={styles['company-image-container']}>
+                          <Image fill src={companyImageURL} alt="company" />
+                        </div>
                       </div>
                     </div>
+                    <div className={styles['text-container']}>
+                      <p className={styles['name']}>{name}</p>
+                      <p className={styles['title'] + ' details-font'}>
+                        {title}
+                      </p>
+                    </div>
                   </div>
-                  <div className={styles['text-container']}>
-                    <p className={styles['name']}>{name}</p>
-                    <p className={styles['title'] + ' details-font'}>{title}</p>
-                  </div>
-                </div>
+                </CardWithShadow>
               </SwiperSlide>
             );
           }
