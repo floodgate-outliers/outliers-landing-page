@@ -72,33 +72,28 @@ const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
   testimonial,
 }) => {
   return (
-    <CardWithShadow
-      scale
-      shadowSize="small"
-      animateWhile="hover"
-      backgroundColor="off-white"
-    >
-      <div className={styles['card'] + ' details-font'}>
-        <div className={styles['card-header']}>
-          <div className={styles['profile-image-container']}>
-            <Image priority fill src={profileImage} alt="profile" />
+    <a href={`https://twitter.com/${handle}`} target="_blank" rel="noreferrer">
+      <CardWithShadow
+        scale
+        shadowSize="small"
+        animateWhile="hover"
+        backgroundColor="off-white"
+      >
+        <div className={styles['card'] + ' details-font'}>
+          <div className={styles['card-header']}>
+            <div className={styles['profile-image-container']}>
+              <Image priority fill src={profileImage} alt="profile" />
+            </div>
+            <div className={styles['header-text']}>
+              <p className={styles['name']}>{name}</p>
+              <p className={styles['handle']}>@{handle}</p>
+            </div>
           </div>
-          <div className={styles['header-text']}>
-            <p className={styles['name']}>{name}</p>
-            <a
-              href={`https://twitter.com/${handle}`}
-              target="_blank"
-              rel="noreferrer"
-              className={styles['handle']}
-            >
-              @{handle}
-            </a>
-          </div>
+          <p className={styles['testimonial']}>{testimonial}</p>
+          <p className={styles['date'] + ' subdetails-font'}>{date}</p>
         </div>
-        <p className={styles['testimonial']}>{testimonial}</p>
-        <p className={styles['date'] + ' subdetails-font'}>{date}</p>
-      </div>
-    </CardWithShadow>
+      </CardWithShadow>
+    </a>
   );
 };
 
