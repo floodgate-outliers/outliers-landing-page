@@ -1,7 +1,8 @@
-import { FC, Fragment, useState } from 'react';
+import { FC, Fragment, useEffect, useState } from 'react';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
 
 import styles from './MissionStatements.module.scss';
+import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 enum MISSION {
   CONNECT = 'CONNECT',
@@ -38,9 +39,66 @@ const MissionStatementSections: MissionStatementSection[] = [
 ];
 
 export const MissionStatements: FC = () => {
+  const { isDesktop, isLaptop, isTablet, isMobile } = useMediaQueryContext();
+
   const [selectedMission, setSelectedMission] = useState<MISSION>(
     MISSION.CONNECT
   );
+  const [textPadding, setTextPadding] = useState('0px');
+
+  useEffect(() => {
+    if (isMobile) {
+      setTextPadding('50px 25px');
+    } else if (isTablet) {
+      setTextPadding('50px 50px');
+    } else if (isLaptop) {
+      setTextPadding('125px 50px');
+    } else if (isDesktop) {
+      setTextPadding('150px 100px');
+    } else {
+      setTextPadding('150px 125px');
+    }
+  }, [isDesktop, isLaptop, isTablet, isMobile]);
+
+  const AccordionVariants: Variants = {
+    closed: {
+      height: '0px',
+      width: '0px',
+      opacity: 0,
+      padding: '0px 0px',
+      transition: {
+        bounce: false,
+        width: {
+          duration: 1,
+        },
+        padding: {
+          duration: 1,
+        },
+        opacity: {
+          duration: 0.5,
+        },
+      },
+    },
+    open: {
+      width: 'auto',
+      height: 'auto',
+      opacity: 1,
+      padding: textPadding,
+      transition: {
+        bounce: false,
+        width: {
+          duration: 1,
+        },
+        padding: {
+          duration: 1,
+        },
+        opacity: {
+          delay: 0.5,
+          duration: 0.5,
+        },
+      },
+    },
+  };
 
   return (
     <div>
@@ -60,21 +118,21 @@ export const MissionStatements: FC = () => {
                 </p>
                 <span className="details-font">{id}</span>
               </div>
-              {/* <AnimatePresence> */}
-              {selectedMission === mission && (
-                <motion.div
-                  className={styles['text-section']}
-                  // style={{
-                  //   display: selectedMission === mission ? 'block' : 'none',
-                  // }}
-                >
-                  <p className={styles['subtitle'] + ' subtitle-font'}>
-                    {subtitle}
-                  </p>
-                  <p className={styles['text']}>{text}</p>
-                </motion.div>
-              )}
-              {/* </AnimatePresence> */}
+              <motion.div
+                variants={AccordionVariants}
+                initial="closed"
+                animate={selectedMission === mission ? 'open' : 'closed'}
+                className={styles['text-section']}
+                style={{
+                  flexGrow: !isMobile && selectedMission === mission ? 1 : 0,
+                  border: selectedMission === mission ? '' : 'none',
+                }}
+              >
+                <p className={styles['subtitle'] + ' subtitle-font'}>
+                  {subtitle}
+                </p>
+                <p className={styles['text']}>{text}</p>
+              </motion.div>
             </Fragment>
           );
         })}

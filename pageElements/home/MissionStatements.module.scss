@@ -5,14 +5,10 @@
 .accordion-container {
   display: flex;
   flex-direction: row;
-  background-color: $light-gray;
+  background-color: $off-white;
   border: 4px solid $off-black;
-
   height: 700px;
-}
-
-.accordion-container > div:not(:last-child) {
-  border-right: 4px solid $off-black;
+  overflow: hidden;
 }
 
 .header-section {
@@ -27,6 +23,10 @@
   box-sizing: border-box;
 }
 
+.header-section:not(:nth-last-child(2)) {
+  border-right: 4px solid $off-black;
+}
+
 .mission-text {
   transform: rotate(-90deg) translateX(75px);
 }
@@ -34,7 +34,14 @@
 .text-section {
   display: flex;
   flex-direction: column;
-  padding: 150px 125px;
+}
+
+.text-section:last-child {
+  border-left: 4px solid $off-black;
+}
+
+.text-section:not(:last-child) {
+  border-right: 4px solid $off-black;
 }
 
 .subtitle {
@@ -45,10 +52,6 @@
   .accordion-container {
     height: 600px;
   }
-
-  .text-section {
-    padding: 150px 100px;
-  }
 }
 
 @media only screen and (max-width: $laptop) {
@@ -58,10 +61,6 @@
 
   .header-section {
     width: 75px;
-  }
-
-  .text-section {
-    padding: 125px 50px;
   }
 }
 
@@ -81,10 +80,6 @@
 
   .header-section {
     width: 60px;
-  }
-
-  .text-section {
-    padding: 50px 50px;
   }
 }
 
@@ -115,7 +110,11 @@
     margin: 0px 0px 0px 10px;
   }
 
-  .text-section {
-    padding: 50px 25px 75px 25px;
+  .text-section:last-child {
+    border-left: none;
+  }
+
+  .subtitle {
+    margin: 0px 0px 20px 0px;
   }
 } ;
