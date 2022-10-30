@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import styles from './FeaturedGuests.module.scss';
@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import { CardWithShadow } from 'components/cards/CardWithShadow';
+import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 type FeaturedGuest = {
   id: string;
@@ -47,6 +48,24 @@ const FeaturedGuestsInfo: FeaturedGuest[] = [
 ];
 
 export const FeaturedGuests: FC = () => {
+  const { isDesktop, isLaptop, isTablet, isMobile } = useMediaQueryContext();
+
+  const [slidesPerView, setSlidesPerView] = useState(1);
+
+  useEffect(() => {
+    if (isMobile) {
+      setSlidesPerView(1.1);
+    } else if (isTablet) {
+      setSlidesPerView(1.57);
+    } else if (isLaptop) {
+      setSlidesPerView(2.25);
+    } else if (isDesktop) {
+      setSlidesPerView(2.5);
+    } else {
+      setSlidesPerView(2.75);
+    }
+  }, [isDesktop, isLaptop, isTablet, isMobile]);
+
   return (
     <div className={styles['container']}>
       <h2 className={styles['title-header'] + ' title-font'}>
@@ -54,16 +73,7 @@ export const FeaturedGuests: FC = () => {
       </h2>
       <Swiper
         className={styles['cards-container']}
-        breakpoints={{
-          1200: {
-            slidesPerView: 2.2,
-          },
-          850: {
-            slidesPerView: 1.75,
-          },
-          700: { slidesPerView: 1.5 },
-          0: { slidesPerView: 1 },
-        }}
+        slidesPerView={slidesPerView}
       >
         {FeaturedGuestsInfo.map(
           ({ id, profileImageURL, companyImageURL, name, title }) => {
@@ -74,9 +84,19 @@ export const FeaturedGuests: FC = () => {
                     <p className={styles['id'] + ' title-font'}>{id}</p>
                     <div className={styles['images-container']}>
                       <div className={styles['profile-image-container']}>
-                        <Image fill src={profileImageURL} alt="profile" />
+                        <Image
+                          priority
+                          fill
+                          src={profileImageURL}
+                          alt="profile"
+                        />
                         <div className={styles['company-image-container']}>
-                          <Image fill src={companyImageURL} alt="company" />
+                          <Image
+                            priority
+                            fill
+                            src={companyImageURL}
+                            alt="company"
+                          />
                         </div>
                       </div>
                     </div>
