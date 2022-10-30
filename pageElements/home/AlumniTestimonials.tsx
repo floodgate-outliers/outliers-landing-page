@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { motion, Variants } from 'framer-motion';
 
 import styles from './AlumniTestimonials.module.scss';
+import { CardWithShadow } from 'components/cards/CardWithShadow';
 
 type AlumniTestimonial = {
   name: string;
@@ -63,17 +64,6 @@ const AlumniTestimonialInfo: AlumniTestimonial[] = [
   },
 ];
 
-const cardVariants: Variants = {
-  initial: {
-    scale: 1,
-    boxShadow: '0px 0px #000',
-  },
-  hover: {
-    scale: 1.01,
-    boxShadow: '10px 10px #000',
-  },
-};
-
 const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
   name,
   handle,
@@ -82,32 +72,28 @@ const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
   testimonial,
 }) => {
   return (
-    <motion.div
-      key={handle}
-      variants={cardVariants}
-      initial="initial"
-      whileHover="hover"
-      className={styles['card'] + ' details-font'}
-    >
-      <div className={styles['card-header']}>
-        <div className={styles['profile-image-container']}>
-          <Image fill src={profileImage} alt="profile" />
+    <CardWithShadow scale animateWhile="hover" backgroundColor="off-white">
+      <div className={styles['card'] + ' details-font'}>
+        <div className={styles['card-header']}>
+          <div className={styles['profile-image-container']}>
+            <Image fill src={profileImage} alt="profile" />
+          </div>
+          <div className={styles['header-text']}>
+            <p className={styles['name']}>{name}</p>
+            <a
+              href={`https://twitter.com/${handle}`}
+              target="_blank"
+              rel="noreferrer"
+              className={styles['handle']}
+            >
+              @{handle}
+            </a>
+          </div>
         </div>
-        <div className={styles['header-text']}>
-          <p className={styles['name']}>{name}</p>
-          <a
-            href={`https://twitter.com/${handle}`}
-            target="_blank"
-            rel="noreferrer"
-            className={styles['handle']}
-          >
-            @{handle}
-          </a>
-        </div>
+        <p className={styles['testimonial']}>{testimonial}</p>
+        <p className={styles['date'] + ' subdetails-font'}>{date}</p>
       </div>
-      <p className={styles['testimonial']}>{testimonial}</p>
-      <p className={styles['date'] + ' subdetails-font'}>{date}</p>
-    </motion.div>
+    </CardWithShadow>
   );
 };
 

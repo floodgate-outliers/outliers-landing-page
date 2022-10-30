@@ -1,11 +1,11 @@
-.container {
+.card {
+  // background-color: $light-gray;
+  padding: 80px 45px;
 }
 
-.card {
-  background-color: $light-gray;
-  padding: 100px 75px;
-  // border-radius: 25px;
-  border: 4px solid $off-black;
+.card > p,
+.title {
+  color: $off-black;
 }
 
 .card > p > span {
@@ -19,14 +19,14 @@
 
 @media only screen and (max-width: $desktop) {
   .card {
-    padding: 75px 75px;
+    padding: 55px 45px;
     // border-radius: 12.5px;
   }
 }
 
 @media only screen and (max-width: $tablet) {
   .card {
-    padding: 50px 47.5px;
+    padding: 30px 17.5px;
     border-width: 2px;
   }
 
