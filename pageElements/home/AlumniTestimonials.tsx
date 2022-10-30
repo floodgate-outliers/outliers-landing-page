@@ -81,7 +81,7 @@ const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
       <div className={styles['card'] + ' details-font'}>
         <div className={styles['card-header']}>
           <div className={styles['profile-image-container']}>
-            <Image fill src={profileImage} alt="profile" />
+            <Image priority fill src={profileImage} alt="profile" />
           </div>
           <div className={styles['header-text']}>
             <p className={styles['name']}>{name}</p>

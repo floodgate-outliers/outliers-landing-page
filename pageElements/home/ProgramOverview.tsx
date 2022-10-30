@@ -22,7 +22,7 @@ export const ProgramOverview: FC = () => {
     <div className={styles['container']}>
       <CardWithShadow
         animateWhile="inView"
-        backgroundColor="light-gray"
+        backgroundColor="off-white"
         transition={{
           delay: 0.5,
           duration: 0.5,
