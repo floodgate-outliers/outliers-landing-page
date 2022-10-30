@@ -20,7 +20,14 @@ export const ProgramOverview: FC = () => {
 
   return (
     <div className={styles['container']}>
-      <CardWithShadow animateWhile="inView" backgroundColor="light-gray">
+      <CardWithShadow
+        animateWhile="inView"
+        backgroundColor="light-gray"
+        transition={{
+          delay: 0.5,
+          duration: 0.5,
+        }}
+      >
         <div className={styles['card']}>
           <h2 className={styles['title'] + ' title-font'}>10-Week Program</h2>
           <p className="paragraph-font">

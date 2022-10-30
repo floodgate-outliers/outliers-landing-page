@@ -1,7 +1,8 @@
-import { FC, ReactNode } from 'react';
-import { motion, Variants } from 'framer-motion';
+import { FC, ReactNode, useEffect, useState } from 'react';
+import { motion, Transition, Variants } from 'framer-motion';
 
 import styles from './CardWithShadow.module.scss';
+import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 type CardWithShadowProps = {
   children: ReactNode;
@@ -9,8 +10,8 @@ type CardWithShadowProps = {
   backgroundColor?: 'off-white' | 'light-gray';
   animateWhile: 'hover' | 'inView' | 'always';
   scale?: boolean;
-  delay?: number;
-  duration?: number;
+  transition?: Transition;
+  shadowSize?: 'large' | 'small';
 };
 
 export const CardWithShadow: FC<CardWithShadowProps> = ({
@@ -19,15 +20,34 @@ export const CardWithShadow: FC<CardWithShadowProps> = ({
   backgroundColor = 'off-white',
   scale = false,
   animateWhile = 'always',
+  transition,
+  shadowSize = 'large',
 }) => {
+  const { isDesktop, isTablet } = useMediaQueryContext();
+
+  const [boxShadow, setBoxShadow] = useState('0px 0px var(--off-black)');
+
+  useEffect(() => {
+    if (shadowSize === 'small') {
+      setBoxShadow('10px 10px var(--off-black)');
+    } else if (isDesktop) {
+      setBoxShadow('15px 15px var(--off-black)');
+    } else if (isDesktop) {
+      setBoxShadow('12.5px 12.5px var(--off-black)');
+    } else {
+      setBoxShadow('30px 30px var(--off-black)');
+    }
+  }, [shadowSize, isDesktop, isTablet]);
+
   const cardVariants: Variants = {
     initial: {
       scale: 1,
-      boxShadow: '0px 0px #000',
+      boxShadow: '0px 0px var(--off-black)',
     },
     animate: {
       scale: scale ? 1.01 : 1,
-      boxShadow: '15px 15px #000',
+      boxShadow,
+      transition: transition,
     },
   };
 
@@ -36,6 +56,7 @@ export const CardWithShadow: FC<CardWithShadowProps> = ({
       id={id}
       variants={cardVariants}
       initial="initial"
+      animate={animateWhile === 'always' ? 'animate' : undefined}
       whileHover={animateWhile === 'hover' ? 'animate' : undefined}
       whileInView={animateWhile === 'inView' ? 'animate' : undefined}
       className={styles['card']}

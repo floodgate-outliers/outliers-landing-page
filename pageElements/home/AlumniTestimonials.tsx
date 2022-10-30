@@ -72,7 +72,12 @@ const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
   testimonial,
 }) => {
   return (
-    <CardWithShadow scale animateWhile="hover" backgroundColor="off-white">
+    <CardWithShadow
+      scale
+      shadowSize="small"
+      animateWhile="hover"
+      backgroundColor="off-white"
+    >
       <div className={styles['card'] + ' details-font'}>
         <div className={styles['card-header']}>
           <div className={styles['profile-image-container']}>
