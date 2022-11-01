@@ -14,7 +14,7 @@ export const ProgramOverview: FC = () => {
         }}
       >
         <div className="py-20 px-11 text-off-black desktop:py-14 desktop:px-11 tablet:py-8 tablet:px-4">
-          <h2 className="mb-12 text-5xl font-bold underline tablet:mb-6">
+          <h2 className="mb-12 text-5xl font-bold underline">
             10-Week Program
           </h2>
           <p className="text-2xl">
