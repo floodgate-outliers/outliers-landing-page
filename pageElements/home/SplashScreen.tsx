@@ -1,22 +1,20 @@
 import { FC } from 'react';
 
-import styles from './SplashScreen.module.scss';
-
 export const SplashScreen: FC = () => {
   return (
-    <div className={styles['container']}>
-      <div className={styles['names-container'] + ' title-font'}>
+    <div className="flex flex-col">
+      <div className="flex flex-col gap-y-8 text-5xl">
         <p>Floodgate</p>
         <p>Standard Crypto</p>
       </div>
-      <div className={styles['main-title']}>
-        <h1 className="xxl-title-font">Create the Future</h1>
-        <h2 className="title-font">Builders x Crypto</h2>
+      <div className="flex flex-col content-end gap-y-5 my-24">
+        <h1 className="text-9xl font-bold">Create the Future</h1>
+        <h2 className="text-5xl">Builders x Crypto</h2>
       </div>
       <div></div>
       <div>
-        <a href="#program-overview" className={styles['outliers']}>
-          <p className="title-font">Outliers</p>
+        <a href="#program-overview" className="w-fit">
+          <p className="text-5xl underline text-floodgate">Outliers</p>
         </a>
       </div>
     </div>

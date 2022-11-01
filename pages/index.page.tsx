@@ -10,20 +10,23 @@ import styles from './index.module.scss';
 
 export default function Home() {
   return (
-    <div className={styles['container']}>
-      <div className={styles['section-container']}>
+    <div>
+      <div className="px-width-clamp py-24 border-b-2 border-b-light-gray">
         <SplashScreen />
       </div>
-      <div id="program-overview" className={styles['section-container']}>
+      <div
+        id="program-overview"
+        className="px-width-clamp py-24 border-b-2 border-b-light-gray"
+      >
         <ProgramOverview />
       </div>
-      <div className={styles['section-container']}>
+      <div className="px-width-clamp py-24 border-b-2 border-b-light-gray">
         <MissionStatements />
       </div>
-      <div className={styles['section-container']}>
+      <div className="px-width-clamp py-24 border-b-2 border-b-light-gray">
         <FeaturedGuests />
       </div>
-      <div className={styles['section-container']}>
+      <div className="px-width-clamp py-24">
         <AlumniTestimonials />
       </div>
     </div>
