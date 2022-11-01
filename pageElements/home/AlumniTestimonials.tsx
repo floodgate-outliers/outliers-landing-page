@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { FC } from 'react';
-import { motion, Variants } from 'framer-motion';
 
-import styles from './AlumniTestimonials.module.scss';
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 
 type AlumniTestimonial = {
@@ -79,18 +77,18 @@ const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
         animateWhile="hover"
         backgroundColor="off-white"
       >
-        <div className={styles['card'] + ' details-font'}>
-          <div className={styles['card-header']}>
-            <div className={styles['profile-image-container']}>
+        <div className="flex h-fit cursor-pointer flex-col gap-y-5 text-xl">
+          <div className="flex flex-row gap-x-5">
+            <div className="desktop:h-18 desktop:w-18 relative h-20 w-20 [&>img]:h-[inherit] [&>img]:w-[inherit] [&>img]:rounded-lg [&>img]:object-cover desktop:[&>img]:rounded-md">
               <Image priority fill src={profileImage} alt="profile" />
             </div>
-            <div className={styles['header-text']}>
-              <p className={styles['name']}>{name}</p>
-              <p className={styles['handle']}>@{handle}</p>
+            <div className="flex flex-col gap-y-1 font-bold">
+              <p className="text-off-black">{name}</p>
+              <p className="text-gray">@{handle}</p>
             </div>
           </div>
-          <p className={styles['testimonial']}>{testimonial}</p>
-          <p className={styles['date'] + ' subdetails-font'}>{date}</p>
+          <p className="text-off-black">{testimonial}</p>
+          <p className="text-base text-gray">{date}</p>
         </div>
       </CardWithShadow>
     </a>
@@ -100,9 +98,9 @@ const AlumniTestimonialCard: FC<AlumniTestimonial> = ({
 export const AlumniTestimonials: FC = () => {
   return (
     <div>
-      <h2 className={styles['title'] + ' title-font'}>Meet the Outliers</h2>
-      <div className={styles['parent-cards-container']}>
-        <div className={styles['cards-container']}>
+      <h2 className="title-header">Meet the Outliers</h2>
+      <div className="grid grid-cols-2 gap-x-7 gap-y-7 tablet:grid-cols-1">
+        <div className="flex flex-col gap-y-7">
           {AlumniTestimonialInfo.filter((_, i) => i % 2 === 0).map(
             (alumniTestimonial, index) => {
               return (
@@ -111,7 +109,7 @@ export const AlumniTestimonials: FC = () => {
             }
           )}
         </div>
-        <div className={styles['cards-container']}>
+        <div className="flex flex-col gap-y-7">
           {AlumniTestimonialInfo.filter((_, i) => i % 2 === 1).map(
             (alumniTestimonial, index) => {
               return (

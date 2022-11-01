@@ -11,22 +11,22 @@ import styles from './index.module.scss';
 export default function Home() {
   return (
     <div>
-      <div className="px-width-clamp py-24 border-b-2 border-b-light-gray">
+      <div className="border-b-2 border-b-light-gray px-width-clamp py-24 tablet:pt-12 tablet:pb-20">
         <SplashScreen />
       </div>
       <div
         id="program-overview"
-        className="px-width-clamp py-24 border-b-2 border-b-light-gray"
+        className="border-b-2 border-b-light-gray px-width-clamp py-24 tablet:pt-12 tablet:pb-20"
       >
         <ProgramOverview />
       </div>
-      <div className="px-width-clamp py-24 border-b-2 border-b-light-gray">
+      <div className="border-b-2 border-b-light-gray px-width-clamp py-24 tablet:pt-12 tablet:pb-20">
         <MissionStatements />
       </div>
-      <div className="px-width-clamp py-24 border-b-2 border-b-light-gray">
+      <div className="overflow-hidden border-b-2 border-b-light-gray px-width-clamp py-24 tablet:pt-12 tablet:pb-20">
         <FeaturedGuests />
       </div>
-      <div className="px-width-clamp py-24">
+      <div className="px-width-clamp py-24 tablet:pt-12 tablet:pb-20">
         <AlumniTestimonials />
       </div>
     </div>

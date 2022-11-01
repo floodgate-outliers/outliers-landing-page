@@ -7,10 +7,10 @@ module.exports = {
   ],
   theme: {
     screens: {
-      desktop: '1460px',
-      laptop: '1024px',
-      tablet: '768px',
-      mobile: '480px',
+      desktop: { max: '1460px' },
+      laptop: { max: '1024px' },
+      tablet: { max: '768px' },
+      mobile: { max: '480px' },
     },
     // fontSize: {
     //   // If necessary, add more font sizes
@@ -46,5 +46,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
 };

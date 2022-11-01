@@ -1,7 +1,6 @@
 import { FC, Fragment, useEffect, useState } from 'react';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
 
-import styles from './MissionStatements.module.scss';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 enum MISSION {
@@ -45,10 +44,13 @@ export const MissionStatements: FC = () => {
     MISSION.CONNECT
   );
   const [textPadding, setTextPadding] = useState('0px');
+  const [textHeight, setTextHeight] = useState('auto');
 
   useEffect(() => {
+    setTextHeight('auto');
     if (isMobile) {
       setTextPadding('50px 25px');
+      setTextHeight('400px');
     } else if (isTablet) {
       setTextPadding('50px 50px');
     } else if (isLaptop) {
@@ -81,7 +83,7 @@ export const MissionStatements: FC = () => {
     },
     open: {
       width: 'auto',
-      height: 'auto',
+      height: textHeight,
       opacity: 1,
       padding: textPadding,
       transition: {
@@ -102,36 +104,38 @@ export const MissionStatements: FC = () => {
 
   return (
     <div>
-      <h2 className={styles['title'] + ' title-font'}>We Believe...</h2>
-      <div className={styles['accordion-container']}>
+      <h2 className="title-header">We Believe...</h2>
+      <div
+        className={
+          'flex h-[700px] flex-row overflow-hidden border-4 border-off-black bg-off-white desktop:h-[600px] laptop:h-[500px] tablet:h-[400px] mobile:h-auto mobile:flex-col mobile:border-2'
+        }
+      >
         {MissionStatementSections.map(({ id, mission, subtitle, text }) => {
           return (
             <Fragment key={id}>
               <div
-                className={styles['header-section']}
+                className="tablet:w-15 box-border flex cursor-pointer flex-col justify-end border-off-black py-12 text-center laptop:w-20 mobile:w-auto mobile:flex-row-reverse mobile:items-center mobile:py-2 mobile:px-5 [&:not(:nth-last-child(2))]:border-r-4 mobile:[&:not(:nth-last-child(2))]:border-r-0 mobile:[&:not(:first-child)]:border-t-2"
                 onClick={() => {
                   setSelectedMission(mission);
                 }}
               >
-                <p className={styles['mission-text'] + ' subtitle-font'}>
+                <p className="[transform: translateX(75px)] mobile:[transform: none] mb-20 -rotate-90 text-4xl mobile:mb-0 mobile:ml-3 mobile:rotate-0">
                   {mission}
                 </p>
-                <span className="details-font">{id}</span>
+                <span className="text-2xl">{id}</span>
               </div>
               <motion.div
                 variants={AccordionVariants}
                 initial="closed"
                 animate={selectedMission === mission ? 'open' : 'closed'}
-                className={styles['text-section']}
+                className="flex flex-col overflow-hidden border-off-black last:border-l-4 mobile:border-t-2 mobile:last:border-l-0 [&:not(:last-child)]:border-r-4 mobile:[&:not(:last-child)]:border-r-0"
                 style={{
                   flexGrow: !isMobile && selectedMission === mission ? 1 : 0,
                   border: selectedMission === mission ? '' : 'none',
                 }}
               >
-                <p className={styles['subtitle'] + ' subtitle-font'}>
-                  {subtitle}
-                </p>
-                <p className={styles['text']}>{text}</p>
+                <p className="mb-12 text-5xl mobile:mb-5">{subtitle}</p>
+                <p className="text-2xl">{text}</p>
               </motion.div>
             </Fragment>
           );
