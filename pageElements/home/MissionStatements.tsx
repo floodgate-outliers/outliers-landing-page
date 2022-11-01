@@ -134,7 +134,7 @@ export const MissionStatements: FC = () => {
                   border: selectedMission === mission ? '' : 'none',
                 }}
               >
-                <p className="mb-12 text-5xl tablet:text-4xl mobile:mb-5">
+                <p className="mb-12 text-5xl font-semibold tablet:text-4xl mobile:mb-5">
                   {subtitle}
                 </p>
                 <p className="text-2xl">{text}</p>
