@@ -1,4 +1,4 @@
-import Head from 'next/head';
+// import Head from 'next/head';
 import { ContactForm } from 'pageElements/contact/ContactForm';
 
 export default function Contact() {

@@ -1,6 +1,5 @@
-import Head from 'next/head';
+// import Head from 'next/head';
 import { EndCTA } from 'pageElements/home/EndCTA';
-import { FC } from 'react';
 import { AlumniTestimonials } from '../pageElements/home/AlumniTestimonials';
 import { FeaturedGuests } from '../pageElements/home/FeaturedGuests';
 import { MissionStatements } from '../pageElements/home/MissionStatements';
