@@ -25,6 +25,9 @@ module.exports = {
     //   '10xl': ['8rem', '8rem'],
     // },
     extend: {
+      fontSize: {
+        '10xl': ['9rem', '9rem'],
+      },
       width: {
         'width-clamp': 'var(--width-clamp)',
       },
