@@ -1,7 +1,6 @@
 import { FC, ReactNode, useEffect, useState } from 'react';
 import { motion, Transition, Variants } from 'framer-motion';
 
-import styles from './CardWithShadow.module.scss';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 type CardWithShadowProps = {
@@ -30,7 +29,7 @@ export const CardWithShadow: FC<CardWithShadowProps> = ({
   useEffect(() => {
     if (shadowSize === 'small') {
       setBoxShadow('10px 10px var(--off-black)');
-    } else if (isDesktop) {
+    } else if (isTablet) {
       setBoxShadow('15px 15px var(--off-black)');
     } else if (isDesktop) {
       setBoxShadow('12.5px 12.5px var(--off-black)');

@@ -1,6 +1,5 @@
-import Head from 'next/head';
+// import Head from 'next/head';
 import { QuestionsAnswers } from 'pageElements/faq/QuestionsAnswers';
-import { FC } from 'react';
 
 export default function FAQ() {
   return (
