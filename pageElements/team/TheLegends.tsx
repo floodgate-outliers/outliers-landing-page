@@ -105,7 +105,7 @@ export const TheLegends: FC = () => {
                 </div>
               </div>
 
-              <p className="mt-5 text-lg tablet:mt-7">{bio}</p>
+              <p className="mt-5 text-lg tablet:mt-7 tablet:text-xl">{bio}</p>
             </motion.div>
           );
         })}
