@@ -119,7 +119,7 @@ export const MissionStatements: FC = () => {
                   setSelectedMission(mission);
                 }}
               >
-                <p className="[transform: translateX(75px)] mobile:[transform: none] mb-20 -rotate-90 text-4xl mobile:mb-0 mobile:ml-3 mobile:rotate-0">
+                <p className="[transform: translateX(75px)] mobile:[transform: none] mb-20 -rotate-90 text-4xl tablet:text-3xl mobile:mb-0 mobile:ml-3 mobile:rotate-0">
                   {mission}
                 </p>
                 <span className="text-2xl">{id}</span>
@@ -134,7 +134,9 @@ export const MissionStatements: FC = () => {
                   border: selectedMission === mission ? '' : 'none',
                 }}
               >
-                <p className="mb-12 text-5xl mobile:mb-5">{subtitle}</p>
+                <p className="mb-12 text-5xl font-semibold tablet:text-4xl mobile:mb-5">
+                  {subtitle}
+                </p>
                 <p className="text-2xl">{text}</p>
               </motion.div>
             </Fragment>
