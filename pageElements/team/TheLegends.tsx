@@ -67,7 +67,7 @@ const nameVariants: Variants = {
 export const TheLegends: FC = () => {
   return (
     <div>
-      <h2 className="title-header">
+      <h1 className="title-header">
         The Team{' '}
         <motion.span
           variants={titleVariants}
@@ -77,7 +77,7 @@ export const TheLegends: FC = () => {
         >
           (A.K.A Legends)
         </motion.span>
-      </h2>
+      </h1>
       <div className="flex flex-row justify-between gap-x-5 tablet:flex-col tablet:gap-y-20">
         {legends.map(({ profileImageURL, name, company, bio, handle }) => {
           return (
