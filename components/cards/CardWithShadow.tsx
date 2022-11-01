@@ -59,7 +59,7 @@ export const CardWithShadow: FC<CardWithShadowProps> = ({
       animate={animateWhile === 'always' ? 'animate' : undefined}
       whileHover={animateWhile === 'hover' ? 'animate' : undefined}
       whileInView={animateWhile === 'inView' ? 'animate' : undefined}
-      className={styles['card']}
+      className="flex h-fit w-fit flex-col gap-y-5 rounded border-4 border-off-black bg-off-white py-5 px-7 tablet:border-2 mobile:py-5 mobile:px-6"
       style={{
         backgroundColor: `var(--${backgroundColor})`,
       }}

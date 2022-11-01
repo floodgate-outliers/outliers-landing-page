@@ -1,25 +1,10 @@
 import { FC } from 'react';
-import { motion, Variants } from 'framer-motion';
 
-import styles from './ProgramOverview.module.scss';
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 
 export const ProgramOverview: FC = () => {
-  const cardVariants: Variants = {
-    initial: {
-      boxShadow: '0px 0px #000',
-    },
-    inView: {
-      boxShadow: '30px 30px #000',
-      transition: {
-        delay: 0.5,
-        duration: 0.5,
-      },
-    },
-  };
-
   return (
-    <div className={styles['container']}>
+    <div>
       <CardWithShadow
         animateWhile="inView"
         backgroundColor="off-white"
@@ -28,9 +13,11 @@ export const ProgramOverview: FC = () => {
           duration: 0.5,
         }}
       >
-        <div className={styles['card']}>
-          <h2 className={styles['title'] + ' title-font'}>10-Week Program</h2>
-          <p className="paragraph-font">
+        <div className="py-20 px-11 text-off-black desktop:py-14 desktop:px-11 tablet:py-8 tablet:px-4">
+          <h2 className="mb-12 text-5xl font-bold underline">
+            10-Week Program
+          </h2>
+          <p className="text-2xl">
             Outliers is a 10-week, summer program to empower exceptional student
             builders in Crypto.
             <br />
@@ -38,7 +25,7 @@ export const ProgramOverview: FC = () => {
             students from across the country who come together to learn and
             build. We facilitate education and mentorship from top industry
             leaders, and provide resources to build and scale the{' '}
-            <span>next Web3 breakthrough</span>.
+            <span className="font-bold">next Web3 breakthrough</span>.
           </p>
         </div>
       </CardWithShadow>
