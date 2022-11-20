@@ -86,6 +86,14 @@ html {
   height: 0.4rem;
 }
 
+/* ---Custom highlight color--- */
+::selection {
+  background: var(--floodgate); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--floodgate); /* Gecko Browsers */
+}
+
 /* ---Reusable Custom Values--- */
 
 @layer components {
