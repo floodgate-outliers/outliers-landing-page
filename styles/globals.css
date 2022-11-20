@@ -90,7 +90,7 @@ html {
 
 @layer components {
   .title-header {
-    margin-bottom: theme(margin.20);
+    margin-bottom: theme(margin.10);
     font-size: theme(fontSize.5xl);
     font-weight: theme(fontWeight.bold);
   }
