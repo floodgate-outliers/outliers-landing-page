@@ -1,8 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import {
-  FeaturedProjectCard,
-  FeaturedProjectCardProps,
-} from './FeaturedProjectCard';
+import { FeaturedProjectCard } from './FeaturedProjectCard';
 import { FeaturedProjectsInfo } from './FeaturedProjectsInfo';
 import { motion, Variants } from 'framer-motion';
 

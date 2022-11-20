@@ -2,7 +2,7 @@
 import { EndCTA } from 'pageElements/home/EndCTA';
 import { FeaturedProjects } from 'pageElements/home/featuredProjects/FeaturedProjects';
 import { AlumniTestimonials } from '../pageElements/home/AlumniTestimonials';
-import { FeaturedGuests } from '../pageElements/home/FeaturedGuests';
+import { FeaturedSpeakers } from '../pageElements/home/featuredSpeakers/FeaturedSpeakers';
 import { CoreValues } from '../pageElements/home/CoreValues';
 import { ProgramOverview } from '../pageElements/home/ProgramOverview';
 import { SplashScreen } from '../pageElements/home/SplashScreen';
@@ -30,7 +30,7 @@ export default function Home() {
         <CommunityIntro />
       </div>
       <div className="overflow-hidden border-b-2 border-b-light-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
-        <FeaturedGuests />
+        <FeaturedSpeakers />
       </div>
       <div className="border-b-2 px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <AlumniTestimonials />

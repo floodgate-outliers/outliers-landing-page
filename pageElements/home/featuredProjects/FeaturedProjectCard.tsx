@@ -4,14 +4,7 @@ import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC, useState } from 'react';
-
-export interface FeaturedProjectCardProps {
-  coverImage: string;
-  title: string;
-  builders: string[];
-  description: string;
-  projectLink: string;
-}
+import { FeaturedProject } from './FeaturedProjectsInfo';
 
 const viewProjectVariants: Variants = {
   initial: {
@@ -24,7 +17,7 @@ const viewProjectVariants: Variants = {
   },
 };
 
-export const FeaturedProjectCard: FC<FeaturedProjectCardProps> = ({
+export const FeaturedProjectCard: FC<FeaturedProject> = ({
   coverImage,
   title,
   builders,

@@ -1,6 +1,12 @@
-import { FeaturedProjectCardProps } from './FeaturedProjectCard';
+export interface FeaturedProject {
+  coverImage: string;
+  title: string;
+  builders: string[];
+  description: string;
+  projectLink: string;
+}
 
-export const FeaturedProjectsInfo: FeaturedProjectCardProps[] = [
+export const FeaturedProjectsInfo: FeaturedProject[] = [
   {
     coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
     title: 'Thunder Lizard NFT',

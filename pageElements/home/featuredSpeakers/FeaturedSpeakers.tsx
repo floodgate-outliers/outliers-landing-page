@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
+import { FeaturedSpeakersInfo } from './FeaturedSpeakersInfo';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -7,46 +8,7 @@ import 'swiper/css';
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
-type FeaturedGuest = {
-  id: string;
-  profileImageURL: string;
-  companyImageURL: string;
-  name: string;
-  title: string;
-};
-
-const FeaturedGuestsInfo: FeaturedGuest[] = [
-  {
-    id: '01',
-    profileImageURL: '/featuredGuests/AnatolyYakovenko.jpeg',
-    companyImageURL: '/featuredGuests/Solana.jpg',
-    name: 'Anatoly\nYakovenko',
-    title: '[Solana] Co-Founder',
-  },
-  {
-    id: '02',
-    profileImageURL: '/featuredGuests/JohnPalmer.jpg',
-    companyImageURL: '/featuredGuests/PartyDAO.jpg',
-    name: 'John\nPalmer',
-    title: '[Party DAO] Co-Founder',
-  },
-  {
-    id: '03',
-    profileImageURL: '/featuredGuests/TinaHe.jpeg',
-    companyImageURL: '/featuredGuests/Station.jpg',
-    name: 'Tina\nHe',
-    title: '[Station] Co-Founder',
-  },
-  {
-    id: '04',
-    profileImageURL: '/featuredGuests/MatteoLeibowitz.jpg',
-    companyImageURL: '/featuredGuests/Uniswap.jpg',
-    name: 'Matteo\nLeibowitz',
-    title: '[Uniswap] Ventures Lead',
-  },
-];
-
-export const FeaturedGuests: FC = () => {
+export const FeaturedSpeakers: FC = () => {
   const { isDesktop, isLaptop, isTablet, isMobile } = useMediaQueryContext();
 
   const [slidesPerView, setSlidesPerView] = useState(1);
@@ -67,10 +29,10 @@ export const FeaturedGuests: FC = () => {
 
   return (
     <div>
-      <h2 className="title-header">Featured Guests</h2>
+      <h2 className="title-header">Featured Speakers</h2>
       <Swiper className="!overflow-visible" slidesPerView={slidesPerView}>
-        {FeaturedGuestsInfo.map(
-          ({ id, profileImageURL, companyImageURL, name, title }) => {
+        {FeaturedSpeakersInfo.map(
+          ({ id, profileImageURL, companyImageURL, name, lectureTitle }) => {
             return (
               <SwiperSlide key={id}>
                 <CardWithShadow animateWhile="always">
@@ -97,10 +59,12 @@ export const FeaturedGuests: FC = () => {
                       </div>
                     </div>
                     <div className="mt-10 text-center tablet:mt-5">
-                      <p className="whitespace-pre-wrap text-3xl font-bold">
-                        {name}
+                      <p className="mt-2 text-xl font-bold underline">
+                        {lectureTitle}
                       </p>
-                      <p className="mt-2 text-xl">{title}</p>
+                      <p className="mt-2 whitespace-pre-wrap text-xl">
+                        -{name}
+                      </p>
                     </div>
                   </div>
                 </CardWithShadow>
