@@ -67,6 +67,7 @@ export const CoreValues: FC = () => {
       } else if (currValue === CORE_VALUE.EDUCATE) {
         return CORE_VALUE.EMPOWER;
       } else {
+        setIsAutoplayDisabled(true);
         return CORE_VALUE.CONNECT;
       }
     });

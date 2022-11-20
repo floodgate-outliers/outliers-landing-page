@@ -14,11 +14,11 @@ import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 const seeMoreVariants: Variants = {
   initial: {
-    scale: 1,
+    x: 0,
     color: 'var(--off-black)',
   },
   hover: {
-    scale: 1.1,
+    x: 10,
     color: 'var(--floodgate)',
   },
 };
