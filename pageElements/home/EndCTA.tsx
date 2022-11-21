@@ -3,7 +3,7 @@ import { motion, Variants } from 'framer-motion';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { BasicButton } from 'components/buttons/BasicButton';
-import { SendgridUpdatesSignupRequest } from 'types/API';
+import { UpdatesSignupRequest } from 'types/API.type';
 import axios from 'axios';
 
 const SignupSchema = Yup.object().shape({
@@ -30,18 +30,16 @@ export const EndCTA: FC = () => {
         }}
         validationSchema={SignupSchema}
         onSubmit={async ({ email }, { resetForm, setErrors }) => {
+          setEmailSuccess(false);
           setLoading(true);
           setErrors({}); // Clear errors
-          const sendgridUpdatesSignupRequest: SendgridUpdatesSignupRequest = {
+          const updatesSignupRequest: UpdatesSignupRequest = {
             recipientEmailAddress: email,
           };
 
           try {
             // Send confirmation email to recipient
-            await axios.post(
-              '/api/sendgrid/updatesSignup',
-              sendgridUpdatesSignupRequest
-            );
+            await axios.post('/api/signupForUpdates', updatesSignupRequest);
             setEmailSuccess(true);
             resetForm();
           } catch (error) {
@@ -70,7 +68,7 @@ export const EndCTA: FC = () => {
                     {errors.email}
                   </p>
                 ) : null}
-                {emailSuccess ? (
+                {!errors.email && emailSuccess ? (
                   <p className="absolute mt-2 text-lg ">✨ Success! ✨</p>
                 ) : null}
               </div>
