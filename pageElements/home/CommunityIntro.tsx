@@ -16,6 +16,7 @@ const TextVariants: Variants = {
   initial: {
     color: 'var(--off-white)',
     scale: 1,
+    textDecoration: 'none',
   },
   hover: {
     color: 'var(--floodgate)',
