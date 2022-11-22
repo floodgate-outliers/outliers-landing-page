@@ -1,6 +1,6 @@
 import { TheMentors } from 'pageElements/people/TheMentors';
 
-export default function Mentors() {
+export default function MentorsPage() {
   return (
     <div className="page-container">
       <TheMentors />

@@ -1,12 +1,20 @@
 import { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
-import { FeaturedSpeakersInfo } from './FeaturedSpeakersInfo';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
+import { SpeakerInfo } from 'types/People.type';
+import { TheSpeakersInfos } from 'pageElements/people/TheSpeakersInfos';
+
+const featuredSpeakersInfo: SpeakerInfo[] = [
+  TheSpeakersInfos[0],
+  TheSpeakersInfos[1],
+  TheSpeakersInfos[2],
+  TheSpeakersInfos[3],
+];
 
 export const FeaturedSpeakers: FC = () => {
   const { isDesktop, isLaptop, isTablet, isMobile } = useMediaQueryContext();
@@ -31,14 +39,14 @@ export const FeaturedSpeakers: FC = () => {
     <div>
       <h2 className="title-header">Featured Speakers</h2>
       <Swiper className="!overflow-visible" slidesPerView={slidesPerView}>
-        {FeaturedSpeakersInfo.map(
-          ({ id, profileImageURL, companyImageURL, name, lectureTitle }) => {
+        {featuredSpeakersInfo.map(
+          ({ profileImageURL, companyImageURL, name, lectureTitle }, index) => {
             return (
-              <SwiperSlide key={id}>
+              <SwiperSlide key={index}>
                 <CardWithShadow animateWhile="always">
                   <div className="relative flex w-80 flex-col items-center pt-20 pb-16 desktop:pb-12 laptop:w-72">
                     <p className="absolute top-1 left-1 text-4xl desktop:top-0 desktop:left-0">
-                      {id}
+                      {index}
                     </p>
                     <div>
                       <div className="relative h-56 w-56 desktop:h-52 desktop:w-52 laptop:h-48 laptop:w-48 tablet:h-44 tablet:w-44 [&>img]:box-border [&>img]:rounded-full [&>img]:border-4 [&>img]:border-off-black mobile:[&>img]:border-2">

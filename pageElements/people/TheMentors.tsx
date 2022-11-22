@@ -67,8 +67,14 @@ export const TheMentors: FC = () => {
                 className="w-80 tablet:w-full tablet:border-2 tablet:py-5 tablet:px-6"
               >
                 <div className="tablet:flex tablet:flex-row tablet:items-center tablet:gap-x-5">
-                  <div className="relative h-96 w-full tablet:h-20 tablet:w-20 [&>img]:object-cover [&>img]:object-top tablet:[&>img]:rounded-lg">
-                    <Image priority src={profileImageURL} alt="profile" fill />
+                  <div className="relative h-96 w-full tablet:h-20 tablet:w-20">
+                    <Image
+                      priority
+                      src={profileImageURL}
+                      alt="profile"
+                      fill
+                      className="border-4 border-off-black object-cover object-top tablet:border-2 "
+                    />
                   </div>
                   <div>
                     <motion.a
