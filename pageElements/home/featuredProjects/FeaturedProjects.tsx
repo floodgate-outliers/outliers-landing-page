@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from 'react';
 import { FeaturedProjectCard } from './FeaturedProjectCard';
-import { FeaturedProjectsInfo } from './FeaturedProjectsInfo';
 import { motion, Variants } from 'framer-motion';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,6 +7,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Link from 'next/link';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
+import { SummerProjects } from 'pageElements/projects/SummerProjects';
+import { ProjectInfo } from 'types/Project.type';
+
+const FeaturedProjectsInfo: ProjectInfo[] = [
+  SummerProjects[0],
+  SummerProjects[1],
+  SummerProjects[2],
+];
 
 const seeMoreVariants: Variants = {
   initial: {

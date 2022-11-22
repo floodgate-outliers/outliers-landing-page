@@ -8,7 +8,7 @@ import { ProgramOverview } from '../pageElements/home/ProgramOverview';
 import { SplashScreen } from '../pageElements/home/SplashScreen';
 import { CommunityIntro } from 'pageElements/home/CommunityIntro';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
       <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">

@@ -34,7 +34,7 @@ export const CardWithShadow: FC<CardWithShadowProps> = ({
     } else if (isDesktop) {
       setBoxShadow('12.5px 12.5px var(--off-black)');
     } else {
-      setBoxShadow('30px 30px var(--off-black)');
+      setBoxShadow('20px 20px var(--off-black)');
     }
   }, [shadowSize, isDesktop, isTablet]);
 

@@ -4,7 +4,7 @@ import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC, useState } from 'react';
-import { FeaturedProject } from './FeaturedProjectsInfo';
+import { ProjectInfo } from 'types/Project.type';
 
 const viewProjectVariants: Variants = {
   initial: {
@@ -17,12 +17,12 @@ const viewProjectVariants: Variants = {
   },
 };
 
-export const FeaturedProjectCard: FC<FeaturedProject> = ({
-  coverImage,
-  title,
+export const FeaturedProjectCard: FC<ProjectInfo> = ({
+  id,
+  projectName,
   builders,
   description,
-  projectLink,
+  coverImage,
 }) => {
   const [isHoveringOverViewProject, setIsHoveringOverViewProject] =
     useState(false);
@@ -36,7 +36,7 @@ export const FeaturedProjectCard: FC<FeaturedProject> = ({
         );
 
   return (
-    <Link href={projectLink}>
+    <Link href={`/projects/${id}`}>
       <CardWithShadow
         animateWhile={isHoveringOverViewProject ? 'always' : 'never'}
       >
@@ -45,7 +45,7 @@ export const FeaturedProjectCard: FC<FeaturedProject> = ({
             <Image priority fill src={coverImage} alt="" />
           </div>
           <div className="flex flex-col tablet:mt-5">
-            <p className="text-4xl underline">{title}</p>
+            <p className="text-4xl underline">{projectName}</p>
             <p className="mt-1 text-lg">{buildersString}</p>
             <p className="mt-10 text-xl tablet:hidden">{description}</p>
             <motion.p

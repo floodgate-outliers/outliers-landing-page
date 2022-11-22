@@ -107,10 +107,19 @@ html {
     font-weight: theme(fontWeight.bold);
   }
 
+  .page-container {
+    padding: theme(padding.10) theme(padding.width-clamp);
+  }
+
   @media only screen and (max-width: 1024px) {
     .title-header {
       font-size: theme(fontSize.4xl);
       margin-bottom: theme(margin.12);
+    }
+
+    .page-container {
+      padding: theme(padding.10) theme(padding.width-clamp) theme(padding.20)
+        theme(padding.width-clamp);
     }
   }
 }
