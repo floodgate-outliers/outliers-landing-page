@@ -14,14 +14,13 @@ export const SplashScreen: FC = () => {
           10-Week Program for Exceptional Builders
         </h2>
       </div>
-      <div></div>
       <div>
         <a
           href="https://www.airtable.com/home/built-for-you"
           target="_blank"
           rel="noreferrer"
         >
-          <BasicButton color="blue" onClick={undefined}>
+          <BasicButton type="button" color="blue" onClick={undefined}>
             Apply Now
           </BasicButton>
         </a>

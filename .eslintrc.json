@@ -21,6 +21,8 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "eslintreact/no-unescaped-entities": 0
+    "eslintreact/no-unescaped-entities": 0,
+    "@typescript-eslint/no-floating-promises": 0,
+    "react-hooks/exhaustive-deps": 0
   }
 }

@@ -4,7 +4,7 @@ import { HackProjects } from 'pageElements/projects/HackProjects';
 import { StartupProjects } from 'pageElements/projects/StartupProjects';
 import { SummerProjects } from 'pageElements/projects/SummerProjects';
 import { ParsedUrlQuery } from 'querystring';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import { ProjectInfo } from 'types/Project.type';
 import { ProjectDetails } from '../../pageElements/projects/ProjectDetails';
 
@@ -39,7 +39,7 @@ interface Params extends ParsedUrlQuery {
 export const getStaticProps: GetStaticProps<
   ProjectDetailsPageStaticProps,
   Params
-> = async (context) => {
+> = (context) => {
   const projectId = context.params?.projectId;
 
   if (!projectId) {
@@ -87,7 +87,7 @@ export const getStaticProps: GetStaticProps<
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = () => {
   const allProjectIds = [
     ...SummerProjects.map((project) => project.id),
     ...HackProjects.map((project) => project.id),
