@@ -15,11 +15,7 @@ export const SplashScreen: FC = () => {
         </h2>
       </div>
       <div>
-        <a
-          href="https://www.airtable.com/home/built-for-you"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={process.env.APPLICATION_LINK} target="_blank" rel="noreferrer">
           <BasicButton type="button" color="blue" onClick={undefined}>
             Apply Now
           </BasicButton>

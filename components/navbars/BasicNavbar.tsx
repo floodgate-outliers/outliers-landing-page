@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import { useRouter } from 'next/router';
+import { BasicButton } from 'components/buttons/BasicButton';
 
 type PageLink = {
   text: string;
@@ -14,10 +15,10 @@ const pageLinks: PageLink[] = [
     text: 'FAQ',
     link: '/faq',
   },
-  {
-    text: 'CONTACT',
-    link: '/contact',
-  },
+  // {
+  //   text: 'CONTACT',
+  //   link: '/contact',
+  // },
 ];
 
 const peopleOptionLinks: PageLink[] = [
@@ -94,7 +95,7 @@ export const BasicNavbar: FC = () => {
                 variants={PeopleLinkVariants}
                 initial="initial"
                 whileHover="hover"
-                className="text-xl text-off-white"
+                className="text-xl text-off-white tablet:text-lg"
               >
                 {text}
               </motion.p>
@@ -115,13 +116,13 @@ export const BasicNavbar: FC = () => {
           <p className="text-2xl font-bold">OUTLIERS</p>
         </div>
       </Link>
-      <div className="ml-10 flex flex-row gap-x-7">
+      <div className="ml-10 flex flex-row items-center gap-x-7">
         <div className="relative">
           <motion.p
             variants={LinkVariants}
             initial="initial"
             whileHover="hover"
-            className="cursor-pointer text-2xl"
+            className="cursor-pointer text-2xl tablet:text-lg"
             onClick={() => {
               setShowPeopleOptions(!showPeopleOptions);
             }}
@@ -139,13 +140,20 @@ export const BasicNavbar: FC = () => {
                 variants={LinkVariants}
                 initial="initial"
                 whileHover="hover"
-                className="cursor-pointer text-2xl"
+                className="cursor-pointer text-2xl tablet:text-lg"
               >
                 {text}
               </motion.p>
             </Link>
           );
         })}
+        <a href={process.env.APPLICATION_LINK} target="_blank" rel="noreferrer">
+          <BasicButton type="button" color="blue">
+            <p className="text-2xl tablet:-my-1 tablet:-mx-2 tablet:text-lg">
+              Apply
+            </p>
+          </BasicButton>
+        </a>
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ export const FeaturedProjects: FC = () => {
 
   useEffect(() => {
     if (isMobile) {
-      setSlidesPerView(1);
+      setSlidesPerView(1.12);
     } else if (isTablet) {
       setSlidesPerView(1.15);
     } else if (isLaptop) {
