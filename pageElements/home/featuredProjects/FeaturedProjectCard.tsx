@@ -41,7 +41,7 @@ export const FeaturedProjectCard: FC<ProjectInfo> = ({
         animateWhile={isHoveringOverViewProject ? 'always' : 'never'}
       >
         <div className="flex w-[60rem] flex-row gap-x-10 px-5 py-3 tablet:w-fit tablet:flex-col">
-          <div className="relative h-[30rem] w-[30rem] flex-shrink-0 border-4 border-off-black tablet:border-2">
+          <div className="relative h-[25rem] w-[25rem] flex-shrink-0 border-4 border-off-black tablet:border-2">
             <Image priority fill src={coverImage} alt="" />
           </div>
           <div className="flex flex-col tablet:mt-5">
