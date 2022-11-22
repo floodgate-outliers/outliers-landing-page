@@ -117,22 +117,25 @@ export const BasicNavbar: FC = () => {
         </div>
       </Link>
       <div className="ml-10 flex flex-row items-center gap-x-7">
-        <div className="relative">
-          <motion.p
-            variants={LinkVariants}
-            initial="initial"
-            whileHover="hover"
-            className="cursor-pointer text-2xl tablet:text-lg"
-            onClick={() => {
-              setShowPeopleOptions(!showPeopleOptions);
-            }}
-          >
-            PEOPLE
-          </motion.p>
+        <motion.div
+          initial="initial"
+          whileHover="hover"
+          onHoverStart={() => setShowPeopleOptions(true)}
+          onHoverEnd={() => setShowPeopleOptions(false)}
+          className="relative"
+        >
+          <Link href="/people">
+            <motion.p
+              variants={LinkVariants}
+              className="cursor-pointer text-2xl tablet:text-lg"
+            >
+              PEOPLE
+            </motion.p>
+          </Link>
           <AnimatePresence>
             {showPeopleOptions && PeopleOptions()}
           </AnimatePresence>
-        </div>
+        </motion.div>
         {pageLinks.map(({ text, link }) => {
           return (
             <Link href={link} key={link}>
@@ -149,7 +152,7 @@ export const BasicNavbar: FC = () => {
         })}
         <a href={process.env.APPLICATION_LINK} target="_blank" rel="noreferrer">
           <BasicButton type="button" color="blue">
-            <p className="text-2xl tablet:-my-1 tablet:-mx-2 tablet:text-lg">
+            <p className="text-2xl text-off-white tablet:-my-1 tablet:-mx-2 tablet:text-lg">
               Apply
             </p>
           </BasicButton>
