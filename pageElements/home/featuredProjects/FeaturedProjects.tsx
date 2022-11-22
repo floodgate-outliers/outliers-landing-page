@@ -42,7 +42,7 @@ export const FeaturedProjects: FC = () => {
     } else if (isDesktop) {
       setSlidesPerView(1.1);
     } else {
-      setSlidesPerView(1.27);
+      setSlidesPerView(1.3);
     }
   }, [isDesktop, isLaptop, isTablet, isMobile]);
 
