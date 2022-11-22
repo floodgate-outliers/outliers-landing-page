@@ -1,32 +1,74 @@
 import { FC } from 'react';
+import { motion, Variants } from 'framer-motion';
 
-import { CardWithShadow } from 'components/cards/CardWithShadow';
+const programDetails: { header: string; info: string }[] = [
+  {
+    header: '😎 Next Cohort',
+    info: '~20 Students Fom Around the World',
+  },
+  {
+    header: '📅 Dates',
+    info: 'June - August 2023',
+  },
+  {
+    header: '📝 Application',
+    info: 'January 2023',
+  },
+  {
+    header: '🏦 Structure',
+    info: 'Learn(week_0 - week_3) + Build(week_4-week_9) + Retreat(week_10)',
+  },
+  {
+    header: '🦾 Commitment',
+    info: 'Speakers + Readings + Homework',
+  },
+];
+
+const emphasisVariants: Variants = {
+  initial: {
+    color: 'var(--off-black)',
+  },
+  hover: {
+    color: 'var(--floodgate)',
+  },
+};
 
 export const ProgramOverview: FC = () => {
   return (
-    <div>
-      <CardWithShadow
-        animateWhile="inView"
-        backgroundColor="off-white"
-        transition={{
-          delay: 0.5,
-          duration: 0.5,
-        }}
-      >
-        <div className="py-20 px-11 text-off-black desktop:py-14 desktop:px-11 tablet:py-8 tablet:px-4">
-          <h2 className="title-header underline">10-Week Program</h2>
-          <p className="text-2xl">
-            Outliers is a 10-week, summer program to empower exceptional student
-            builders in Crypto.
+    <div className="text-2xl">
+      <h2 className="title-header">The Program</h2>
+      <motion.p initial="initial" whileHover="hover" className="text-4xl">
+        "Outliers is a 10-week, summer program to empower{' '}
+        <motion.span
+          variants={emphasisVariants}
+          className="font-bold underline"
+        >
+          exceptional
+        </motion.span>{' '}
+        student builders in crypto."
+      </motion.p>
+      <motion.p initial="initial" whileHover="hover" className="mt-10">
+        More importantly, Outliers is an engaged community of students from
+        across the world who come together to learn and build. We facilitate
+        education and mentorship from top industry leaders, and provide
+        resources to build and scale the <br className="hidden mobile:inline" />
+        <motion.span
+          variants={emphasisVariants}
+          className="font-bold underline"
+        >
+          next Web3 breakthrough
+        </motion.span>
+        .
+      </motion.p>
+      <div className="mt-10 flex flex-col gap-y-3 text-xl">
+        {programDetails.map(({ header, info }, index) => (
+          <p key={index}>
+            <span className="font-bold">[{header}]</span>
             <br />
-            <br /> More importantly, Outliers is an engaged community of
-            students from across the country who come together to learn and
-            build. We facilitate education and mentorship from top industry
-            leaders, and provide resources to build and scale the{' '}
-            <span className="font-bold">next Web3 breakthrough</span>.
+            {info}
           </p>
-        </div>
-      </CardWithShadow>
+        ))}
+      </div>
     </div>
   );
 };

@@ -7,7 +7,7 @@ type CardWithShadowProps = {
   children: ReactNode;
   id?: string;
   backgroundColor?: 'off-white' | 'light-gray';
-  animateWhile: 'hover' | 'inView' | 'always';
+  animateWhile: 'hover' | 'inView' | 'always' | 'never';
   scale?: boolean;
   transition?: Transition;
   shadowSize?: 'large' | 'small';
@@ -34,17 +34,21 @@ export const CardWithShadow: FC<CardWithShadowProps> = ({
     } else if (isDesktop) {
       setBoxShadow('12.5px 12.5px var(--off-black)');
     } else {
-      setBoxShadow('30px 30px var(--off-black)');
+      setBoxShadow('20px 20px var(--off-black)');
     }
   }, [shadowSize, isDesktop, isTablet]);
 
   const cardVariants: Variants = {
     initial: {
       scale: 1,
+      x: 0,
+      y: 0,
       boxShadow: '0px 0px var(--off-black)',
     },
     animate: {
       scale: scale ? 1.01 : 1,
+      x: -5,
+      y: -5,
       boxShadow,
       transition: transition,
     },

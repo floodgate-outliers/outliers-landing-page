@@ -26,6 +26,8 @@ module.exports = {
     // },
     extend: {
       fontSize: {
+        '8xl': ['5rem', '5rem'],
+        '9xl': ['7rem', '7rem'],
         '10xl': ['9rem', '9rem'],
       },
       width: {

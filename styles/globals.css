@@ -40,6 +40,10 @@ a {
   text-decoration: none;
 }
 
+input {
+  border-radius: 0;
+}
+
 body {
   background-color: var(--off-white);
 }
@@ -86,19 +90,36 @@ html {
   height: 0.4rem;
 }
 
+/* ---Custom highlight color--- */
+::selection {
+  background: var(--floodgate); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--floodgate); /* Gecko Browsers */
+}
+
 /* ---Reusable Custom Values--- */
 
 @layer components {
   .title-header {
-    margin-bottom: theme(margin.20);
+    margin-bottom: theme(margin.10);
     font-size: theme(fontSize.5xl);
     font-weight: theme(fontWeight.bold);
+  }
+
+  .page-container {
+    padding: theme(padding.10) theme(padding.width-clamp);
   }
 
   @media only screen and (max-width: 1024px) {
     .title-header {
       font-size: theme(fontSize.4xl);
       margin-bottom: theme(margin.12);
+    }
+
+    .page-container {
+      padding: theme(padding.10) theme(padding.width-clamp) theme(padding.20)
+        theme(padding.width-clamp);
     }
   }
 }
