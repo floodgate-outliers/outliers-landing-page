@@ -24,7 +24,7 @@ export const FeaturedSpeakers: FC = () => {
 
   useEffect(() => {
     if (isMobile) {
-      setSlidesPerView(1.1);
+      setSlidesPerView(1.3);
     } else if (isTablet) {
       setSlidesPerView(1.57);
     } else if (isLaptop) {

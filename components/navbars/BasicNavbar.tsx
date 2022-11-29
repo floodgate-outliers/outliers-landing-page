@@ -12,51 +12,18 @@ type PageLink = {
 
 const pageLinks: PageLink[] = [
   {
+    text: 'PEOPLE',
+    link: '/people',
+  },
+  {
+    text: 'PROJECTS',
+    link: '/projects',
+  },
+  {
     text: 'FAQ',
     link: '/faq',
   },
-  // {
-  //   text: 'CONTACT',
-  //   link: '/contact',
-  // },
 ];
-
-const peopleOptionLinks: PageLink[] = [
-  {
-    text: 'MENTORS',
-    link: '/people/mentors',
-  },
-  {
-    text: 'SPEAKERS',
-    link: '/people/speakers',
-  },
-  {
-    text: 'STUDENTS',
-    link: '/people/students',
-  },
-];
-
-const PeopleLinkPopupVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: -5,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-};
-
-const PeopleLinkVariants: Variants = {
-  initial: {
-    x: 0,
-    color: 'var(--off-white)',
-  },
-  hover: {
-    x: 5,
-    color: 'var(--floodgate)',
-  },
-};
 
 const LinkVariants: Variants = {
   initial: {
@@ -70,42 +37,6 @@ const LinkVariants: Variants = {
 };
 
 export const BasicNavbar: FC = () => {
-  const router = useRouter();
-
-  const [showPeopleOptions, setShowPeopleOptions] = useState(false);
-
-  // Hide options when changing paths
-  useEffect(() => {
-    setShowPeopleOptions(false);
-  }, [router.route]);
-
-  const PeopleOptions = () => {
-    return (
-      <motion.div
-        variants={PeopleLinkPopupVariants}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        className="absolute top-[120%] left-0 flex flex-col gap-y-1 bg-gray px-5 py-3 tablet:gap-y-5 tablet:py-5 tablet:px-7"
-      >
-        {peopleOptionLinks.map(({ text, link }, index) => {
-          return (
-            <Link key={index} href={link}>
-              <motion.p
-                variants={PeopleLinkVariants}
-                initial="initial"
-                whileHover="hover"
-                className="text-xl text-off-white tablet:text-lg"
-              >
-                {text}
-              </motion.p>
-            </Link>
-          );
-        })}
-      </motion.div>
-    );
-  };
-
   return (
     <div className="sticky left-0 right-0 top-0 z-50 flex flex-row items-center justify-between border-b-2 bg-off-white px-width-clamp py-5">
       <Link href="/">
@@ -116,26 +47,7 @@ export const BasicNavbar: FC = () => {
           <p className="text-2xl font-bold">OUTLIERS</p>
         </div>
       </Link>
-      <div className="ml-10 flex flex-row items-center gap-x-7">
-        <motion.div
-          initial="initial"
-          whileHover="hover"
-          onHoverStart={() => setShowPeopleOptions(true)}
-          onHoverEnd={() => setShowPeopleOptions(false)}
-          className="relative"
-        >
-          <Link href="/people">
-            <motion.p
-              variants={LinkVariants}
-              className="cursor-pointer text-2xl tablet:text-lg"
-            >
-              PEOPLE
-            </motion.p>
-          </Link>
-          <AnimatePresence>
-            {showPeopleOptions && PeopleOptions()}
-          </AnimatePresence>
-        </motion.div>
+      <div className="ml-10 flex flex-row items-center gap-x-10 tablet:gap-x-5">
         {pageLinks.map(({ text, link }) => {
           return (
             <Link href={link} key={link}>
@@ -150,7 +62,12 @@ export const BasicNavbar: FC = () => {
             </Link>
           );
         })}
-        <a href={process.env.APPLICATION_LINK} target="_blank" rel="noreferrer">
+        <a
+          href={process.env.APPLICATION_LINK}
+          target="_blank"
+          rel="noreferrer"
+          className="tablet:hidden"
+        >
           <BasicButton type="button" color="blue">
             <p className="text-2xl text-off-white tablet:-my-1 tablet:-mx-2 tablet:text-lg">
               Apply

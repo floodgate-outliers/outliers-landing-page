@@ -4,7 +4,9 @@ import { ProjectCard } from './ProjectCard';
 import { SummerProjects } from './SummerProjects';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel } from 'swiper';
 import 'swiper/css';
+
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 const allProjectInfos: {
@@ -51,6 +53,10 @@ export const AllProjects: FC = () => {
               <Swiper
                 className="!overflow-visible"
                 slidesPerView={slidesPerView}
+                modules={[Mousewheel]}
+                mousewheel={{
+                  forceToAxis: true,
+                }}
               >
                 {projects.map((projectInfo, index) => {
                   return (
