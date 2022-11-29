@@ -3,8 +3,9 @@ import { FeaturedProjectCard } from './FeaturedProjectCard';
 import { motion, Variants } from 'framer-motion';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
+import { Mousewheel } from 'swiper';
+
 import Link from 'next/link';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 import { SummerProjects } from 'pageElements/projects/SummerProjects';
@@ -53,7 +54,10 @@ export const FeaturedProjects: FC = () => {
         <Swiper
           className="!overflow-visible"
           slidesPerView={slidesPerView}
-          spaceBetween={20}
+          modules={[Mousewheel]}
+          mousewheel={{
+            forceToAxis: true,
+          }}
         >
           {FeaturedProjectsInfo.map((projectInfo, index) => (
             <SwiperSlide key={index}>
