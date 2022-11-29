@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, Fragment, useEffect, useState } from 'react';
 import { PROJECT_TYPE, ProjectInfo } from 'types/Project.type';
 import { ProjectCard } from './ProjectCard';
 import { SummerProjects } from './SummerProjects';
@@ -8,6 +8,8 @@ import { Mousewheel } from 'swiper';
 import 'swiper/css';
 
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
+import { StartupProjects } from './StartupProjects';
+import { HackProjects } from './HackProjects';
 
 const allProjectInfos: {
   projectType: PROJECT_TYPE;
@@ -16,6 +18,14 @@ const allProjectInfos: {
   {
     projectType: PROJECT_TYPE.SUMMER,
     projects: SummerProjects,
+  },
+  {
+    projectType: PROJECT_TYPE.STARTUP,
+    projects: StartupProjects,
+  },
+  {
+    projectType: PROJECT_TYPE.HACK,
+    projects: HackProjects,
   },
 ];
 
@@ -40,33 +50,35 @@ export const AllProjects: FC = () => {
 
   return (
     <div>
-      <h2 className="title-header">Projects</h2>
-      <div>
+      <div className="flex flex-col">
         {allProjectInfos.map(({ projectType, projects }, index) => {
           return (
-            <div key={projectType}>
-              <div className="mb-10 w-fit bg-off-black px-10 py-2">
-                <p className="text-4xl font-bold capitalize text-floodgate">
-                  {projectType}
-                </p>
+            <Fragment>
+              <hr className="header-divider" />
+              <div key={projectType}>
+                <div className="mb-10 w-fit bg-off-black px-10 py-2">
+                  <p className="text-4xl font-bold capitalize text-floodgate">
+                    {projectType}
+                  </p>
+                </div>
+                <Swiper
+                  className="!overflow-visible"
+                  slidesPerView={slidesPerView}
+                  modules={[Mousewheel]}
+                  mousewheel={{
+                    forceToAxis: true,
+                  }}
+                >
+                  {projects.map((projectInfo, index) => {
+                    return (
+                      <SwiperSlide key={index}>
+                        <ProjectCard {...projectInfo} />
+                      </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
               </div>
-              <Swiper
-                className="!overflow-visible"
-                slidesPerView={slidesPerView}
-                modules={[Mousewheel]}
-                mousewheel={{
-                  forceToAxis: true,
-                }}
-              >
-                {projects.map((projectInfo, index) => {
-                  return (
-                    <SwiperSlide key={index}>
-                      <ProjectCard {...projectInfo} />
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
-            </div>
+            </Fragment>
           );
         })}
       </div>

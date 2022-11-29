@@ -37,7 +37,11 @@ export const ProgramOverview: FC = () => {
   return (
     <div className="text-2xl">
       <h2 className="title-header">The Program</h2>
-      <motion.p initial="initial" whileHover="hover" className="text-4xl">
+      <motion.p
+        initial="initial"
+        whileHover="hover"
+        className="text-4xl tablet:text-3xl"
+      >
         "Outliers is a 10-week, summer program to empower{' '}
         <motion.span
           variants={emphasisVariants}

@@ -94,9 +94,8 @@ export const ProjectDetails: FC<ProjectInfo> = ({
         </div>
       </a>
 
-      <p className="mt-20 border-y-2 border-gray py-16 text-3xl font-bold tablet:text-2xl">
-        "{oneLiner}"
-      </p>
+      <p className="mt-20 text-3xl font-bold tablet:text-2xl">"{oneLiner}"</p>
+      <hr className="header-divider" />
       <div className="mt-20 flex flex-row items-center gap-x-20 gap-y-20 tablet:flex-col">
         <div className="relative h-[40rem] w-[40rem] flex-shrink-0 border-4 border-off-black desktop:h-[35rem] desktop:w-[35rem] tablet:border-2">
           <Image

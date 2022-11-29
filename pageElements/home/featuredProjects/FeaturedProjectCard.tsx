@@ -45,7 +45,7 @@ export const FeaturedProjectCard: FC<ProjectInfo> = ({
             <Image priority fill src={coverImage} alt="" />
           </div>
           <div className="flex flex-col tablet:mt-5">
-            <p className="text-4xl underline">{projectName}</p>
+            <p className="text-4xl underline tablet:text-3xl">{projectName}</p>
             <p className="mt-1 text-lg">{buildersString}</p>
             <p className="mt-10 text-xl tablet:hidden">{description}</p>
             <motion.p
