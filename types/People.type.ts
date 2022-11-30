@@ -1,13 +1,14 @@
 import { PROJECT_ID } from './Project.type';
 
 export enum STUDENT_ID {
+  JAN_RUTTINGER = 'Jan Ruttinger',
+  JONGWON_PARK = 'Jongwon Park',
   JOYCE_JIANG = 'Joyce Jiang',
-  SANTIAGO_HERNANDEZ = 'Santiago Hernandez',
   KAILI_WANG = 'Kaili Wang',
   MICHAEL_DAIGLER = 'Michael Daigler',
-  WENITTE_APIOU = 'Wenitte Apiou',
+  SANTIAGO_HERNANDEZ = 'Santiago Hernandez',
   VARUN_SHENOY = 'Varun Shenoy',
-  JAN_RUTTINGER = 'Jan Ruttinger',
+  WENITTE_APIOU = 'Wenitte Apiou',
   YUMA_TANAKA = 'Yuma Tanaka',
 }
 

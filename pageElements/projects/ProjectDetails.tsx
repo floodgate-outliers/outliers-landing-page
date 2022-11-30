@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { ProjectInfo } from 'types/Project.type';
 import { motion, Variants } from 'framer-motion';
+import { getStudentInfoById } from 'data/people/TheStudentsInfos';
 
 const ProjectNameVariants: Variants = {
   initial: {
@@ -27,7 +28,6 @@ export const ProjectDetails: FC<ProjectInfo> = ({
   projectType,
   projectName,
   builders,
-  buildersTwitterHandles,
   oneLiner,
   description,
   coverImage,
@@ -37,18 +37,21 @@ export const ProjectDetails: FC<ProjectInfo> = ({
   // Format the names ["Alice", "Bob", "Carol"] => Alice, Bob, and Carol with Twitter handle links
 
   const buildersNamesFormatted = () => {
-    const twitterHandlesIncluded = builders.map((builder, index) => (
-      <motion.a
-        variants={BuilderNameVariants}
-        initial="initial"
-        whileHover="hover"
-        href={`https://twitter.com/${buildersTwitterHandles[index]}`}
-        target="_blank"
-        rel="noreferrer"
-      >
-        {builder}
-      </motion.a>
-    ));
+    const twitterHandlesIncluded = builders.map((builder, index) => {
+      const { twitterHandle } = getStudentInfoById(builder);
+      return (
+        <motion.a
+          variants={BuilderNameVariants}
+          initial="initial"
+          whileHover="hover"
+          href={`https://twitter.com/${twitterHandle}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {builder}
+        </motion.a>
+      );
+    });
 
     return builders.length === 1
       ? twitterHandlesIncluded

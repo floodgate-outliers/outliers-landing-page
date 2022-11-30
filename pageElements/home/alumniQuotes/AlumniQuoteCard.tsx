@@ -2,7 +2,7 @@ import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { FC } from 'react';
 import { AlumniQuote } from '../../../data/people/AlumniQuotesInfo';
 import Image from 'next/image';
-import { getStudentInfoById } from 'data/people/TheStudentsInfo';
+import { getStudentInfoById } from 'data/people/TheStudentsInfos';
 
 export const AlumniQuoteCard: FC<AlumniQuote> = ({
   studentId,

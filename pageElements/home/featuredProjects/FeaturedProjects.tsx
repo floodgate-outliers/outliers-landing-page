@@ -8,14 +8,23 @@ import { Mousewheel } from 'swiper';
 
 import Link from 'next/link';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
-import { ProjectInfo } from 'types/Project.type';
-import { SummerProjects } from 'data/projects/SummerProjects';
+import { ProjectInfo, PROJECT_ID } from 'types/Project.type';
+import {
+  getProjectInfoById,
+  SummerProjects,
+} from 'data/projects/SummerProjects';
 
-const FeaturedProjectsInfo: ProjectInfo[] = [
-  SummerProjects[0],
-  SummerProjects[1],
-  SummerProjects[2],
+const FeaturedProjectIds: PROJECT_ID[] = [
+  PROJECT_ID.THUNDER_LIZARD_NFT,
+  PROJECT_ID.NORDLE,
+  PROJECT_ID.DATALEAP,
+  PROJECT_ID.NORDLE,
+  PROJECT_ID.THUNDER_LIZARD_NFT,
+  PROJECT_ID.DATALEAP,
 ];
+const FeaturedProjectsInfo: ProjectInfo[] = FeaturedProjectIds.map((p) =>
+  getProjectInfoById(p)
+);
 
 const seeMoreVariants: Variants = {
   initial: {
