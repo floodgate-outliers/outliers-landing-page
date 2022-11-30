@@ -11,6 +11,7 @@ import { StudentInfo, STUDENT_ID } from 'types/People.type';
 import { ProjectInfo, PROJECT_ID } from 'types/Project.type';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import clsx from 'clsx';
+import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 // Get the students with a project
 // Limit to the first 20
@@ -28,6 +29,8 @@ const ProjectCardVariants: Variants = {
 };
 
 export const TheStudents: FC = () => {
+  const { isTablet, isMobile } = useMediaQueryContext();
+
   const [selectedProjectId, setSelectedProjectId] = useState<PROJECT_ID>(
     StudentsWithProjects[0].projectId!
   );
@@ -45,31 +48,33 @@ export const TheStudents: FC = () => {
   return (
     <div>
       <h2 className="title-header">The Students</h2>
-      <div className="grid grid-cols-5 justify-between gap-5">
-        {StudentsWithProjects.map(({ id, profileImageUrl, projectId }) => (
-          <div
-            key={id}
-            onClick={() => setSelectedProjectId(projectId!)}
-            className="cursor-pointer"
-          >
+      <div className="grid grid-cols-5 justify-between gap-5 laptop:grid-cols-4 tablet:grid-cols-3">
+        {[...StudentsWithProjects, ...StudentsWithProjects].map(
+          ({ id, profileImageUrl, projectId }) => (
             <div
-              className={clsx(
-                'relative h-72 w-full border-4 border-off-black transition-all tablet:border-2',
-                selectedProjectData.builders.includes(id)
-                  ? 'grayscale-0'
-                  : 'grayscale'
-              )}
+              key={id}
+              onClick={() => setSelectedProjectId(projectId!)}
+              className="cursor-pointer"
             >
-              <Image
-                priority
-                fill
-                src={profileImageUrl}
-                alt=""
-                className="object-cover"
-              />
+              <div
+                className={clsx(
+                  'relative h-72 w-full border-4 border-off-black transition-all desktop:h-64 laptop:h-80 tablet:h-72 tablet:border-2 mobile:h-48',
+                  selectedProjectData.builders.includes(id)
+                    ? 'grayscale-0'
+                    : 'grayscale'
+                )}
+              >
+                <Image
+                  priority
+                  fill
+                  src={profileImageUrl}
+                  alt=""
+                  className="object-cover"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
       <div className="mt-10">
         <AnimatePresence mode="wait">
@@ -84,8 +89,11 @@ export const TheStudents: FC = () => {
               href={`/projects/${selectedProjectData.id}`}
               className="mx-auto block w-fit"
             >
-              <CardWithShadow animateWhile="hover">
-                <div className="py-5 px-5">
+              <CardWithShadow
+                fullWidth={isMobile || isTablet}
+                animateWhile="hover"
+              >
+                <div className="py-5 px-5 tablet:py-2 tablet:px-2">
                   <div className="flex flex-row items-center gap-x-10">
                     <div className="relative h-20 w-20 border-2 border-off-black">
                       <Image
@@ -100,13 +108,13 @@ export const TheStudents: FC = () => {
                       <p className="text-4xl font-bold">
                         {selectedProjectData.projectName}
                       </p>
-                      <p className="mt-3 text-xl">
+                      <p className="mt-3 text-xl tablet:mt-1">
                         {formatStudentsNames(selectedProjectData.builders)}
                       </p>
                     </div>
                   </div>
                   <div>
-                    <p className="mt-10 text-2xl">
+                    <p className="mt-10 text-2xl tablet:mt-5">
                       "{selectedProjectData.oneLiner}"
                     </p>
                   </div>

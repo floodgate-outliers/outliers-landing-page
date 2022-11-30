@@ -1,6 +1,7 @@
 import { PROJECT_ID } from './Project.type';
 
 export enum STUDENT_ID {
+  JAN_DAMM = 'Jan Damm',
   JAN_RUTTINGER = 'Jan Ruttinger',
   JONGWON_PARK = 'Jongwon Park',
   JOYCE_JIANG = 'Joyce Jiang',

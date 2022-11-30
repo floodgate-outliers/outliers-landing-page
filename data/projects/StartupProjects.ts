@@ -6,7 +6,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER],
+    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
@@ -18,7 +18,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER],
+    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
@@ -30,7 +30,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER],
+    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
@@ -42,7 +42,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER],
+    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
@@ -54,7 +54,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER],
+    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
@@ -66,7 +66,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER],
+    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:

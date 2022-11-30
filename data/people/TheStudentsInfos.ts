@@ -11,12 +11,24 @@ export const formatStudentsNames = (names: string[]): string[] => {
     return names;
   } else {
     return names.map((name, index) =>
-      index === names.length - 1 ? `and ${name}` : `${name}, `
+      index === names.length - 1 ? `${name}` : `${name}, `
     );
   }
 };
 
 export const TheStudentsInfos: StudentInfo[] = [
+  {
+    id: STUDENT_ID.JAN_DAMM,
+    twitterHandle: 'jh_damm',
+    profileImageUrl: '/students/JanDamm.jpg',
+    projectId: PROJECT_ID.DATALEAP,
+  },
+  {
+    id: STUDENT_ID.JAN_RUTTINGER,
+    twitterHandle: 'jan_ruettinger',
+    profileImageUrl: '/students/JanRuttinger.jpg',
+    projectId: PROJECT_ID.DATALEAP,
+  },
   {
     id: STUDENT_ID.JONGWON_PARK,
     twitterHandle: 'jwpark02',
@@ -28,12 +40,6 @@ export const TheStudentsInfos: StudentInfo[] = [
     twitterHandle: 'joycebydsgn',
     profileImageUrl: '/students/JoyceJiang.jpg',
     projectId: PROJECT_ID.THUNDER_LIZARD_NFT,
-  },
-  {
-    id: STUDENT_ID.JAN_RUTTINGER,
-    twitterHandle: 'jan_ruettinger',
-    profileImageUrl: '/students/JanRuttinger.jpg',
-    projectId: PROJECT_ID.DATALEAP,
   },
   {
     id: STUDENT_ID.KAILI_WANG,
