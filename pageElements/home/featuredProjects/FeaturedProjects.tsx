@@ -8,8 +8,8 @@ import { Mousewheel } from 'swiper';
 
 import Link from 'next/link';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
-import { SummerProjects } from 'pageElements/projects/SummerProjects';
 import { ProjectInfo } from 'types/Project.type';
+import { SummerProjects } from 'data/projects/SummerProjects';
 
 const FeaturedProjectsInfo: ProjectInfo[] = [
   SummerProjects[0],

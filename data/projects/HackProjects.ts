@@ -1,11 +1,12 @@
-import { ProjectInfo, PROJECT_TYPE } from 'types/Project.type';
+import { STUDENT_ID } from 'types/People.type';
+import { ProjectInfo, PROJECT_ID, PROJECT_TYPE } from 'types/Project.type';
 
-export const StartupProjects: ProjectInfo[] = [
+export const HackProjects: ProjectInfo[] = [
   {
-    id: 'thunder_lizard_nft',
-    projectType: PROJECT_TYPE.STARTUP,
+    id: PROJECT_ID.THUNDER_LIZARD_NFT,
+    projectType: PROJECT_TYPE.HACK,
     projectName: 'Thunder Lizard NFT',
-    builders: ['Joyce Jiang'],
+    builders: [STUDENT_ID.JOYCE_JIANG],
     buildersTwitterHandles: ['joycebydsgn'],
     oneLiner:
       'NFT representing the incredible builders in the Outliers program',
@@ -16,10 +17,10 @@ export const StartupProjects: ProjectInfo[] = [
     coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
   },
   {
-    id: 'thunder_lizard_nft',
-    projectType: PROJECT_TYPE.STARTUP,
+    id: PROJECT_ID.THUNDER_LIZARD_NFT,
+    projectType: PROJECT_TYPE.HACK,
     projectName: 'Thunder Lizard NFT',
-    builders: ['Joyce Jiang'],
+    builders: [STUDENT_ID.JOYCE_JIANG],
     buildersTwitterHandles: ['joycebydsgn'],
     oneLiner:
       'NFT representing the incredible builders in the Outliers program',
@@ -30,10 +31,10 @@ export const StartupProjects: ProjectInfo[] = [
     coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
   },
   {
-    id: 'thunder_lizard_nft',
-    projectType: PROJECT_TYPE.STARTUP,
+    id: PROJECT_ID.THUNDER_LIZARD_NFT,
+    projectType: PROJECT_TYPE.HACK,
     projectName: 'Thunder Lizard NFT',
-    builders: ['Joyce Jiang'],
+    builders: [STUDENT_ID.JOYCE_JIANG],
     buildersTwitterHandles: ['joycebydsgn'],
     oneLiner:
       'NFT representing the incredible builders in the Outliers program',
@@ -44,10 +45,10 @@ export const StartupProjects: ProjectInfo[] = [
     coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
   },
   {
-    id: 'thunder_lizard_nft',
-    projectType: PROJECT_TYPE.STARTUP,
+    id: PROJECT_ID.THUNDER_LIZARD_NFT,
+    projectType: PROJECT_TYPE.HACK,
     projectName: 'Thunder Lizard NFT',
-    builders: ['Joyce Jiang'],
+    builders: [STUDENT_ID.JOYCE_JIANG],
     buildersTwitterHandles: ['joycebydsgn'],
     oneLiner:
       'NFT representing the incredible builders in the Outliers program',

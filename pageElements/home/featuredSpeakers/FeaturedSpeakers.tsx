@@ -8,7 +8,7 @@ import 'swiper/css';
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 import { SpeakerInfo } from 'types/People.type';
-import { TheSpeakersInfos } from 'pageElements/people/TheSpeakersInfos';
+import { TheSpeakersInfos } from 'data/people/TheSpeakersInfos';
 
 const featuredSpeakersInfo: SpeakerInfo[] = [
   TheSpeakersInfos[0],

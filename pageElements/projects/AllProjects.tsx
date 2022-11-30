@@ -1,15 +1,14 @@
 import { FC, Fragment, useEffect, useState } from 'react';
 import { PROJECT_TYPE, ProjectInfo } from 'types/Project.type';
 import { ProjectCard } from './ProjectCard';
-import { SummerProjects } from './SummerProjects';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel } from 'swiper';
 import 'swiper/css';
 
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
-import { StartupProjects } from './StartupProjects';
-import { HackProjects } from './HackProjects';
+import { StartupProjects } from '../../data/projects/StartupProjects';
+import { HackProjects } from '../../data/projects/HackProjects';
+import { SummerProjects } from 'data/projects/SummerProjects';
 
 const allProjectInfos: {
   projectType: PROJECT_TYPE;
