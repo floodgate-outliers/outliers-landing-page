@@ -1,5 +1,6 @@
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
+import { formatStudentsNames } from 'data/people/TheStudentsInfos';
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,11 +9,9 @@ import { ProjectInfo } from 'types/Project.type';
 
 const viewProjectVariants: Variants = {
   initial: {
-    scale: 1,
     color: 'var(--off-black)',
   },
   hover: {
-    scale: 1.05,
     color: 'var(--floodgate)',
   },
 };
@@ -24,42 +23,29 @@ export const FeaturedProjectCard: FC<ProjectInfo> = ({
   description,
   coverImage,
 }) => {
-  const [isHoveringOverViewProject, setIsHoveringOverViewProject] =
-    useState(false);
-
-  // Format the names ["Alice", "Bob", "Carol"] => Alice, Bob, and Carol
-  const buildersString =
-    builders.length === 1
-      ? builders
-      : builders.map((name, index) =>
-          index === builders.length - 1 ? `and ${name}` : `${name}, `
-        );
-
   return (
     <Link href={`/projects/${id}`}>
-      <CardWithShadow
-        animateWhile={isHoveringOverViewProject ? 'always' : 'never'}
-      >
-        <div className="flex w-[60rem] flex-row gap-x-10 px-5 py-3 tablet:w-fit tablet:flex-col">
+      <CardWithShadow animateWhile="hover">
+        <motion.div
+          initial="initial"
+          whileHover="hover"
+          className="flex w-[60rem] flex-row gap-x-10 px-5 py-3 tablet:w-fit tablet:flex-col"
+        >
           <div className="relative h-[25rem] w-[25rem] flex-shrink-0 border-4 border-off-black tablet:border-2">
             <Image priority fill src={coverImage} alt="" />
           </div>
           <div className="flex flex-col tablet:mt-5">
-            <p className="text-4xl underline">{projectName}</p>
-            <p className="mt-1 text-lg">{buildersString}</p>
+            <p className="text-4xl underline tablet:text-3xl">{projectName}</p>
+            <p className="mt-1 text-lg">{formatStudentsNames(builders)}</p>
             <p className="mt-10 text-xl tablet:hidden">{description}</p>
             <motion.p
               variants={viewProjectVariants}
-              initial="initial"
-              animate={isHoveringOverViewProject ? 'hover' : 'initial'}
-              onHoverStart={() => setIsHoveringOverViewProject(true)}
-              onHoverEnd={() => setIsHoveringOverViewProject(false)}
               className="mt-auto ml-auto w-fit justify-self-end pt-5 pl-5 text-xl font-bold tablet:hidden"
             >
               View Project
             </motion.p>
           </div>
-        </div>
+        </motion.div>
       </CardWithShadow>
     </Link>
   );

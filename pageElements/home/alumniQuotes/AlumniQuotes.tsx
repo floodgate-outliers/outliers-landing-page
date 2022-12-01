@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { AlumniQuoteCard } from './AlumniQuoteCard';
-import { AlumniQuotesInfo } from './AlumniQuotesInfo';
+import { AlumniQuotesInfo } from '../../../data/people/AlumniQuotesInfo';
 
 export const AlumniQuotes: FC = () => {
   return (

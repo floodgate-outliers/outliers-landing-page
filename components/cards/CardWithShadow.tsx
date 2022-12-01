@@ -2,6 +2,7 @@ import { FC, ReactNode, useEffect, useState } from 'react';
 import { motion, Transition, Variants } from 'framer-motion';
 
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
+import clsx from 'clsx';
 
 type CardWithShadowProps = {
   children: ReactNode;
@@ -11,6 +12,7 @@ type CardWithShadowProps = {
   scale?: boolean;
   transition?: Transition;
   shadowSize?: 'large' | 'small';
+  fullWidth?: boolean;
 };
 
 export const CardWithShadow: FC<CardWithShadowProps> = ({
@@ -21,6 +23,7 @@ export const CardWithShadow: FC<CardWithShadowProps> = ({
   animateWhile = 'always',
   transition,
   shadowSize = 'large',
+  fullWidth = false,
 }) => {
   const { isDesktop, isTablet } = useMediaQueryContext();
 
@@ -62,7 +65,10 @@ export const CardWithShadow: FC<CardWithShadowProps> = ({
       animate={animateWhile === 'always' ? 'animate' : undefined}
       whileHover={animateWhile === 'hover' ? 'animate' : undefined}
       whileInView={animateWhile === 'inView' ? 'animate' : undefined}
-      className="flex h-fit w-fit flex-col gap-y-5 rounded border-4 border-off-black bg-off-white py-5 px-7 tablet:border-2 mobile:py-5 mobile:px-6"
+      className={clsx(
+        'flex h-fit flex-col gap-y-5 rounded border-4 border-off-black bg-off-white py-5 px-7 tablet:border-2 mobile:py-5 mobile:px-6',
+        fullWidth ? 'w-full' : 'w-fit'
+      )}
       style={{
         backgroundColor: `var(--${backgroundColor})`,
       }}

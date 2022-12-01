@@ -111,6 +111,11 @@ html {
     padding: theme(padding.10) theme(padding.width-clamp);
   }
 
+  .header-divider {
+    margin: theme(margin.16) 0px;
+    border-top: theme(borderWidth.2) solid theme(borderColor.gray);
+  }
+
   @media only screen and (max-width: 1024px) {
     .title-header {
       font-size: theme(fontSize.4xl);

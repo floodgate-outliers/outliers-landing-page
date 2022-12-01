@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { TheMentorsInfos } from './TheMentorsInfo';
+import { TheMentorsInfos } from '../../data/people/TheMentorsInfo';
 
 const ImageVariants: Variants = {
   initial: {
@@ -57,13 +57,13 @@ export const TheMentors: FC = () => {
             name,
             company,
             bio,
-            handle,
+            twitterHandle,
           }) => {
             return (
               <motion.div
                 initial="initial"
                 whileHover="hover"
-                key={handle}
+                key={twitterHandle}
                 className="w-80 tablet:w-full tablet:border-2 tablet:py-5 tablet:px-6"
               >
                 <div className="tablet:flex tablet:flex-row tablet:items-center tablet:gap-x-5">
@@ -78,7 +78,7 @@ export const TheMentors: FC = () => {
                   </div>
                   <div>
                     <motion.a
-                      href={`https://twitter.com/${handle}`}
+                      href={`https://twitter.com/${twitterHandle}`}
                       target="_blank"
                       rel="noreferrer"
                       variants={NameVariants}

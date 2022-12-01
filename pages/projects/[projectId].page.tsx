@@ -1,8 +1,8 @@
+import { HackProjects } from 'data/projects/HackProjects';
+import { StartupProjects } from 'data/projects/StartupProjects';
+import { SummerProjects } from 'data/projects/SummerProjects';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import { HackProjects } from 'pageElements/projects/HackProjects';
-import { StartupProjects } from 'pageElements/projects/StartupProjects';
-import { SummerProjects } from 'pageElements/projects/SummerProjects';
 import { ParsedUrlQuery } from 'querystring';
 import { FC, useEffect } from 'react';
 import { ProjectInfo } from 'types/Project.type';

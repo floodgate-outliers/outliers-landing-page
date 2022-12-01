@@ -2,12 +2,13 @@ import { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { Mousewheel } from 'swiper';
 import 'swiper/css';
+
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 import { SpeakerInfo } from 'types/People.type';
-import { TheSpeakersInfos } from 'pageElements/people/TheSpeakersInfos';
+import { TheSpeakersInfos } from 'data/people/TheSpeakersInfos';
 
 const featuredSpeakersInfo: SpeakerInfo[] = [
   TheSpeakersInfos[0],
@@ -23,7 +24,7 @@ export const FeaturedSpeakers: FC = () => {
 
   useEffect(() => {
     if (isMobile) {
-      setSlidesPerView(1.1);
+      setSlidesPerView(1.3);
     } else if (isTablet) {
       setSlidesPerView(1.57);
     } else if (isLaptop) {
@@ -38,7 +39,14 @@ export const FeaturedSpeakers: FC = () => {
   return (
     <div>
       <h2 className="title-header">Featured Speakers</h2>
-      <Swiper className="!overflow-visible" slidesPerView={slidesPerView}>
+      <Swiper
+        className="!overflow-visible"
+        slidesPerView={slidesPerView}
+        modules={[Mousewheel]}
+        mousewheel={{
+          forceToAxis: true,
+        }}
+      >
         {featuredSpeakersInfo.map(
           ({ profileImageURL, companyImageURL, name, lectureTitle }, index) => {
             return (
@@ -67,9 +75,7 @@ export const FeaturedSpeakers: FC = () => {
                       </div>
                     </div>
                     <div className="mt-10 text-center tablet:mt-5">
-                      <p className="mt-2 text-xl font-bold underline">
-                        {lectureTitle}
-                      </p>
+                      <p className="mt-2 text-xl font-bold">"{lectureTitle}"</p>
                       <p className="mt-2 whitespace-pre-wrap text-xl">
                         -{name}
                       </p>

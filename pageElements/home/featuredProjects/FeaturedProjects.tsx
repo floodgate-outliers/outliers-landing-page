@@ -3,18 +3,26 @@ import { FeaturedProjectCard } from './FeaturedProjectCard';
 import { motion, Variants } from 'framer-motion';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
+import { Mousewheel } from 'swiper';
+
 import Link from 'next/link';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
-import { SummerProjects } from 'pageElements/projects/SummerProjects';
-import { ProjectInfo } from 'types/Project.type';
+import { ProjectInfo, PROJECT_ID } from 'types/Project.type';
+import {
+  getProjectInfoById,
+  SummerProjects,
+} from 'data/projects/SummerProjects';
 
-const FeaturedProjectsInfo: ProjectInfo[] = [
-  SummerProjects[0],
-  SummerProjects[1],
-  SummerProjects[2],
+const FeaturedProjectIds: PROJECT_ID[] = [
+  PROJECT_ID.THUNDER_LIZARD_NFT,
+  PROJECT_ID.NORDLE,
+  PROJECT_ID.DATALEAP,
+  PROJECT_ID.DAEDALUS,
 ];
+const FeaturedProjectsInfo: ProjectInfo[] = FeaturedProjectIds.map((p) =>
+  getProjectInfoById(p)
+);
 
 const seeMoreVariants: Variants = {
   initial: {
@@ -34,7 +42,7 @@ export const FeaturedProjects: FC = () => {
 
   useEffect(() => {
     if (isMobile) {
-      setSlidesPerView(1.12);
+      setSlidesPerView(1.05);
     } else if (isTablet) {
       setSlidesPerView(1.15);
     } else if (isLaptop) {
@@ -53,7 +61,10 @@ export const FeaturedProjects: FC = () => {
         <Swiper
           className="!overflow-visible"
           slidesPerView={slidesPerView}
-          spaceBetween={20}
+          modules={[Mousewheel]}
+          mousewheel={{
+            forceToAxis: true,
+          }}
         >
           {FeaturedProjectsInfo.map((projectInfo, index) => (
             <SwiperSlide key={index}>

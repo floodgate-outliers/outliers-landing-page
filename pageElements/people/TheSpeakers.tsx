@@ -1,7 +1,7 @@
 import { CardWithShadow } from 'components/cards/CardWithShadow';
+import { TheSpeakersInfos } from 'data/people/TheSpeakersInfos';
 import Image from 'next/image';
 import { FC } from 'react';
-import { TheSpeakersInfos } from './TheSpeakersInfos';
 
 export const TheSpeakers: FC = () => {
   return (
@@ -18,13 +18,13 @@ export const TheSpeakers: FC = () => {
               companyImageURL,
               profileImageURL,
               year,
-              handle,
+              twitterHandle,
             },
             index
           ) => {
             return (
               <a
-                href={`https://twitter.com/${handle}`}
+                href={`https://twitter.com/${twitterHandle}`}
                 target="_blank"
                 rel="noreferrer"
                 key={index}
