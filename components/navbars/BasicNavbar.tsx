@@ -1,8 +1,7 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { useRouter } from 'next/router';
+import { motion, Variants } from 'framer-motion';
 import { BasicButton } from 'components/buttons/BasicButton';
 
 type PageLink = {

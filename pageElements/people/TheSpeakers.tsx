@@ -1,7 +1,7 @@
 import { CardWithShadow } from 'components/cards/CardWithShadow';
+import { TheSpeakersInfos } from 'data/people/TheSpeakersInfos';
 import Image from 'next/image';
 import { FC } from 'react';
-import { TheSpeakersInfos } from '../../data/TheSpeakersInfos';
 
 export const TheSpeakers: FC = () => {
   return (
