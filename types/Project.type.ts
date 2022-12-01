@@ -4,9 +4,12 @@ import { STUDENT_ID } from './People.type';
 
 // Note the ids also act as URL paths to the project details
 export enum PROJECT_ID {
-  THUNDER_LIZARD_NFT = 'thunder_lizard_nft',
-  NORDLE = 'nordle',
+  DAEDALUS = 'daedalus',
   DATALEAP = 'dataleap',
+  NEXUS = 'nexus',
+  NORDLE = 'nordle',
+  THUNDER_LIZARD_NFT = 'thunder_lizard_nft',
+  UNFOLD = 'unfold',
 }
 
 export enum PROJECT_TYPE {

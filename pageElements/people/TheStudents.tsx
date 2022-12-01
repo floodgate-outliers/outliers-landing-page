@@ -14,10 +14,10 @@ import clsx from 'clsx';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 // Get the students with a project
-// Limit to the first 20
+// Limit to the first 12
 const StudentsWithProjects: StudentInfo[] = TheStudentsInfos.filter(
   (s) => s.projectId
-).slice(0, 20);
+).slice(0, 14);
 
 const ProjectCardVariants: Variants = {
   hidden: {
@@ -48,33 +48,32 @@ export const TheStudents: FC = () => {
   return (
     <div>
       <h2 className="title-header">The Students</h2>
-      <div className="grid grid-cols-5 justify-between gap-5 laptop:grid-cols-4 tablet:grid-cols-3">
-        {[...StudentsWithProjects, ...StudentsWithProjects].map(
-          ({ id, profileImageUrl, projectId }) => (
+      <div className="grid grid-cols-6 justify-between gap-5 laptop:grid-cols-4">
+        {StudentsWithProjects.map(({ id, profileImageUrl, projectId }) => (
+          <div
+            key={id}
+            onClick={() => setSelectedProjectId(projectId!)}
+            className="cursor-pointer"
+          >
             <div
-              key={id}
-              onClick={() => setSelectedProjectId(projectId!)}
-              className="cursor-pointer"
+              className={clsx(
+                'relative h-60 w-full border-4 border-off-black transition-all desktop:h-64 laptop:h-80 tablet:h-48 tablet:border-2 mobile:h-36',
+                selectedProjectData.builders.includes(id)
+                  ? 'grayscale-0'
+                  : 'grayscale'
+              )}
             >
-              <div
-                className={clsx(
-                  'relative h-72 w-full border-4 border-off-black transition-all desktop:h-64 laptop:h-80 tablet:h-72 tablet:border-2 mobile:h-48',
-                  selectedProjectData.builders.includes(id)
-                    ? 'grayscale-0'
-                    : 'grayscale'
-                )}
-              >
-                <Image
-                  priority
-                  fill
-                  src={profileImageUrl}
-                  alt=""
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                priority
+                fill
+                src={profileImageUrl}
+                alt=""
+                className="object-cover"
+              />
             </div>
-          )
-        )}
+          </div>
+        ))}
+        <p className="my-auto ml-3 text-5xl font-bold tablet:text-3xl">...</p>
       </div>
       <div className="mt-10">
         <AnimatePresence mode="wait">

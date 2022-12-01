@@ -18,9 +18,7 @@ const FeaturedProjectIds: PROJECT_ID[] = [
   PROJECT_ID.THUNDER_LIZARD_NFT,
   PROJECT_ID.NORDLE,
   PROJECT_ID.DATALEAP,
-  PROJECT_ID.NORDLE,
-  PROJECT_ID.THUNDER_LIZARD_NFT,
-  PROJECT_ID.DATALEAP,
+  PROJECT_ID.DAEDALUS,
 ];
 const FeaturedProjectsInfo: ProjectInfo[] = FeaturedProjectIds.map((p) =>
   getProjectInfoById(p)

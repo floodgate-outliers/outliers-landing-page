@@ -37,10 +37,11 @@ export const ProjectDetails: FC<ProjectInfo> = ({
   // Format the names ["Alice", "Bob", "Carol"] => Alice, Bob, and Carol with Twitter handle links
 
   const buildersNamesFormatted = () => {
-    const twitterHandlesIncluded = builders.map((builder, index) => {
+    const twitterHandlesIncluded = builders.map((builder) => {
       const { twitterHandle } = getStudentInfoById(builder);
       return (
         <motion.a
+          key={builder}
           variants={BuilderNameVariants}
           initial="initial"
           whileHover="hover"

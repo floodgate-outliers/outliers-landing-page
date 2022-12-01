@@ -18,6 +18,12 @@ export const formatStudentsNames = (names: string[]): string[] => {
 
 export const TheStudentsInfos: StudentInfo[] = [
   {
+    id: STUDENT_ID.DANIEL_MARIN,
+    twitterHandle: 'danielmarinq',
+    profileImageUrl: '/students/DanielMarin.jfif',
+    projectId: PROJECT_ID.NEXUS,
+  },
+  {
     id: STUDENT_ID.JAN_DAMM,
     twitterHandle: 'jh_damm',
     profileImageUrl: '/students/JanDamm.jpg',
@@ -60,11 +66,13 @@ export const TheStudentsInfos: StudentInfo[] = [
     id: STUDENT_ID.VARUN_SHENOY,
     twitterHandle: 'varunshenoy_',
     profileImageUrl: '/students/VarunShenoy.jpg',
+    projectId: PROJECT_ID.UNFOLD,
   },
   {
     id: STUDENT_ID.WENITTE_APIOU,
-    twitterHandle: 'wenitte_a_placeholder',
-    profileImageUrl: '/students/WenitteApiou.jpeg',
+    twitterHandle: 'wenitte0',
+    profileImageUrl: '/students/WenitteApiou.jfif',
+    projectId: PROJECT_ID.DAEDALUS,
   },
   {
     id: STUDENT_ID.YUMA_TANAKA,
