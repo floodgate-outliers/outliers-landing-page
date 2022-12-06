@@ -32,12 +32,20 @@ export const FeaturedProjectCard: FC<ProjectInfo> = ({
           className="flex w-[60rem] flex-row gap-x-10 px-5 py-3 tablet:w-fit tablet:flex-col"
         >
           <div className="relative h-[25rem] w-[25rem] flex-shrink-0 border-4 border-off-black tablet:border-2">
-            <Image priority fill src={coverImage} alt="" />
+            <Image
+              priority
+              fill
+              src={coverImage}
+              alt=""
+              className="object-cover"
+            />
           </div>
           <div className="flex flex-col tablet:mt-5">
             <p className="text-4xl underline tablet:text-3xl">{projectName}</p>
             <p className="mt-1 text-lg">{formatStudentsNames(builders)}</p>
-            <p className="mt-10 text-xl tablet:hidden">{description}</p>
+            <p className="mt-10 text-xl line-clamp-6 tablet:hidden">
+              {description}
+            </p>
             <motion.p
               variants={viewProjectVariants}
               className="mt-auto ml-auto w-fit justify-self-end pt-5 pl-5 text-xl font-bold tablet:hidden"

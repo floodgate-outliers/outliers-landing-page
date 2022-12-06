@@ -17,7 +17,7 @@ export const AlumniQuotes: FC = () => {
 
   useEffect(() => {
     if (isMobile) {
-      setSlidesPerView(1.15);
+      setSlidesPerView(1.005);
     } else if (isTablet) {
       setSlidesPerView(1.2);
     } else if (isLaptop) {
