@@ -4,6 +4,7 @@ import { STUDENT_ID } from './People.type';
 
 // Note the ids also act as URL paths to the project details
 export enum PROJECT_ID {
+  CONVEXSWAP = 'convexswap',
   DAEDALUS = 'daedalus',
   DATALEAP = 'dataleap',
   NEXUS = 'nexus',

@@ -24,6 +24,15 @@ const BuilderNameVariants: Variants = {
   },
 };
 
+const CoverImageVariants: Variants = {
+  initial: {
+    scale: 1,
+  },
+  hover: {
+    scale: 1.05,
+  },
+};
+
 export const ProjectDetails: FC<ProjectInfo> = ({
   projectType,
   projectName,
@@ -54,15 +63,9 @@ export const ProjectDetails: FC<ProjectInfo> = ({
       );
     });
 
-    return builders.length === 1
-      ? twitterHandlesIncluded
-      : builders.map((nameComponent, index) =>
-          index === builders.length - 1 ? (
-            <>and {nameComponent}</>
-          ) : (
-            nameComponent
-          )
-        );
+    return twitterHandlesIncluded.map((nameComponent, index) =>
+      index === builders.length - 1 ? <>, {nameComponent}</> : nameComponent
+    );
   };
 
   return (
@@ -73,7 +76,12 @@ export const ProjectDetails: FC<ProjectInfo> = ({
         rel="noreferrer"
         className="flex flex-row items-center gap-x-10"
       >
-        <div className="relative h-28 w-28 flex-shrink-0 border-4 border-off-black tablet:h-20 tablet:w-20 tablet:border-2">
+        <motion.div
+          variants={CoverImageVariants}
+          initial="initial"
+          whileHover="hover"
+          className="relative h-28 w-28 flex-shrink-0 border-4 border-off-black tablet:h-20 tablet:w-20 tablet:border-2"
+        >
           <Image
             priority
             fill
@@ -81,7 +89,7 @@ export const ProjectDetails: FC<ProjectInfo> = ({
             alt=""
             className="object-cover"
           />
-        </div>
+        </motion.div>
         <div className="flex flex-col items-start">
           <h2 className="mb-0 text-5xl font-bold tablet:text-3xl">
             <motion.span

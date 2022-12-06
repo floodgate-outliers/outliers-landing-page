@@ -32,7 +32,7 @@ export default function HomePage() {
       <div className="overflow-hidden border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <FeaturedSpeakers />
       </div>
-      <div className="border-b-2 px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
+      <div className="overflow-hidden border-b-2 px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <AlumniQuotes />
       </div>
       <div className="px-width-clamp py-20 tablet:pt-24 tablet:pb-20">

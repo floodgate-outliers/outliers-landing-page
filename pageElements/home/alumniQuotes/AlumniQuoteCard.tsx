@@ -15,6 +15,7 @@ export const AlumniQuoteCard: FC<AlumniQuote> = ({
       href={`https://twitter.com/${twitterHandle}`}
       target="_blank"
       rel="noreferrer"
+      className="block w-[700px] desktop:w-[600px] laptop:w-[500px] tablet:w-[400px] mobile:w-[350px]"
     >
       <CardWithShadow
         scale
