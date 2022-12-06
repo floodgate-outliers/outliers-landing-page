@@ -32,17 +32,17 @@ export const SummerProjects: ProjectInfo[] = [
     coverImage: '/projects/unfold/UnfoldMainImage.jfif',
   },
   {
-    id: PROJECT_ID.THUNDER_LIZARD_NFT,
+    id: PROJECT_ID.CONVEXSWAP,
     projectType: PROJECT_TYPE.SUMMER,
-    projectName: 'Thunder Lizard NFT',
-    builders: [STUDENT_ID.JOYCE_JIANG],
+    projectName: 'ConvexSwap',
+    builders: [STUDENT_ID.SARA_ABDALI, STUDENT_ID.ERFAN_ROSTAMI],
     oneLiner:
-      'NFT representing the incredible builders in the Outliers program',
-    mainImage: '/projects/thunderLizardNFT/ThunderLizardMainImage.png',
+      'ConvexSwap allows large trades to be streamed over time to reduce slippage and price impact while also minimizing for gas.',
+    mainImage: '/projects/convexSwap/ConvexSwapMainImage.jpg',
     description:
-      'Outliers is a 10-week, summer program to empower exceptional student builders in Crypto and Web3. Through curriculum and technical projects, Outliers equips students from across the country with the resources, knowledge, and community necessary to build and scale a successful Web3 venture.',
+      'While executing large trades, there is often a high amount of slippage. As these orders get close to completion, the swap price increases drastically, and therefore the trade ends up being expensive and capital inefficient. Additionally, with large trades on the blockchain, the security risks are heightened as nothing is reversible. ConvexSwap solves both of these problems by streaming the trade over time. The stream cannot only be stopped at any time for security purposes, but also prevents a price shock on the exchanges and ensures that there is time for liquidity pools to revert to their average volume, so slippage will be lower. While streaming leads to price impact, it increases the gas fees as multiple transtaction happen to complete the trade. This leads to a convex cost function for any trade that can be solved for deterministically. Our trading platform solves for this optimal value of streaming time with lowest slippage and gas fees.',
     projectLink: 'https://outliersnft.xyz/',
-    coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
+    coverImage: '/projects/convexSwap/ConvexSwapMainImage.jpg',
   },
   {
     id: PROJECT_ID.THUNDER_LIZARD_NFT,

@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './pageElements/**/*.{js,ts,jsx,tsx}',
   ],
+  plugins: [require('@tailwindcss/line-clamp')],
   theme: {
     screens: {
       desktop: { max: '1460px' },

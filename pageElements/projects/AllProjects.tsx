@@ -61,7 +61,7 @@ export const AllProjects: FC = () => {
                   </p>
                 </div>
                 <Swiper
-                  className="!overflow-visible"
+                  className="!items-stretch !overflow-visible"
                   slidesPerView={slidesPerView}
                   modules={[Mousewheel]}
                   mousewheel={{

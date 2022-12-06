@@ -24,6 +24,12 @@ export const TheStudentsInfos: StudentInfo[] = [
     projectId: PROJECT_ID.NEXUS,
   },
   {
+    id: STUDENT_ID.ERFAN_ROSTAMI,
+    twitterHandle: '_erfie',
+    profileImageUrl: '/students/ErfanRostami.jfif',
+    projectId: PROJECT_ID.CONVEXSWAP,
+  },
+  {
     id: STUDENT_ID.JAN_DAMM,
     twitterHandle: 'jh_damm',
     profileImageUrl: '/students/JanDamm.jpg',
@@ -61,6 +67,12 @@ export const TheStudentsInfos: StudentInfo[] = [
     id: STUDENT_ID.SANTIAGO_HERNANDEZ,
     twitterHandle: 'santiaghini',
     profileImageUrl: '/students/SantiagoHernandez.jpeg',
+  },
+  {
+    id: STUDENT_ID.SARA_ABDALI,
+    twitterHandle: 'sara__abdali',
+    profileImageUrl: '/students/SaraAbdali.jfif',
+    projectId: PROJECT_ID.CONVEXSWAP,
   },
   {
     id: STUDENT_ID.VARUN_SHENOY,

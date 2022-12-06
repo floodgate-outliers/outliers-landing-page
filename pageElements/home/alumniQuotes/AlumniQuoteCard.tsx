@@ -15,6 +15,7 @@ export const AlumniQuoteCard: FC<AlumniQuote> = ({
       href={`https://twitter.com/${twitterHandle}`}
       target="_blank"
       rel="noreferrer"
+      className="block w-[700px] desktop:w-[600px] laptop:w-[500px] tablet:w-[400px] mobile:w-[325px]"
     >
       <CardWithShadow
         scale
@@ -25,7 +26,13 @@ export const AlumniQuoteCard: FC<AlumniQuote> = ({
         <div className="flex h-fit cursor-pointer flex-col gap-y-5 text-xl">
           <div className="flex flex-row gap-x-5">
             <div className="desktop:h-18 desktop:w-18 relative h-20 w-20 [&>img]:h-[inherit] [&>img]:w-[inherit] [&>img]:rounded-lg [&>img]:object-cover desktop:[&>img]:rounded-md">
-              <Image priority fill src={profileImageUrl} alt="profile" />
+              <Image
+                priority
+                fill
+                src={profileImageUrl}
+                alt="profile"
+                className="object-cover"
+              />
             </div>
             <div className="flex flex-col gap-y-1 font-bold">
               <p className="text-off-black">{id}</p>

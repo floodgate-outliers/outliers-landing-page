@@ -7,12 +7,12 @@ export interface AlumniQuote {
 }
 
 export const AlumniQuotesInfo: AlumniQuote[] = [
-  {
-    studentId: STUDENT_ID.SANTIAGO_HERNANDEZ,
-    date: 'July 15, 2021',
-    quote:
-      'I found people here that turned into great friends; people to start the next breakthrough company with, to chat about some niche new technology, or just to go on a hike and talk about life.',
-  },
+  // {
+  //   studentId: STUDENT_ID.SANTIAGO_HERNANDEZ,
+  //   date: 'July 15, 2021',
+  //   quote:
+  //     'I found people here that turned into great friends; people to start the next breakthrough company with, to chat about some niche new technology, or just to go on a hike and talk about life.',
+  // },
   {
     studentId: STUDENT_ID.KAILI_WANG,
     date: 'July 28, 2021',

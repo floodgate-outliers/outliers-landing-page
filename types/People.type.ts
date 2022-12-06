@@ -2,6 +2,7 @@ import { PROJECT_ID } from './Project.type';
 
 export enum STUDENT_ID {
   DANIEL_MARIN = 'Daniel Marin',
+  ERFAN_ROSTAMI = 'Erfan Rostami',
   JAN_DAMM = 'Jan Damm',
   JAN_RUTTINGER = 'Jan Ruttinger',
   JONGWON_PARK = 'Jongwon Park',
@@ -9,6 +10,7 @@ export enum STUDENT_ID {
   KAILI_WANG = 'Kaili Wang',
   MICHAEL_DAIGLER = 'Michael Daigler',
   SANTIAGO_HERNANDEZ = 'Santiago Hernandez',
+  SARA_ABDALI = 'Sara Abdali',
   VARUN_SHENOY = 'Varun Shenoy',
   WENITTE_APIOU = 'Wenitte Apiou',
   YUMA_TANAKA = 'Yuma Tanaka',
@@ -16,7 +18,6 @@ export enum STUDENT_ID {
 
 export interface MentorInfo {
   profileImageURL: string;
-  colorProfileImageURL: string;
   name: string;
   company: string;
   bio: string;

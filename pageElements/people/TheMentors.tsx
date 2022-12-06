@@ -51,14 +51,7 @@ export const TheMentors: FC = () => {
       </h1>
       <div className="flex flex-row justify-between gap-x-5 tablet:flex-col tablet:gap-y-20">
         {TheMentorsInfos.map(
-          ({
-            profileImageURL,
-            colorProfileImageURL,
-            name,
-            company,
-            bio,
-            twitterHandle,
-          }) => {
+          ({ profileImageURL, name, company, bio, twitterHandle }) => {
             return (
               <motion.div
                 initial="initial"
