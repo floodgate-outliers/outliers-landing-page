@@ -19,6 +19,7 @@ const FeaturedProjectIds: PROJECT_ID[] = [
   PROJECT_ID.NORDLE,
   PROJECT_ID.DATALEAP,
   PROJECT_ID.CONVEXSWAP,
+  PROJECT_ID.REVERSIBILITY_ON_ETHEREUM,
 ];
 const FeaturedProjectsInfo: ProjectInfo[] = FeaturedProjectIds.map((p) =>
   getProjectInfoById(p)

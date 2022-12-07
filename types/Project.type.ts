@@ -9,6 +9,7 @@ export enum PROJECT_ID {
   DATALEAP = 'dataleap',
   NEXUS = 'nexus',
   NORDLE = 'nordle',
+  REVERSIBILITY_ON_ETHEREUM = 'reversibility_on_ethereum',
   THUNDER_LIZARD_NFT = 'thunder_lizard_nft',
   UNFOLD = 'unfold',
 }

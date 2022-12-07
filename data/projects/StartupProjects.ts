@@ -15,16 +15,19 @@ export const StartupProjects: ProjectInfo[] = [
     coverImage: '/projects/dataleap/DataleapMainImage.png',
   },
   {
-    id: PROJECT_ID.DAEDALUS,
+    id: PROJECT_ID.REVERSIBILITY_ON_ETHEREUM,
     projectType: PROJECT_TYPE.STARTUP,
-    projectName: 'Daedalus',
-    builders: [STUDENT_ID.WENITTE_APIOU],
-    oneLiner: 'Build custom trading bots without writing a single line of code',
-    mainImage: '/projects/daedalus/DaedalusMainImage.png',
+    projectName: 'ERC20R and ERC721R: Theft Reversibility on Ethereum',
+    builders: [STUDENT_ID.KAILI_WANG],
+    oneLiner:
+      'Research work on how to programmatically recover thefts and hacks on Ethereum via a new token standard',
+    mainImage:
+      '/projects/reversibilityOnEthereum/ReversibilityOnEthereumMainImage.png',
     description:
-      'Algorithmic trading should not be accessible to only hedge funds and elite programmers. Daedalus is working to democratize access to these powerful tools for everyday people. Quickly and easily create whatever trading strategy you have in mind. Currently supporting technical and social indicators, with Daedalus you will be able to trade based off the weather, political climate, charts, when Elon Musk tweets about some coin, or really whatever condition you can think of.',
-    projectLink: 'https://daedalusfi.com/',
-    coverImage: '/projects/daedalus/DaedalusMainImage.png',
+      'Blockchains are meant to be persistent: posted transactions are immutable and cannot be changed. As a result, when a theft takes place, there are limited options for recovering the disputed transaction, and this has led to significant losses in the blockchain ecosystem. In this paper we propose token standard extensions of ERC-20 and ERC-721 with support for recoverability. With these new standards, a transaction is eligible for reversal for a short period of time after it has been posted on chain. After the dispute period has elapsed, the transaction can no longer be reversed. Within the short dispute period, a sender can request to reverse a transaction by convincing a decentralized set of judges to first freeze the disputed assets, and then later convincing them to reverse the transaction. Supporting recoverability in the context of ERC-20 and ERC-721 raises many interesting technical challenges. This paper explores these challenges and proposes a design for our ERC-20R and ERC-721R standards, the reversible versions of ERC-20 and ERC721.',
+    projectLink: 'https://arxiv.org/pdf/2208.00543.pdf',
+    coverImage:
+      '/projects/reversibilityOnEthereum/ReversibilityOnEthereumCoverImage.png',
   },
   {
     id: PROJECT_ID.NEXUS,
