@@ -64,7 +64,7 @@ export const ProjectDetails: FC<ProjectInfo> = ({
     });
 
     return twitterHandlesIncluded.map((nameComponent, index) =>
-      index === builders.length - 1 ? <>, {nameComponent}</> : nameComponent
+      index === 0 ? nameComponent : <>, {nameComponent}</>
     );
   };
 

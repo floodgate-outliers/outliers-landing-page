@@ -66,7 +66,7 @@ export const TheMentors: FC = () => {
                       src={profileImageURL}
                       alt="profile"
                       fill
-                      className="border-4 border-off-black object-cover object-top tablet:border-2 "
+                      className="border-4 border-off-black object-cover object-top grayscale transition-all hover:grayscale-0 tablet:border-2"
                     />
                   </div>
                   <div>

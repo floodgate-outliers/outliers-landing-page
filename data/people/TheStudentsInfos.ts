@@ -56,7 +56,8 @@ export const TheStudentsInfos: StudentInfo[] = [
   {
     id: STUDENT_ID.KAILI_WANG,
     twitterHandle: 'kaili_jenner',
-    profileImageUrl: '/students/KailiWang.jpeg',
+    profileImageUrl: '/students/KailiWang.JPG',
+    projectId: PROJECT_ID.REVERSIBILITY_ON_ETHEREUM,
   },
   {
     id: STUDENT_ID.MICHAEL_DAIGLER,
@@ -84,7 +85,7 @@ export const TheStudentsInfos: StudentInfo[] = [
     id: STUDENT_ID.WENITTE_APIOU,
     twitterHandle: 'wenitte0',
     profileImageUrl: '/students/WenitteApiou.jfif',
-    projectId: PROJECT_ID.DAEDALUS,
+    // projectId: PROJECT_ID.DAEDALUS,
   },
   {
     id: STUDENT_ID.YUMA_TANAKA,
