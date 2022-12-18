@@ -62,7 +62,7 @@ export const BasicNavbar: FC = () => {
           );
         })}
         <a
-          href={process.env.APPLICATION_LINK}
+          href={process.env.NEXT_PUBLIC_APPLICATION_LINK}
           target="_blank"
           rel="noreferrer"
           className="tablet:hidden"
