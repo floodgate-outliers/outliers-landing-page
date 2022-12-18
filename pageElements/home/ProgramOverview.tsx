@@ -8,7 +8,7 @@ const programDetails: { header: string; info: string }[] = [
   },
   {
     header: '📅 Dates',
-    info: 'June - August 2023',
+    info: 'June - August 2023, Tuesday & Thursday from 5:00-6:30pm PT',
   },
   {
     header: '📝 Application',
@@ -16,11 +16,11 @@ const programDetails: { header: string; info: string }[] = [
   },
   {
     header: '🏦 Structure',
-    info: 'Learn(week_0 - week_3) + Build(week_4-week_9) + Retreat(week_10)',
+    info: 'Learn(week_0 - week_3) + Build(week_4 - week_9) + Retreat(week_10)',
   },
   {
     header: '🦾 Commitment',
-    info: 'Speakers + Readings + Homework',
+    info: 'Sessions + Reading + Assignments + Final Build Project',
   },
 ];
 
@@ -42,32 +42,30 @@ export const ProgramOverview: FC = () => {
         whileHover="hover"
         className="text-4xl tablet:text-3xl"
       >
-        "Outliers is a 10-week, summer program to empower{' '}
-        <motion.span
-          variants={emphasisVariants}
-          className="font-bold underline"
-        >
-          exceptional
-        </motion.span>{' '}
-        young builders in crypto."
+        "A cornerstone of Outliers is our 10-week, summer program designed to
+        educate and empower exceptional young builders in crypto."
       </motion.p>
-      <motion.p initial="initial" whileHover="hover" className="mt-10">
-        More importantly, Outliers is an engaged community of builders from
-        across the world who come together to learn and build. We facilitate
-        education and mentorship from top industry leaders, and provide
-        resources to build and scale the <br className="hidden mobile:inline" />
+      <motion.p
+        initial="initial"
+        whileHover="hover"
+        className="mt-10 mr-20 desktop:mr-4"
+      >
+        The Outliers part-time summer program serves as the launchpad for new
+        Outliers entering the community. We facilitate education and mentorship
+        from top industry leaders that teach you how to build and scale the{' '}
         <motion.span
           variants={emphasisVariants}
           className="font-bold underline"
         >
           next Web3 breakthrough
         </motion.span>
-        .
+        . By the end of this program, you will have a solid foundation in both
+        crypto AND entrepreneurship.
       </motion.p>
-      <div className="mt-10 flex flex-col gap-y-3 text-xl">
+      <div className="mt-16 flex flex-col gap-y-5 text-xl mobile:gap-y-10 mobile:text-2xl">
         {programDetails.map(({ header, info }, index) => (
           <p key={index}>
-            <span className="font-bold">[{header}]</span>
+            <span className="text-2xl font-bold">{header}</span>
             <br />
             {info}
           </p>
