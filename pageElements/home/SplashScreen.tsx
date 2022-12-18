@@ -1,18 +1,34 @@
 import { BasicButton } from 'components/buttons/BasicButton';
+import Image from 'next/image';
 import { FC } from 'react';
 
 export const SplashScreen: FC = () => {
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col gap-y-5 text-4xl  mobile:gap-y-3 mobile:text-3xl">
-        <p>Floodgate</p>
-        <p>Standard Crypto</p>
+      <div className="mt-32 flex flex-col justify-end gap-y-5 tablet:mt-48 tablet:gap-y-10">
+        <h1 className="text-10xl font-bold tablet:text-9xl">Outliers</h1>
       </div>
-      <div className="my-14 flex flex-col justify-end gap-y-5 mobile:my-10 mobile:gap-y-10">
-        <h1 className="text-8xl font-bold mobile:text-7xl">Outliers</h1>
-        <h2 className="text-4xl mobile:text-3xl">
-          10-Week Program for Exceptional Young Builders
-        </h2>
+      <div className="mb-24 mt-2 flex flex-row items-center gap-x-5 tablet:mt-5 tablet:gap-x-3">
+        <p className="mr-2 text-3xl font-bold">By</p>
+        <div className="relative -mt-5 h-[100px] w-[175px] tablet:h-[40px] tablet:w-[100px]">
+          <Image
+            priority
+            fill
+            src="/FloodgateLogo.png"
+            alt=""
+            className="object-contain"
+          />
+        </div>
+        <p className="text-2xl font-bold">&#10006;</p>
+        <div className="relative h-[100px] w-[175px] tablet:h-[40px] tablet:w-[100px]">
+          <Image
+            priority
+            fill
+            src="/StandardCryptoLogo.png"
+            alt=""
+            className="object-contain"
+          />
+        </div>
       </div>
       <div>
         <a href={process.env.APPLICATION_LINK} target="_blank" rel="noreferrer">
