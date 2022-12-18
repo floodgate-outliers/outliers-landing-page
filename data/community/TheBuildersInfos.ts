@@ -1,20 +1,5 @@
-import { BuilderInfo, BUILDER_ID } from 'types/Community';
-import { PROJECT_ID } from 'types/Project.type';
-
-export const getBuilderInfoById = (builderId: BUILDER_ID): BuilderInfo => {
-  return TheBuildersInfos.find((s) => s.id === builderId)!;
-};
-
-// Format the names ["Alice", "Bob", "Carol"] => Alice, Bob, and Carol
-export const formatBuildersNames = (names: string[]): string[] => {
-  if (names.length === 1) {
-    return names;
-  } else {
-    return names.map((name, index) =>
-      index === names.length - 1 ? `${name}` : `${name}, `
-    );
-  }
-};
+import { BUILDER_ID, PROJECT_ID } from 'data/Ids';
+import { BuilderInfo } from 'types/Community';
 
 export const TheBuildersInfos: BuilderInfo[] = [
   {
@@ -76,6 +61,12 @@ export const TheBuildersInfos: BuilderInfo[] = [
     projectId: PROJECT_ID.CONVEXSWAP,
   },
   {
+    id: BUILDER_ID.ANONYMOUS_SMALL_BRAIN,
+    twitterHandle: '0xsmallbrain',
+    profileImageUrl: '/builders/AnonymousSmallBrain.png',
+    projectId: PROJECT_ID.SMALL_BRAIN_GAMES,
+  },
+  {
     id: BUILDER_ID.VARUN_SHENOY,
     twitterHandle: 'varunshenoy_',
     profileImageUrl: '/builders/VarunShenoy.jpg',
@@ -94,3 +85,18 @@ export const TheBuildersInfos: BuilderInfo[] = [
     projectId: PROJECT_ID.NORDLE,
   },
 ];
+
+export const getBuilderInfoById = (builderId: BUILDER_ID): BuilderInfo => {
+  return TheBuildersInfos.find((s) => s.id === builderId)!;
+};
+
+// Format the names ["Alice", "Bob", "Carol"] => Alice, Bob, and Carol
+export const formatBuildersNames = (names: string[]): string[] => {
+  if (names.length === 1) {
+    return names;
+  } else {
+    return names.map((name, index) =>
+      index === names.length - 1 ? `${name}` : `${name}, `
+    );
+  }
+};

@@ -41,7 +41,9 @@ export const FeaturedProjectCard: FC<ProjectInfo> = ({
             />
           </div>
           <div className="flex flex-col tablet:mt-5">
-            <p className="text-4xl underline tablet:text-3xl">{projectName}</p>
+            <p className="text-4xl underline line-clamp-1 tablet:text-3xl">
+              {projectName}
+            </p>
             <p className="mt-1 text-lg">{formatBuildersNames(builders)}</p>
             <p className="mt-10 text-xl line-clamp-6 tablet:hidden">
               {description}

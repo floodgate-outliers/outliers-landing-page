@@ -19,7 +19,7 @@ export const TheMentorsInfos: MentorInfo[] = [
     profileImageURL: '/mentors/TylerWhittle.jpg',
     name: 'Tyler Whittle',
     company: 'Floodgate',
-    bio: 'Tyler Whittle is a Senior Associate at Floodgate. Additionally, he has been one of the co-leads at DAO Masters since its inception and leads their research arm. Tyler received his PhD in Entrepreneurship & Organizations from Stanford University.',
+    bio: 'Tyler Whittle is a Senior Associate at Floodgate where he created the Outliers and Reactor programs for student founders. Tyler received his PhD in Entrepreneurship & Organizations from Stanford University and worked on nuclear fusion reactors.',
     twitterHandle: 'dr_dao_',
   },
   {

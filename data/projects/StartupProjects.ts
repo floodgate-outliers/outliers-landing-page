@@ -1,5 +1,5 @@
-import { BUILDER_ID } from 'types/Community';
-import { ProjectInfo, PROJECT_ID, PROJECT_TYPE } from 'types/Project.type';
+import { PROJECT_ID, BUILDER_ID } from 'data/Ids';
+import { ProjectInfo, PROJECT_TYPE } from 'types/Project.type';
 
 export const StartupProjects: ProjectInfo[] = [
   {
@@ -40,41 +40,5 @@ export const StartupProjects: ProjectInfo[] = [
       'Nexus is a network of externally-aware, self-executing, replicated state machines, designed to hyperscale Ethereum with enhanced computation, storage, and I/O. Decentralized Cloud Networks (DCNs), or simply Clouds, are externally-aware, self-executing, replicated state machines. They provide blockchain applications with dedicated off-chain computational power, replicated storage and event-driven I/O capabilities with external systems.',
     projectLink: 'https://www.nexus.xyz/',
     coverImage: '/projects/nexus/NexusMainImage.png',
-  },
-  {
-    id: PROJECT_ID.DATALEAP,
-    projectType: PROJECT_TYPE.STARTUP,
-    projectName: 'Dataleap',
-    builders: [BUILDER_ID.JAN_RUTTINGER, BUILDER_ID.JAN_DAMM],
-    oneLiner: 'The home for web3 data engineers',
-    mainImage: '/projects/dataleap/DataleapMainImage.png',
-    description:
-      'Dataleap is a fully managed data warehouse for web3. We reduce the time needed to build customized data pipelines from weeks to minutes.',
-    projectLink: 'https://www.dataleap.dev/',
-    coverImage: '/projects/dataleap/DataleapMainImage.png',
-  },
-  {
-    id: PROJECT_ID.DATALEAP,
-    projectType: PROJECT_TYPE.STARTUP,
-    projectName: 'Dataleap',
-    builders: [BUILDER_ID.JAN_RUTTINGER, BUILDER_ID.JAN_DAMM],
-    oneLiner: 'The home for web3 data engineers',
-    mainImage: '/projects/dataleap/DataleapMainImage.png',
-    description:
-      'Dataleap is a fully managed data warehouse for web3. We reduce the time needed to build customized data pipelines from weeks to minutes.',
-    projectLink: 'https://www.dataleap.dev/',
-    coverImage: '/projects/dataleap/DataleapMainImage.png',
-  },
-  {
-    id: PROJECT_ID.DATALEAP,
-    projectType: PROJECT_TYPE.STARTUP,
-    projectName: 'Dataleap',
-    builders: [BUILDER_ID.JAN_RUTTINGER, BUILDER_ID.JAN_DAMM],
-    oneLiner: 'The home for web3 data engineers',
-    mainImage: '/projects/dataleap/DataleapMainImage.png',
-    description:
-      'Dataleap is a fully managed data warehouse for web3. We reduce the time needed to build customized data pipelines from weeks to minutes.',
-    projectLink: 'https://www.dataleap.dev/',
-    coverImage: '/projects/dataleap/DataleapMainImage.png',
   },
 ];

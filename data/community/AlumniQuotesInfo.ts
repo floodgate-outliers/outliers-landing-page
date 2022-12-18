@@ -1,4 +1,4 @@
-import { BUILDER_ID } from 'types/Community';
+import { BUILDER_ID } from 'data/Ids';
 
 export interface AlumniQuote {
   builderId: BUILDER_ID;

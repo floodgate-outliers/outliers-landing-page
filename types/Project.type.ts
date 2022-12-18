@@ -1,18 +1,4 @@
-// Ids of all of the projects
-
-import { BUILDER_ID } from './Community';
-
-// Note the ids also act as URL paths to the project details
-export enum PROJECT_ID {
-  CONVEXSWAP = 'convexswap',
-  DAEDALUS = 'daedalus',
-  DATALEAP = 'dataleap',
-  NEXUS = 'nexus',
-  NORDLE = 'nordle',
-  REVERSIBILITY_ON_ETHEREUM = 'reversibility_on_ethereum',
-  THUNDER_LIZARD_NFT = 'thunder_lizard_nft',
-  UNFOLD = 'unfold',
-}
+import { BUILDER_ID, PROJECT_ID } from 'data/Ids';
 
 export enum PROJECT_TYPE {
   SUMMER = 'summer',

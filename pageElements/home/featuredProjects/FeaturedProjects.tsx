@@ -8,11 +8,12 @@ import { Mousewheel } from 'swiper';
 
 import Link from 'next/link';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
-import { ProjectInfo, PROJECT_ID } from 'types/Project.type';
+import { ProjectInfo } from 'types/Project.type';
 import {
   getProjectInfoById,
   SummerProjects,
 } from 'data/projects/SummerProjects';
+import { PROJECT_ID } from 'data/Ids';
 
 const FeaturedProjectIds: PROJECT_ID[] = [
   PROJECT_ID.THUNDER_LIZARD_NFT,

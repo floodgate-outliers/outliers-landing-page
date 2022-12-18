@@ -7,11 +7,12 @@ import { getProjectInfoById } from 'data/projects/SummerProjects';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC, useEffect, useState } from 'react';
-import { BuilderInfo, BUILDER_ID } from 'types/Community';
-import { ProjectInfo, PROJECT_ID } from 'types/Project.type';
+import { BuilderInfo } from 'types/Community';
+import { ProjectInfo } from 'types/Project.type';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import clsx from 'clsx';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
+import { PROJECT_ID } from 'data/Ids';
 
 // Get the builders with a project
 // Limit to the first 12
@@ -47,7 +48,7 @@ export const TheBuilders: FC = () => {
 
   return (
     <div>
-      <h2 className="title-header">The Builders</h2>
+      <h2 className="title-header">The Outliers</h2>
       <div className="grid grid-cols-6 justify-between gap-5 laptop:grid-cols-4">
         {BuildersWithProjects.map(({ id, profileImageUrl, projectId }) => (
           <div
@@ -94,7 +95,7 @@ export const TheBuilders: FC = () => {
               >
                 <div className="py-5 px-5 tablet:py-2 tablet:px-2">
                   <div className="flex flex-row items-center gap-x-10">
-                    <div className="relative h-20 w-20 border-2 border-off-black">
+                    <div className="relative h-20 w-20 flex-shrink-0 border-2 border-off-black">
                       <Image
                         priority
                         fill
@@ -104,7 +105,7 @@ export const TheBuilders: FC = () => {
                       />
                     </div>
                     <div>
-                      <p className="text-4xl font-bold">
+                      <p className="text-4xl font-bold line-clamp-2">
                         {selectedProjectData.projectName}
                       </p>
                       <p className="mt-3 text-xl tablet:mt-1">
