@@ -6,7 +6,7 @@ export default function CommunityPage() {
   return (
     <div className="page-container pb-20">
       <h2 className="title-header">The Community</h2>
-      <p className="text-4xl italic tablet:text-2xl">
+      <p className="text-2xl italic tablet:text-2xl">
         Outliers is a community of exceptional builders lead by world-class
         mentors. Here is a snapshot of the people that make it happen
       </p>

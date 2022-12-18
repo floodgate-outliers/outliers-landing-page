@@ -68,7 +68,7 @@ export const BasicNavbar: FC = () => {
           className="tablet:hidden"
         >
           <BasicButton type="button" color="blue">
-            <p className="text-2xl text-off-white tablet:-my-1 tablet:-mx-2 tablet:text-lg">
+            <p className="text-off-white tablet:-my-1 tablet:-mx-2 tablet:text-lg">
               Apply
             </p>
           </BasicButton>

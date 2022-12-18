@@ -89,7 +89,7 @@ export const QuestionsAnswers: FC = () => {
               }
               className="cursor-pointer px-4 py-5 [&:not(:last-child)]:border-b-4 tablet:[&:not(:last-child)]:border-b-2"
             >
-              <p className="text-3xl font-bold tablet:text-2xl">{question}</p>
+              <p className="text-2xl font-bold tablet:text-xl">{question}</p>
 
               <motion.div
                 variants={answerVariants}
@@ -97,7 +97,7 @@ export const QuestionsAnswers: FC = () => {
                 animate={showAnswerIndex === index ? 'show' : 'hidden'}
                 className="overflow-hidden"
               >
-                <p className="text-2xl">{answer}</p>
+                <p className="text-xl">{answer}</p>
               </motion.div>
             </div>
           );

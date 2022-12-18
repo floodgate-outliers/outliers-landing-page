@@ -23,7 +23,7 @@ export const HackProjects: ProjectInfo[] = [
       'Small Brain Games builds fully on-chain, open source, casual games.',
     mainImage: '/projects/smallBrainGames/SmallBrainGamesMainImage.png',
     description:
-      'Small Brain Games builds games that are:\n1. Are open source and fully on-chain\n2. Are for anybody–not just crypto-native users\n3. Are about persistence and composability (less so than ownership)\nThe first game is Words3, a PvP word game on Optimism. See results at: words3.xyz/stats\nWhy are we doing this? There’s a tension present in web3 go to markets–it’s easier to get early adopters/people excited about the tech, but every “proven” go to market (tokens, pfp drop, etc.) have misaligned incentives. The best way to figure this out is to do the opposite–get as many promising shots on goal as possible.',
+      'Small Brain Games builds games that are:\n\n1. Are open source and fully on-chain\n\n2. Are for anybody–not just crypto-native users\n\n3. Are about persistence and composability (less so than ownership)\n\nThe first game is Words3, a PvP word game on Optimism. See results at: words3.xyz/stats\n\nWhy are we doing this? There’s a tension present in web3 go to markets–it’s easier to get early adopters/people excited about the tech, but every “proven” go to market (tokens, pfp drop, etc.) have misaligned incentives. The best way to figure this out is to do the opposite–get as many promising shots on goal as possible.',
     projectLink: 'https://words3.xyz',
     coverImage: '/projects/smallBrainGames/SmallBrainGamesCoverImage.png',
   },

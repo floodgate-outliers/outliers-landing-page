@@ -43,7 +43,7 @@ export const BasicButton: FC<BasicButtonProps> = ({
       disabled={disabled}
       onClick={onClick}
       className={clsx(
-        'px-8 py-3 text-2xl',
+        'px-8 py-3 text-xl',
         color === 'blue' ? 'bg-floodgate text-off-white' : 'bg-transparent'
       )}
     >

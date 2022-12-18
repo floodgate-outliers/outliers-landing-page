@@ -49,80 +49,79 @@ export const TheBuilders: FC = () => {
   return (
     <div>
       <h2 className="title-header">The Outliers</h2>
-      <div className="grid grid-cols-6 justify-between gap-5 laptop:grid-cols-4">
-        {BuildersWithProjects.map(({ id, profileImageUrl, projectId }) => (
-          <div
-            key={id}
-            onClick={() => setSelectedProjectId(projectId!)}
-            className="cursor-pointer"
-          >
+      <div className="grid grid-cols-2 gap-x-20 laptop:grid-cols-1">
+        <div className="grid grid-cols-4 justify-between gap-5">
+          {BuildersWithProjects.map(({ id, profileImageUrl, projectId }) => (
             <div
-              className={clsx(
-                'relative h-60 w-full border-4 border-off-black transition-all desktop:h-64 laptop:h-80 tablet:h-48 tablet:border-2 mobile:h-36',
-                selectedProjectData.builders.includes(id)
-                  ? 'grayscale-0'
-                  : 'grayscale'
-              )}
+              key={id}
+              onClick={() => setSelectedProjectId(projectId!)}
+              className="cursor-pointer"
             >
-              <Image
-                priority
-                fill
-                src={profileImageUrl}
-                alt=""
-                className="object-cover"
-              />
-            </div>
-          </div>
-        ))}
-        <p className="my-auto ml-3 text-5xl font-bold tablet:text-3xl">...</p>
-      </div>
-      <div className="mt-10">
-        <AnimatePresence mode="wait">
-          <motion.div
-            variants={ProjectCardVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            key={selectedProjectId}
-          >
-            <Link
-              href={`/projects/${selectedProjectData.id}`}
-              className="mx-auto block w-fit"
-            >
-              <CardWithShadow
-                fullWidth={isMobile || isTablet}
-                animateWhile="hover"
+              <div
+                className={clsx(
+                  'relative h-44 w-full border-4 border-off-black transition-all desktop:h-36 laptop:h-72 tablet:h-48 tablet:border-2 mobile:h-36',
+                  selectedProjectData.builders.includes(id)
+                    ? 'grayscale-0'
+                    : 'grayscale'
+                )}
               >
-                <div className="py-5 px-5 tablet:py-2 tablet:px-2">
-                  <div className="flex flex-row items-center gap-x-10">
-                    <div className="relative h-20 w-20 flex-shrink-0 border-2 border-off-black">
-                      <Image
-                        priority
-                        fill
-                        src={selectedProjectData.coverImage}
-                        alt=""
-                        className="object-cover"
-                      />
+                <Image
+                  priority
+                  fill
+                  src={profileImageUrl}
+                  alt=""
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          ))}
+          <p className="my-auto ml-3 text-5xl font-bold laptop:text-3xl">...</p>
+        </div>
+        <div className="laptop:mt-10">
+          <AnimatePresence mode="wait">
+            <motion.div
+              variants={ProjectCardVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              key={selectedProjectId}
+            >
+              <Link
+                href={`/projects/${selectedProjectData.id}`}
+                className="mx-auto block w-full"
+              >
+                <CardWithShadow fullWidth animateWhile="hover">
+                  <div className="py-5 px-5 tablet:py-2 tablet:px-2">
+                    <div className="flex flex-row items-center gap-x-10">
+                      <div className="relative h-24 w-24 flex-shrink-0 border-2 border-off-black">
+                        <Image
+                          priority
+                          fill
+                          src={selectedProjectData.coverImage}
+                          alt=""
+                          className="object-cover"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-2xl font-bold line-clamp-2">
+                          {selectedProjectData.projectName}
+                        </p>
+                        <p className="mt-1 text-lg tablet:mt-1">
+                          {formatBuildersNames(selectedProjectData.builders)}
+                        </p>
+                      </div>
                     </div>
                     <div>
-                      <p className="text-4xl font-bold line-clamp-2">
-                        {selectedProjectData.projectName}
-                      </p>
-                      <p className="mt-3 text-xl tablet:mt-1">
-                        {formatBuildersNames(selectedProjectData.builders)}
+                      <p className="mt-10 text-xl line-clamp-4 tablet:mt-5">
+                        {selectedProjectData.description}
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <p className="mt-10 text-2xl tablet:mt-5">
-                      "{selectedProjectData.oneLiner}"
-                    </p>
-                  </div>
-                </div>
-              </CardWithShadow>
-            </Link>
-          </motion.div>
-        </AnimatePresence>
+                </CardWithShadow>
+              </Link>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );

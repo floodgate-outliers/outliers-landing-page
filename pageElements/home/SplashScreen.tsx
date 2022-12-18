@@ -1,5 +1,6 @@
 import { BasicButton } from 'components/buttons/BasicButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 
 export const SplashScreen: FC = () => {
@@ -12,7 +13,8 @@ export const SplashScreen: FC = () => {
         <p className="text-4xl mobile:text-2xl">
           Empowering exceptional young builders in crypto{' '}
           <br className="tablet:hidden" />
-          through community and education
+          through <a href="#community">community</a> and{' '}
+          <a href="#program">education</a>
         </p>
       </div>
       <div className="mb-16 flex flex-row items-center gap-x-5 tablet:gap-x-3">

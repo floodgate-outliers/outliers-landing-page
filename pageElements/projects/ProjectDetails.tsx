@@ -91,7 +91,7 @@ export const ProjectDetails: FC<ProjectInfo> = ({
           />
         </motion.div>
         <div className="flex flex-col items-start">
-          <h2 className="mb-0 text-5xl font-bold tablet:text-3xl">
+          <h2 className="mb-0 text-4xl font-bold tablet:text-3xl">
             <motion.span
               variants={ProjectNameVariants}
               initial="initial"
@@ -100,13 +100,13 @@ export const ProjectDetails: FC<ProjectInfo> = ({
             >
               {projectName}
             </motion.span>{' '}
-            <span className="text-2xl text-gray">({projectType})</span>
+            {/* <span className="text-2xl text-gray">({projectType})</span> */}
           </h2>
-          <div className="mt-5 text-xl">{buildersNamesFormatted()}</div>
+          <div className="mt-5 text-xl">- {buildersNamesFormatted()}</div>
         </div>
       </a>
-
-      <p className="mt-20 text-3xl font-bold tablet:text-2xl">"{oneLiner}"</p>
+      <hr className="header-divider" />
+      <p className="text-2xl font-bold tablet:text-2xl">"{oneLiner}"</p>
       <hr className="header-divider" />
       <div className="mt-20 flex flex-row items-center gap-x-20 gap-y-20 tablet:flex-col">
         <div className="relative h-[40rem] w-[40rem] flex-shrink-0 border-4 border-off-black desktop:h-[35rem] desktop:w-[35rem] tablet:border-2">
@@ -118,7 +118,7 @@ export const ProjectDetails: FC<ProjectInfo> = ({
             className="object-cover"
           />
         </div>
-        <p className="text-2xl">{description}</p>
+        <p className="whitespace-pre-wrap text-xl">{description}</p>
       </div>
     </div>
   );

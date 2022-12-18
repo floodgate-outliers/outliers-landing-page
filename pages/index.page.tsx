@@ -18,12 +18,15 @@ export default function HomePage() {
         <FeaturedProjects />
       </div>
       <div
-        id="program-overview"
+        id="program"
         className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20"
       >
         <ProgramOverview />
       </div>
-      <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
+      <div
+        id="community"
+        className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20"
+      >
         <CommunityOverview />
       </div>
       <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
