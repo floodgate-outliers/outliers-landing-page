@@ -5,12 +5,19 @@ import { FC } from 'react';
 export const SplashScreen: FC = () => {
   return (
     <div className="flex flex-col">
-      <div className="mt-32 flex flex-col justify-end gap-y-5 tablet:mt-48 tablet:gap-y-10">
-        <h1 className="text-10xl font-bold tablet:text-9xl">Outliers</h1>
+      <div className="mt-24 flex flex-col justify-end gap-y-5 tablet:mt-28 tablet:gap-y-10">
+        <h1 className="text-10xl font-bold tablet:text-8xl">Out·li·ers</h1>
       </div>
-      <div className="mb-24 mt-2 flex flex-row items-center gap-x-5 tablet:mt-5 tablet:gap-x-3">
+      <div className="mt-2 mb-5 mobile:mb-10 mobile:pr-7">
+        <p className="text-4xl mobile:text-2xl">
+          Empowering exceptional young builders in crypto{' '}
+          <br className="tablet:hidden" />
+          through community and education
+        </p>
+      </div>
+      <div className="mb-16 flex flex-row items-center gap-x-5 tablet:gap-x-3">
         <p className="mr-2 text-3xl font-bold">By</p>
-        <div className="relative -mt-5 h-[100px] w-[175px] tablet:h-[40px] tablet:w-[100px]">
+        <div className="relative -mt-5 h-[100px] w-[150px] tablet:h-[40px] tablet:w-[100px]">
           <Image
             priority
             fill
@@ -19,8 +26,8 @@ export const SplashScreen: FC = () => {
             className="object-contain"
           />
         </div>
-        <p className="text-2xl font-bold">&#10006;</p>
-        <div className="relative h-[100px] w-[175px] tablet:h-[40px] tablet:w-[100px]">
+        <p className="text-lg font-bold">&#10006;</p>
+        <div className="relative h-[100px] w-[150px] tablet:h-[40px] tablet:w-[100px]">
           <Image
             priority
             fill
