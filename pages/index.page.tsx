@@ -6,7 +6,7 @@ import { FeaturedSpeakers } from '../pageElements/home/featuredSpeakers/Featured
 import { CoreValues } from '../pageElements/home/CoreValues';
 import { ProgramOverview } from '../pageElements/home/ProgramOverview';
 import { SplashScreen } from '../pageElements/home/SplashScreen';
-import { CommunityIntro } from 'pageElements/home/CommunityIntro';
+import { CommunityOverview } from 'pageElements/home/CommunityOverview';
 
 export default function HomePage() {
   return (
@@ -24,10 +24,10 @@ export default function HomePage() {
         <ProgramOverview />
       </div>
       <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
-        <CoreValues />
+        <CommunityOverview />
       </div>
       <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
-        <CommunityIntro />
+        <CoreValues />
       </div>
       <div className="overflow-hidden border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <FeaturedSpeakers />

@@ -35,20 +35,16 @@ const emphasisVariants: Variants = {
 
 export const ProgramOverview: FC = () => {
   return (
-    <div className="text-2xl">
+    <div>
       <h2 className="title-header">The Program</h2>
-      <motion.p
-        initial="initial"
-        whileHover="hover"
-        className="text-4xl tablet:text-3xl"
-      >
+      <p className="text-3xl">
         "A cornerstone of Outliers is our 10-week, summer program designed to
-        educate and empower exceptional young builders in crypto."
-      </motion.p>
+        educate and empower exceptional young builders in crypto."{' '}
+      </p>
       <motion.p
         initial="initial"
         whileHover="hover"
-        className="mt-10 mr-20 desktop:mr-4"
+        className="mt-10 mr-20 text-2xl desktop:mr-4"
       >
         The Outliers part-time summer program serves as the launchpad for new
         Outliers entering the community. We facilitate education and mentorship
@@ -64,11 +60,12 @@ export const ProgramOverview: FC = () => {
       </motion.p>
       <div className="mt-16 flex flex-col gap-y-5 text-xl mobile:gap-y-10 mobile:text-2xl">
         {programDetails.map(({ header, info }, index) => (
-          <p key={index}>
-            <span className="text-2xl font-bold">{header}</span>
-            <br />
-            {info}
-          </p>
+          <div key={index}>
+            <p className="text-2xl font-bold">{header}</p>
+            <div className="ml-12">
+              <p>{info}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
