@@ -1,6 +1,6 @@
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
-import { formatStudentsNames } from 'data/people/TheStudentsInfos';
+import { formatBuildersNames } from 'data/community/TheBuildersInfos';
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -42,7 +42,7 @@ export const FeaturedProjectCard: FC<ProjectInfo> = ({
           </div>
           <div className="flex flex-col tablet:mt-5">
             <p className="text-4xl underline tablet:text-3xl">{projectName}</p>
-            <p className="mt-1 text-lg">{formatStudentsNames(builders)}</p>
+            <p className="mt-1 text-lg">{formatBuildersNames(builders)}</p>
             <p className="mt-10 text-xl line-clamp-6 tablet:hidden">
               {description}
             </p>

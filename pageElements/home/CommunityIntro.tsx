@@ -42,16 +42,16 @@ export const CommunityIntro: FC = () => {
   const [autoplayInterval, setAutoplayInterval] = useState<
     NodeJS.Timer | undefined
   >(undefined);
-  const [showStudentsOrMentors, setShowStudentsOrMentors] = useState<
-    'mentors' | 'students'
-  >('students');
+  const [showBuildersOrMentors, setShowBuildersOrMentors] = useState<
+    'mentors' | 'builders'
+  >('builders');
 
   useMemo(() => {
     if (!isAutoplayDisabled) {
       setAutoplayInterval(
         setInterval(() => {
-          setShowStudentsOrMentors((currVal) =>
-            currVal === 'students' ? 'mentors' : 'students'
+          setShowBuildersOrMentors((currVal) =>
+            currVal === 'builders' ? 'mentors' : 'builders'
           );
         }, 2000)
       );
@@ -65,33 +65,33 @@ export const CommunityIntro: FC = () => {
       <h2 className="title-header">The Community</h2>
       <div className="w-fill relative flex h-[60rem] flex-row justify-center tablet:h-[30rem]">
         <div className="relative z-10 mt-6 h-fit px-2 py-2 text-6xl text-off-white tablet:mt-1 tablet:text-4xl mobile:mt-6">
-          <Link href="/people/students">
+          <Link href="/community/builders">
             <motion.span
               variants={TextVariants}
               initial="initial"
               animate={
-                showStudentsOrMentors === 'students' ? 'hover' : 'initial'
+                showBuildersOrMentors === 'builders' ? 'hover' : 'initial'
               }
               onHoverStart={() => {
                 setIsAutoplayDisabled(true);
-                setShowStudentsOrMentors('students');
+                setShowBuildersOrMentors('builders');
               }}
               className="cursor-pointer text-off-white"
             >
-              Students
+              Builders
             </motion.span>
           </Link>{' '}
           x{' '}
-          <Link href="/people/mentors">
+          <Link href="/community/mentors">
             <motion.span
               variants={TextVariants}
               initial="initial"
               animate={
-                showStudentsOrMentors === 'mentors' ? 'hover' : 'initial'
+                showBuildersOrMentors === 'mentors' ? 'hover' : 'initial'
               }
               onHoverStart={() => {
                 setIsAutoplayDisabled(true);
-                setShowStudentsOrMentors('mentors');
+                setShowBuildersOrMentors('mentors');
               }}
               className="cursor-pointer text-off-white"
             >
@@ -102,19 +102,19 @@ export const CommunityIntro: FC = () => {
         <Image
           priority
           fill
-          src="/community/StudentsAndMentors.jpg"
+          src="/community/BuildersAndMentors.jpg"
           alt="all"
           className="object-cover grayscale"
         />
         <motion.div
           variants={HiddenImageVariants}
           initial="hidden"
-          animate={showStudentsOrMentors === 'students' ? 'visible' : 'hidden'}
+          animate={showBuildersOrMentors === 'builders' ? 'visible' : 'hidden'}
         >
           <Image
             priority
             fill
-            src="/community/Students.jpg"
+            src="/community/Builders.jpg"
             alt="all"
             className="object-cover"
           />
@@ -122,7 +122,7 @@ export const CommunityIntro: FC = () => {
         <motion.div
           variants={HiddenImageVariants}
           initial="hidden"
-          animate={showStudentsOrMentors === 'mentors' ? 'visible' : 'hidden'}
+          animate={showBuildersOrMentors === 'mentors' ? 'visible' : 'hidden'}
         >
           <Image
             priority
@@ -134,7 +134,7 @@ export const CommunityIntro: FC = () => {
         </motion.div>
       </div>
       <div>
-        <Link href="/people">
+        <Link href="/community">
           <motion.p
             variants={MeetVariants}
             initial="initial"

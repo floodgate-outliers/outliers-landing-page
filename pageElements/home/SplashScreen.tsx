@@ -11,7 +11,7 @@ export const SplashScreen: FC = () => {
       <div className="my-14 flex flex-col justify-end gap-y-5 mobile:my-10 mobile:gap-y-10">
         <h1 className="text-8xl font-bold mobile:text-7xl">Outliers</h1>
         <h2 className="text-4xl mobile:text-3xl">
-          10-Week Program for Exceptional Builders
+          10-Week Program for Exceptional Young Builders
         </h2>
       </div>
       <div>

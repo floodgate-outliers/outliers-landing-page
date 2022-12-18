@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { TheMentorsInfos } from '../../data/people/TheMentorsInfo';
+import { TheMentorsInfos } from '../../data/community/TheMentorsInfo';
 
 const ImageVariants: Variants = {
   initial: {

@@ -25,7 +25,7 @@ const FAQs: FAQEntry[] = [
   {
     question: 'Do I need to be working on a startup to apply to Outliers?',
     answer:
-      'No! Outliers is not an accelerator/incubator. While many of our members are hacking away on side projects, we are selecting students based on their technical skills and aptitude for leadership. Outliers is not intended to be a replacement for an accelerator program.',
+      'No! Outliers is not an accelerator/incubator. While many of our members are hacking away on side projects, we are selecting builders based on their technical skills and aptitude for leadership. Outliers is not intended to be a replacement for an accelerator program.',
   },
   {
     question: 'Does Outliers provide funding?',

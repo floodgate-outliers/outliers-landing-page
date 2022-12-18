@@ -1,6 +1,6 @@
 import { PROJECT_ID } from './Project.type';
 
-export enum STUDENT_ID {
+export enum BUILDER_ID {
   DANIEL_MARIN = 'Daniel Marin',
   ERFAN_ROSTAMI = 'Erfan Rostami',
   JAN_DAMM = 'Jan Damm',
@@ -35,8 +35,8 @@ export interface SpeakerInfo {
   twitterHandle: string;
 }
 
-export interface StudentInfo {
-  id: STUDENT_ID;
+export interface BuilderInfo {
+  id: BUILDER_ID;
   profileImageUrl: string;
   twitterHandle: string;
   projectId?: PROJECT_ID;

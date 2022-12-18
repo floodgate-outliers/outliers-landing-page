@@ -11,8 +11,8 @@ type PageLink = {
 
 const pageLinks: PageLink[] = [
   {
-    text: 'PEOPLE',
-    link: '/people',
+    text: 'COMMUNITY',
+    link: '/community',
   },
   {
     text: 'PROJECTS',

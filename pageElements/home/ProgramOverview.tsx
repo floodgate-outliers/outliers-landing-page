@@ -4,7 +4,7 @@ import { motion, Variants } from 'framer-motion';
 const programDetails: { header: string; info: string }[] = [
   {
     header: '😎 Next Cohort',
-    info: '~20 Students Fom Around the World',
+    info: '~20 Builders Fom Around the World',
   },
   {
     header: '📅 Dates',
@@ -49,10 +49,10 @@ export const ProgramOverview: FC = () => {
         >
           exceptional
         </motion.span>{' '}
-        student builders in crypto."
+        young builders in crypto."
       </motion.p>
       <motion.p initial="initial" whileHover="hover" className="mt-10">
-        More importantly, Outliers is an engaged community of students from
+        More importantly, Outliers is an engaged community of builders from
         across the world who come together to learn and build. We facilitate
         education and mentorship from top industry leaders, and provide
         resources to build and scale the <br className="hidden mobile:inline" />

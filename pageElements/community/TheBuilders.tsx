@@ -1,21 +1,21 @@
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import {
-  formatStudentsNames,
-  TheStudentsInfos,
-} from 'data/people/TheStudentsInfos';
+  formatBuildersNames,
+  TheBuildersInfos,
+} from 'data/community/TheBuildersInfos';
 import { getProjectInfoById } from 'data/projects/SummerProjects';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC, useEffect, useState } from 'react';
-import { StudentInfo, STUDENT_ID } from 'types/People.type';
+import { BuilderInfo, BUILDER_ID } from 'types/Community';
 import { ProjectInfo, PROJECT_ID } from 'types/Project.type';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import clsx from 'clsx';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
-// Get the students with a project
+// Get the builders with a project
 // Limit to the first 12
-const StudentsWithProjects: StudentInfo[] = TheStudentsInfos.filter(
+const BuildersWithProjects: BuilderInfo[] = TheBuildersInfos.filter(
   (s) => s.projectId
 ).slice(0, 14);
 
@@ -28,17 +28,17 @@ const ProjectCardVariants: Variants = {
   },
 };
 
-export const TheStudents: FC = () => {
+export const TheBuilders: FC = () => {
   const { isTablet, isMobile } = useMediaQueryContext();
 
   const [selectedProjectId, setSelectedProjectId] = useState<PROJECT_ID>(
-    StudentsWithProjects[0].projectId!
+    BuildersWithProjects[0].projectId!
   );
   const [selectedProjectData, setSelectedProjectData] = useState<ProjectInfo>(
-    getProjectInfoById(StudentsWithProjects[0].projectId!)
+    getProjectInfoById(BuildersWithProjects[0].projectId!)
   );
 
-  // Whenever a new student is selected, their corresponding project Id will be set in selectedProjectId
+  // Whenever a new builder is selected, their corresponding project Id will be set in selectedProjectId
   // Subsequently, the data for the project must be extracted
   useEffect(() => {
     const newProjectData = getProjectInfoById(selectedProjectId);
@@ -47,9 +47,9 @@ export const TheStudents: FC = () => {
 
   return (
     <div>
-      <h2 className="title-header">The Students</h2>
+      <h2 className="title-header">The Builders</h2>
       <div className="grid grid-cols-6 justify-between gap-5 laptop:grid-cols-4">
-        {StudentsWithProjects.map(({ id, profileImageUrl, projectId }) => (
+        {BuildersWithProjects.map(({ id, profileImageUrl, projectId }) => (
           <div
             key={id}
             onClick={() => setSelectedProjectId(projectId!)}
@@ -108,7 +108,7 @@ export const TheStudents: FC = () => {
                         {selectedProjectData.projectName}
                       </p>
                       <p className="mt-3 text-xl tablet:mt-1">
-                        {formatStudentsNames(selectedProjectData.builders)}
+                        {formatBuildersNames(selectedProjectData.builders)}
                       </p>
                     </div>
                   </div>

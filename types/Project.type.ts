@@ -1,6 +1,6 @@
 // Ids of all of the projects
 
-import { STUDENT_ID } from './People.type';
+import { BUILDER_ID } from './Community';
 
 // Note the ids also act as URL paths to the project details
 export enum PROJECT_ID {
@@ -24,7 +24,7 @@ export interface ProjectInfo {
   id: PROJECT_ID;
   projectType: PROJECT_TYPE;
   projectName: string;
-  builders: STUDENT_ID[];
+  builders: BUILDER_ID[];
   oneLiner: string;
   description: string;
   coverImage: string;

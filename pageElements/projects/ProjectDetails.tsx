@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { ProjectInfo } from 'types/Project.type';
 import { motion, Variants } from 'framer-motion';
-import { getStudentInfoById } from 'data/people/TheStudentsInfos';
+import { getBuilderInfoById } from 'data/community/TheBuildersInfos';
 
 const ProjectNameVariants: Variants = {
   initial: {
@@ -47,7 +47,7 @@ export const ProjectDetails: FC<ProjectInfo> = ({
 
   const buildersNamesFormatted = () => {
     const twitterHandlesIncluded = builders.map((builder) => {
-      const { twitterHandle } = getStudentInfoById(builder);
+      const { twitterHandle } = getBuilderInfoById(builder);
       return (
         <motion.a
           key={builder}

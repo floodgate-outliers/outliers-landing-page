@@ -1,15 +1,15 @@
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { FC } from 'react';
-import { AlumniQuote } from '../../../data/people/AlumniQuotesInfo';
+import { AlumniQuote } from '../../../data/community/AlumniQuotesInfo';
 import Image from 'next/image';
-import { getStudentInfoById } from 'data/people/TheStudentsInfos';
+import { getBuilderInfoById } from 'data/community/TheBuildersInfos';
 
 export const AlumniQuoteCard: FC<AlumniQuote> = ({
-  studentId,
+  builderId,
   date,
   quote,
 }) => {
-  const { id, profileImageUrl, twitterHandle } = getStudentInfoById(studentId);
+  const { id, profileImageUrl, twitterHandle } = getBuilderInfoById(builderId);
   return (
     <a
       href={`https://twitter.com/${twitterHandle}`}

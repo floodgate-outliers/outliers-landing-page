@@ -1,4 +1,4 @@
-import { STUDENT_ID } from 'types/People.type';
+import { BUILDER_ID } from 'types/Community';
 import { ProjectInfo, PROJECT_ID, PROJECT_TYPE } from 'types/Project.type';
 
 export const StartupProjects: ProjectInfo[] = [
@@ -6,7 +6,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
+    builders: [BUILDER_ID.JAN_RUTTINGER, BUILDER_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
@@ -18,7 +18,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.REVERSIBILITY_ON_ETHEREUM,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'ERC20R and ERC721R: Theft Reversibility on Ethereum',
-    builders: [STUDENT_ID.KAILI_WANG],
+    builders: [BUILDER_ID.KAILI_WANG],
     oneLiner:
       'Research work on how to programmatically recover thefts and hacks on Ethereum via a new token standard',
     mainImage:
@@ -33,7 +33,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.NEXUS,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Nexus',
-    builders: [STUDENT_ID.DANIEL_MARIN],
+    builders: [BUILDER_ID.DANIEL_MARIN],
     oneLiner: 'Decentralized Cloud Networks, Hyperscaled Blockchains',
     mainImage: '/projects/nexus/NexusMainImage.png',
     description:
@@ -45,7 +45,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
+    builders: [BUILDER_ID.JAN_RUTTINGER, BUILDER_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
@@ -57,7 +57,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
+    builders: [BUILDER_ID.JAN_RUTTINGER, BUILDER_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
@@ -69,7 +69,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [STUDENT_ID.JAN_RUTTINGER, STUDENT_ID.JAN_DAMM],
+    builders: [BUILDER_ID.JAN_RUTTINGER, BUILDER_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:

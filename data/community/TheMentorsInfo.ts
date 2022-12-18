@@ -1,4 +1,4 @@
-import { MentorInfo } from 'types/People.type';
+import { MentorInfo } from 'types/Community';
 
 export const TheMentorsInfos: MentorInfo[] = [
   {
