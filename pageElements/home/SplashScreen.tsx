@@ -40,7 +40,11 @@ export const SplashScreen: FC = () => {
         </div>
       </div>
       <div>
-        <a href={process.env.APPLICATION_LINK} target="_blank" rel="noreferrer">
+        <a
+          href={process.env.NEXT_PUBLIC_APPLICATION_LINK}
+          target="_blank"
+          rel="noreferrer"
+        >
           <BasicButton type="button" color="blue" onClick={undefined}>
             Apply Now
           </BasicButton>
