@@ -54,7 +54,7 @@ export const BasicNavbar: FC = () => {
                 variants={LinkVariants}
                 initial="initial"
                 whileHover="hover"
-                className="cursor-pointer text-2xl tablet:text-lg"
+                className="cursor-pointer text-xl"
               >
                 {text}
               </motion.p>
@@ -68,9 +68,7 @@ export const BasicNavbar: FC = () => {
           className="tablet:hidden"
         >
           <BasicButton type="button" color="blue">
-            <p className="text-off-white tablet:-my-1 tablet:-mx-2 tablet:text-lg">
-              Apply
-            </p>
+            <p className="-my-1 -mx-2 text-off-white tablet:text-lg">Apply</p>
           </BasicButton>
         </a>
       </div>
