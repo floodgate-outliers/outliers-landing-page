@@ -69,7 +69,7 @@ export const SplashScreen: FC = () => {
           variants={TitleVariants}
           initial="hidden"
           animate="visible"
-          className="text-9xl font-bold tablet:text-8xl"
+          className="text-9xl font-bold tablet:text-7xl"
         >
           Out·li·ers
         </motion.h1>
