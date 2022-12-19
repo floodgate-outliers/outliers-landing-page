@@ -64,7 +64,7 @@ export const ProjectDetails: FC<ProjectInfo> = ({
 
     return twitterHandlesIncluded.map((nameComponent, index) =>
       index === 0 ? (
-        <Fragment key={index}>nameComponent</Fragment>
+        <Fragment key={index}>{nameComponent}</Fragment>
       ) : (
         <Fragment key={index}>, {nameComponent}</Fragment>
       )
