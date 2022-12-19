@@ -37,7 +37,7 @@ export const ProgramOverview: FC = () => {
   return (
     <div>
       <h2 className="title-header">The Program</h2>
-      <p className="text-3xl">
+      <p className="text-2xl font-bold">
         "A cornerstone of Outliers is our 10-week, summer program designed to
         educate and empower exceptional young builders in crypto."{' '}
       </p>

@@ -51,7 +51,7 @@ export const CommunityOverview: FC = () => {
   return (
     <div>
       <h2 className="title-header">The Community</h2>
-      <p className="text-3xl">
+      <p className="text-2xl font-bold">
         "The best part about Outliers is the A+ community of like-minded
         builders who are continuously pushing the bounds in crypto."{' '}
       </p>
