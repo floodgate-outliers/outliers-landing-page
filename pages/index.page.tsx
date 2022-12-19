@@ -6,7 +6,20 @@ import { FeaturedSpeakers } from '../pageElements/home/featuredSpeakers/Featured
 import { CoreValues } from '../pageElements/home/CoreValues';
 import { ProgramOverview } from '../pageElements/home/ProgramOverview';
 import { SplashScreen } from '../pageElements/home/SplashScreen';
-import { CommunityIntro } from 'pageElements/home/CommunityIntro';
+import { CommunityOverview } from 'pageElements/home/CommunityOverview';
+// import { motion, Variants } from 'framer-motion';
+
+// const SubSectionVariants: Variants = {
+//   hidden: {
+//     opacity: 0,
+//   },
+//   visible: {
+//     opacity: 1,
+//     transition: {
+//       delay: 3.5,
+//     },
+//   },
+// };
 
 export default function HomePage() {
   return (
@@ -14,20 +27,28 @@ export default function HomePage() {
       <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <SplashScreen />
       </div>
+      {/* <motion.div
+        variants={SubSectionVariants}
+        initial="hidden"
+        animate="visible"
+      > */}
       <div className="overflow-hidden border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <FeaturedProjects />
       </div>
       <div
-        id="program-overview"
+        id="program"
         className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20"
       >
         <ProgramOverview />
       </div>
-      <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
-        <CoreValues />
+      <div
+        id="community"
+        className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20"
+      >
+        <CommunityOverview />
       </div>
       <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
-        <CommunityIntro />
+        <CoreValues />
       </div>
       <div className="overflow-hidden border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <FeaturedSpeakers />
@@ -38,6 +59,7 @@ export default function HomePage() {
       <div className="px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <EndCTA />
       </div>
+      {/* </motion.div> */}
     </div>
   );
 }

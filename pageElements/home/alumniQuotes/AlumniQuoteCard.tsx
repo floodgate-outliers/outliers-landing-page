@@ -1,15 +1,15 @@
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { FC } from 'react';
-import { AlumniQuote } from '../../../data/people/AlumniQuotesInfo';
+import { AlumniQuote } from '../../../data/community/AlumniQuotesInfo';
 import Image from 'next/image';
-import { getStudentInfoById } from 'data/people/TheStudentsInfos';
+import { getBuilderInfoById } from 'data/community/TheBuildersInfos';
 
 export const AlumniQuoteCard: FC<AlumniQuote> = ({
-  studentId,
+  builderId,
   date,
   quote,
 }) => {
-  const { id, profileImageUrl, twitterHandle } = getStudentInfoById(studentId);
+  const { id, profileImageUrl, twitterHandle } = getBuilderInfoById(builderId);
   return (
     <a
       href={`https://twitter.com/${twitterHandle}`}
@@ -23,9 +23,9 @@ export const AlumniQuoteCard: FC<AlumniQuote> = ({
         animateWhile="hover"
         backgroundColor="off-white"
       >
-        <div className="flex h-fit cursor-pointer flex-col gap-y-5 text-xl">
+        <div className="flex h-fit cursor-pointer flex-col gap-y-5">
           <div className="flex flex-row gap-x-5">
-            <div className="desktop:h-18 desktop:w-18 relative h-20 w-20 [&>img]:h-[inherit] [&>img]:w-[inherit] [&>img]:rounded-lg [&>img]:object-cover desktop:[&>img]:rounded-md">
+            <div className="desktop:h-18 desktop:w-18 relative h-20 w-20 border-2">
               <Image
                 priority
                 fill
@@ -35,7 +35,7 @@ export const AlumniQuoteCard: FC<AlumniQuote> = ({
               />
             </div>
             <div className="flex flex-col gap-y-1 font-bold">
-              <p className="text-off-black">{id}</p>
+              <p className="text-xl text-off-black">{id}</p>
               <p className="text-gray">@{twitterHandle}</p>
             </div>
           </div>

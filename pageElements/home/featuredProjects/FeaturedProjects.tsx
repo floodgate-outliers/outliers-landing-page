@@ -8,11 +8,12 @@ import { Mousewheel } from 'swiper';
 
 import Link from 'next/link';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
-import { ProjectInfo, PROJECT_ID } from 'types/Project.type';
+import { ProjectInfo } from 'types/Project.type';
 import {
   getProjectInfoById,
   SummerProjects,
 } from 'data/projects/SummerProjects';
+import { PROJECT_ID } from 'data/Ids';
 
 const FeaturedProjectIds: PROJECT_ID[] = [
   PROJECT_ID.THUNDER_LIZARD_NFT,
@@ -43,15 +44,15 @@ export const FeaturedProjects: FC = () => {
 
   useEffect(() => {
     if (isMobile) {
-      setSlidesPerView(1.05);
+      setSlidesPerView(1.15);
     } else if (isTablet) {
       setSlidesPerView(1.15);
     } else if (isLaptop) {
-      setSlidesPerView(0.98);
+      setSlidesPerView(1.2);
     } else if (isDesktop) {
-      setSlidesPerView(1.1);
+      setSlidesPerView(1.35);
     } else {
-      setSlidesPerView(1.3);
+      setSlidesPerView(1.55);
     }
   }, [isDesktop, isLaptop, isTablet, isMobile]);
 

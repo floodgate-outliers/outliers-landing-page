@@ -165,11 +165,11 @@ export const CoreValues: FC = () => {
               >
                 <motion.p
                   variants={SubtitleVariants}
-                  className="[transform: translateX(75px)] mobile:[transform: none] mb-20 -rotate-90 text-4xl tablet:text-3xl mobile:mb-0 mobile:ml-3 mobile:rotate-0"
+                  className="[transform: translateX(75px)] mobile:[transform: none] mb-20 -rotate-90 text-3xl mobile:mb-0 mobile:ml-3 mobile:rotate-0"
                 >
                   {coreValue}
                 </motion.p>
-                <motion.span variants={SubtitleVariants} className="text-2xl">
+                <motion.span variants={SubtitleVariants} className="text-xl">
                   {id}
                 </motion.span>
               </motion.div>
@@ -184,10 +184,10 @@ export const CoreValues: FC = () => {
                   border: selectedCoreValue === coreValue ? '' : 'none',
                 }}
               >
-                <p className="mb-12 text-5xl font-semibold tablet:text-4xl mobile:mb-5">
+                <p className="mb-12 text-4xl font-semibold tablet:text-4xl mobile:mb-5">
                   {subtitle}
                 </p>
-                <p className="text-2xl">{text}</p>
+                <p className="text-xl">{text}</p>
               </motion.div>
             </Fragment>
           );

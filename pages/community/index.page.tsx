@@ -1,13 +1,13 @@
-import { JoinCTA } from 'pageElements/people/JoinCTA';
-import { TheMentors } from 'pageElements/people/TheMentors';
-import { TheStudents } from 'pageElements/people/TheStudents';
+import { JoinCTA } from 'pageElements/community/JoinCTA';
+import { TheMentors } from 'pageElements/community/TheMentors';
+import { TheBuilders } from 'pageElements/community/TheBuilders';
 
-export default function PeoplePage() {
+export default function CommunityPage() {
   return (
     <div className="page-container pb-20">
       <h2 className="title-header">The Community</h2>
-      <p className="text-4xl italic tablet:text-2xl">
-        Outliers is a community of exceptional students lead by world-class
+      <p className="text-2xl italic tablet:text-2xl">
+        Outliers is a community of exceptional builders lead by world-class
         mentors. Here is a snapshot of the people that make it happen
       </p>
       <hr className="header-divider" />
@@ -16,7 +16,7 @@ export default function PeoplePage() {
       </div>
       <hr className="header-divider" />
       <div>
-        <TheStudents />
+        <TheBuilders />
       </div>
       <hr className="header-divider" />
       <div>

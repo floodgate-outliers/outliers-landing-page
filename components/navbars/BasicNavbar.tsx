@@ -11,8 +11,8 @@ type PageLink = {
 
 const pageLinks: PageLink[] = [
   {
-    text: 'PEOPLE',
-    link: '/people',
+    text: 'COMMUNITY',
+    link: '/community',
   },
   {
     text: 'PROJECTS',
@@ -62,13 +62,13 @@ export const BasicNavbar: FC = () => {
           );
         })}
         <a
-          href={process.env.APPLICATION_LINK}
+          href={process.env.NEXT_PUBLIC_APPLICATION_LINK}
           target="_blank"
           rel="noreferrer"
           className="tablet:hidden"
         >
           <BasicButton type="button" color="blue">
-            <p className="text-2xl text-off-white tablet:-my-1 tablet:-mx-2 tablet:text-lg">
+            <p className="text-off-white tablet:-my-1 tablet:-mx-2 tablet:text-lg">
               Apply
             </p>
           </BasicButton>

@@ -1,5 +1,5 @@
-import { STUDENT_ID } from 'types/People.type';
-import { ProjectInfo, PROJECT_ID, PROJECT_TYPE } from 'types/Project.type';
+import { PROJECT_ID, BUILDER_ID } from 'data/Ids';
+import { ProjectInfo, PROJECT_TYPE } from 'types/Project.type';
 import { HackProjects } from './HackProjects';
 import { StartupProjects } from './StartupProjects';
 
@@ -22,7 +22,7 @@ export const SummerProjects: ProjectInfo[] = [
     id: PROJECT_ID.UNFOLD,
     projectType: PROJECT_TYPE.SUMMER,
     projectName: 'Unfold',
-    builders: [STUDENT_ID.VARUN_SHENOY],
+    builders: [BUILDER_ID.VARUN_SHENOY],
     oneLiner:
       'A small, sandboxed scripting language for querying crypto wallets and tokengating content.',
     mainImage: '/projects/unfold/UnfoldMainImage.jfif',
@@ -35,7 +35,7 @@ export const SummerProjects: ProjectInfo[] = [
     id: PROJECT_ID.CONVEXSWAP,
     projectType: PROJECT_TYPE.SUMMER,
     projectName: 'ConvexSwap',
-    builders: [STUDENT_ID.SARA_ABDALI, STUDENT_ID.ERFAN_ROSTAMI],
+    builders: [BUILDER_ID.SARA_ABDALI, BUILDER_ID.ERFAN_ROSTAMI],
     oneLiner:
       'ConvexSwap allows large trades to be streamed over time to reduce slippage and price impact while also minimizing for gas.',
     mainImage: '/projects/convexSwap/ConvexSwapMainImage.jpg',
@@ -48,51 +48,12 @@ export const SummerProjects: ProjectInfo[] = [
     id: PROJECT_ID.THUNDER_LIZARD_NFT,
     projectType: PROJECT_TYPE.SUMMER,
     projectName: 'Thunder Lizard NFT',
-    builders: [STUDENT_ID.JOYCE_JIANG],
+    builders: [BUILDER_ID.JOYCE_JIANG],
     oneLiner:
       'NFT representing the incredible builders in the Outliers program',
     mainImage: '/projects/thunderLizardNFT/ThunderLizardMainImage.png',
     description:
-      'Outliers is a 10-week, summer program to empower exceptional student builders in Crypto and Web3. Through curriculum and technical projects, Outliers equips students from across the country with the resources, knowledge, and community necessary to build and scale a successful Web3 venture.',
-    projectLink: 'https://outliersnft.xyz/',
-    coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
-  },
-  {
-    id: PROJECT_ID.THUNDER_LIZARD_NFT,
-    projectType: PROJECT_TYPE.SUMMER,
-    projectName: 'Thunder Lizard NFT',
-    builders: [STUDENT_ID.JOYCE_JIANG],
-    oneLiner:
-      'NFT representing the incredible builders in the Outliers program',
-    mainImage: '/projects/thunderLizardNFT/ThunderLizardMainImage.png',
-    description:
-      'Outliers is a 10-week, summer program to empower exceptional student builders in Crypto and Web3. Through curriculum and technical projects, Outliers equips students from across the country with the resources, knowledge, and community necessary to build and scale a successful Web3 venture.',
-    projectLink: 'https://outliersnft.xyz/',
-    coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
-  },
-  {
-    id: PROJECT_ID.THUNDER_LIZARD_NFT,
-    projectType: PROJECT_TYPE.SUMMER,
-    projectName: 'Thunder Lizard NFT',
-    builders: [STUDENT_ID.JOYCE_JIANG],
-    oneLiner:
-      'NFT representing the incredible builders in the Outliers program',
-    mainImage: '/projects/thunderLizardNFT/ThunderLizardMainImage.png',
-    description:
-      'Outliers is a 10-week, summer program to empower exceptional student builders in Crypto and Web3. Through curriculum and technical projects, Outliers equips students from across the country with the resources, knowledge, and community necessary to build and scale a successful Web3 venture.',
-    projectLink: 'https://outliersnft.xyz/',
-    coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
-  },
-  {
-    id: PROJECT_ID.THUNDER_LIZARD_NFT,
-    projectType: PROJECT_TYPE.SUMMER,
-    projectName: 'Thunder Lizard NFT',
-    builders: [STUDENT_ID.JOYCE_JIANG],
-    oneLiner:
-      'NFT representing the incredible builders in the Outliers program',
-    mainImage: '/projects/thunderLizardNFT/ThunderLizardMainImage.png',
-    description:
-      'Outliers is a 10-week, summer program to empower exceptional student builders in Crypto and Web3. Through curriculum and technical projects, Outliers equips students from across the country with the resources, knowledge, and community necessary to build and scale a successful Web3 venture.',
+      'Outliers is a 10-week, summer program to empower exceptional builder builders in Crypto and Web3. Through curriculum and technical projects, Outliers equips builders from across the country with the resources, knowledge, and community necessary to build and scale a successful Web3 venture.',
     projectLink: 'https://outliersnft.xyz/',
     coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
   },

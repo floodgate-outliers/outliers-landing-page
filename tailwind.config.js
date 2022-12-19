@@ -28,8 +28,8 @@ module.exports = {
     extend: {
       fontSize: {
         '8xl': ['5rem', '5rem'],
-        '9xl': ['7rem', '7rem'],
-        '10xl': ['9rem', '9rem'],
+        '9xl': ['6rem', '6rem'],
+        '10xl': ['8rem', '8rem'],
       },
       width: {
         'width-clamp': 'var(--width-clamp)',

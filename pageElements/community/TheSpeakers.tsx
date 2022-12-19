@@ -1,5 +1,5 @@
 import { CardWithShadow } from 'components/cards/CardWithShadow';
-import { TheSpeakersInfos } from 'data/people/TheSpeakersInfos';
+import { TheSpeakersInfos } from 'data/community/TheSpeakersInfos';
 import Image from 'next/image';
 import { FC } from 'react';
 

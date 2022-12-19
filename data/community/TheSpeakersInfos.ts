@@ -1,4 +1,4 @@
-import { SpeakerInfo } from 'types/People.type';
+import { SpeakerInfo } from 'types/Community';
 
 export const TheSpeakersInfos: SpeakerInfo[] = [
   {

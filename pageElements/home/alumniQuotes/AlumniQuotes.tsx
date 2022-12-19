@@ -7,7 +7,7 @@ import { Mousewheel } from 'swiper';
 
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import { AlumniQuoteCard } from './AlumniQuoteCard';
-import { AlumniQuotesInfo } from '../../../data/people/AlumniQuotesInfo';
+import { AlumniQuotesInfo } from '../../../data/community/AlumniQuotesInfo';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 
 export const AlumniQuotes: FC = () => {
@@ -42,7 +42,7 @@ export const AlumniQuotes: FC = () => {
       >
         {AlumniQuotesInfo.map((alumniQuote) => {
           return (
-            <SwiperSlide key={alumniQuote.studentId}>
+            <SwiperSlide key={alumniQuote.builderId}>
               <AlumniQuoteCard {...alumniQuote} />
             </SwiperSlide>
           );
