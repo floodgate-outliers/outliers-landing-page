@@ -60,15 +60,21 @@ export const TheMentors: FC = () => {
                 className="w-80 tablet:w-full tablet:border-2 tablet:py-5 tablet:px-6"
               >
                 <div className="tablet:flex tablet:flex-row tablet:items-center tablet:gap-x-5">
-                  <div className="relative h-96 w-full tablet:h-20 tablet:w-20">
-                    <Image
-                      priority
-                      src={profileImageURL}
-                      alt="profile"
-                      fill
-                      className="border-4 border-off-black object-cover object-top grayscale transition-all hover:grayscale-0 tablet:border-2"
-                    />
-                  </div>
+                  <a
+                    href={`https://twitter.com/${twitterHandle}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="relative h-96 w-full tablet:h-20 tablet:w-20">
+                      <Image
+                        priority
+                        src={profileImageURL}
+                        alt="profile"
+                        fill
+                        className="border-4 border-off-black object-cover object-top grayscale transition-all hover:grayscale-0 tablet:border-2"
+                      />
+                    </div>
+                  </a>
                   <div>
                     <motion.a
                       href={`https://twitter.com/${twitterHandle}`}

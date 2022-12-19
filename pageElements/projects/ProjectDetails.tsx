@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 import { ProjectInfo } from 'types/Project.type';
 import { motion, Variants } from 'framer-motion';
 import { getBuilderInfoById } from 'data/community/TheBuildersInfos';
@@ -29,12 +29,11 @@ const CoverImageVariants: Variants = {
     scale: 1,
   },
   hover: {
-    scale: 1.05,
+    scale: 1.025,
   },
 };
 
 export const ProjectDetails: FC<ProjectInfo> = ({
-  projectType,
   projectName,
   builders,
   oneLiner,
@@ -64,47 +63,49 @@ export const ProjectDetails: FC<ProjectInfo> = ({
     });
 
     return twitterHandlesIncluded.map((nameComponent, index) =>
-      index === 0 ? nameComponent : <>, {nameComponent}</>
+      index === 0 ? (
+        <Fragment key={index}>nameComponent</Fragment>
+      ) : (
+        <Fragment key={index}>, {nameComponent}</Fragment>
+      )
     );
   };
 
   return (
     <div>
-      <a
-        href={projectLink}
-        target="_blank"
-        rel="noreferrer"
-        className="flex flex-row items-center gap-x-10"
-      >
-        <motion.div
-          variants={CoverImageVariants}
-          initial="initial"
-          whileHover="hover"
-          className="relative h-28 w-28 flex-shrink-0 border-4 border-off-black tablet:h-20 tablet:w-20 tablet:border-2"
-        >
-          <Image
-            priority
-            fill
-            src={coverImage}
-            alt=""
-            className="object-cover"
-          />
-        </motion.div>
+      <div className="flex flex-row items-center gap-x-10">
+        <a href={projectLink} target="_blank" rel="noreferrer">
+          <motion.div
+            variants={CoverImageVariants}
+            initial="initial"
+            whileHover="hover"
+            className="relative h-28 w-28 flex-shrink-0 border-4 border-off-black tablet:h-20 tablet:w-20 tablet:border-2"
+          >
+            <Image
+              priority
+              fill
+              src={coverImage}
+              alt=""
+              className="object-cover"
+            />
+          </motion.div>
+        </a>
         <div className="flex flex-col items-start">
-          <h2 className="mb-0 text-4xl font-bold tablet:text-3xl">
-            <motion.span
-              variants={ProjectNameVariants}
-              initial="initial"
-              whileHover="hover"
-              className="underline"
-            >
-              {projectName}
-            </motion.span>{' '}
-            {/* <span className="text-2xl text-gray">({projectType})</span> */}
-          </h2>
+          <a href={projectLink} target="_blank" rel="noreferrer">
+            <h2 className="mb-0 text-4xl font-bold tablet:text-3xl">
+              <motion.span
+                variants={ProjectNameVariants}
+                initial="initial"
+                whileHover="hover"
+                className="underline"
+              >
+                {projectName}
+              </motion.span>
+            </h2>
+          </a>
           <div className="mt-5 text-xl">- {buildersNamesFormatted()}</div>
         </div>
-      </a>
+      </div>
       <hr className="header-divider" />
       <p className="text-2xl font-bold tablet:text-2xl">"{oneLiner}"</p>
       <hr className="header-divider" />

@@ -29,7 +29,7 @@ export const SummerProjects: ProjectInfo[] = [
     description:
       "Excited to share a project i've been working on: a  scripting language for querying crypto wallets 📖🔍 it has a small (but expressive) grammar, so anyone can quickly write a short program and run it in a safe, sandboxed runtime environment⚡️",
     projectLink: 'https://varunshenoy.com/unfold/',
-    coverImage: '/projects/unfold/UnfoldMainImage.jfif',
+    coverImage: '/projects/unfold/UnfoldCoverImage.png',
   },
   {
     id: PROJECT_ID.CONVEXSWAP,

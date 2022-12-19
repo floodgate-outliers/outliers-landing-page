@@ -1,5 +1,5 @@
 // import Head from 'next/head';
-import { EndCTA } from 'pageElements/home/EndCTA';
+import { ComingSoonCTA } from 'pageElements/home/ComingSoonCTA';
 import { FeaturedProjects } from 'pageElements/home/featuredProjects/FeaturedProjects';
 import { AlumniQuotes } from '../pageElements/home/alumniQuotes/AlumniQuotes';
 import { FeaturedSpeakers } from '../pageElements/home/featuredSpeakers/FeaturedSpeakers';
@@ -7,6 +7,7 @@ import { CoreValues } from '../pageElements/home/CoreValues';
 import { ProgramOverview } from '../pageElements/home/ProgramOverview';
 import { SplashScreen } from '../pageElements/home/SplashScreen';
 import { CommunityOverview } from 'pageElements/home/CommunityOverview';
+import { DeadlineCTA } from 'pageElements/home/DeadlineCTA';
 // import { motion, Variants } from 'framer-motion';
 
 // const SubSectionVariants: Variants = {
@@ -57,7 +58,8 @@ export default function HomePage() {
         <AlumniQuotes />
       </div>
       <div className="px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
-        <EndCTA />
+        {/* <ComingSoonCTA /> */}
+        <DeadlineCTA />
       </div>
       {/* </motion.div> */}
     </div>

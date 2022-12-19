@@ -29,7 +29,7 @@ export const FeaturedProjectCard: FC<ProjectInfo> = ({
         <motion.div
           initial="initial"
           whileHover="hover"
-          className="flex w-[50rem] flex-row gap-x-10 px-5 py-3 tablet:w-fit tablet:flex-col"
+          className="flex w-[50rem] flex-row gap-x-10 px-5 py-3 tablet:w-min tablet:flex-col"
         >
           <div className="relative h-[20rem] w-[20rem] flex-shrink-0 border-4 border-off-black tablet:border-2">
             <Image

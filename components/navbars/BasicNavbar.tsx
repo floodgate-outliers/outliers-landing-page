@@ -54,7 +54,7 @@ export const BasicNavbar: FC = () => {
                 variants={LinkVariants}
                 initial="initial"
                 whileHover="hover"
-                className="cursor-pointer text-xl"
+                className="cursor-pointer text-xl font-bold"
               >
                 {text}
               </motion.p>
