@@ -77,7 +77,7 @@ export const CommunityOverview: FC = () => {
         ))}
         <p className="text-2xl font-bold">And much more!</p>
       </div>
-      <div className="mt-10">
+      <div className="mt-20">
         <Link href="/community">
           <motion.p
             variants={MeetVariants}
