@@ -6,7 +6,7 @@ export const StartupProjects: ProjectInfo[] = [
     id: PROJECT_ID.DATALEAP,
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
-    builders: [BUILDER_ID.JAN_RUTTINGER, BUILDER_ID.JAN_DAMM],
+    builders: [BUILDER_ID.JAN_RUETTINGER, BUILDER_ID.JAN_DAMM],
     oneLiner: 'The home for web3 data engineers',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:

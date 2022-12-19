@@ -2,7 +2,7 @@ export enum BUILDER_ID {
   DANIEL_MARIN = 'Daniel Marin',
   ERFAN_ROSTAMI = 'Erfan Rostami',
   JAN_DAMM = 'Jan Damm',
-  JAN_RUTTINGER = 'Jan Ruttinger',
+  JAN_RUETTINGER = 'Jan Ruettinger',
   JONGWON_PARK = 'Jongwon Park',
   JOYCE_JIANG = 'Joyce Jiang',
   KAILI_WANG = 'Kaili Wang',

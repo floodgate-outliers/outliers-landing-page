@@ -21,9 +21,9 @@ export const TheBuildersInfos: BuilderInfo[] = [
     projectId: PROJECT_ID.DATALEAP,
   },
   {
-    id: BUILDER_ID.JAN_RUTTINGER,
+    id: BUILDER_ID.JAN_RUETTINGER,
     twitterHandle: 'jan_ruettinger',
-    profileImageUrl: '/builders/JanRuttinger.jpg',
+    profileImageUrl: '/builders/JanRuetinger.jpg',
     projectId: PROJECT_ID.DATALEAP,
   },
   {
