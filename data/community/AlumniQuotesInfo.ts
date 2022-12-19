@@ -20,7 +20,7 @@ export const AlumniQuotesInfo: AlumniQuote[] = [
       'The community and mentorship of Outliers impacted my life in two major ways: 1) relationships with bright, wonderful minds that’ll last for decades to come, and 2) self-realization of what I want in life: using my strengths to make real impact and pursuing a life full of learning + building.',
   },
   {
-    builderId: BUILDER_ID.JAN_RUTTINGER,
+    builderId: BUILDER_ID.JAN_RUETTINGER,
     date: 'August 07, 2022',
     quote:
       'The Outliers program by the Floodgate team has been a life-changing experience for me. I came in expecting to learn what paradigms will change with the emergence of web3 and how building a company in that space is different. I left with much more - a new group of friends I am still collaborating with to this day.',
