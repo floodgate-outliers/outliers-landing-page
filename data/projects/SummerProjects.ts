@@ -27,7 +27,7 @@ export const SummerProjects: ProjectInfo[] = [
       'A small, sandboxed scripting language for querying crypto wallets and tokengating content.',
     mainImage: '/projects/unfold/UnfoldMainImage.jfif',
     description:
-      "Excited to share a project i've been working on: a  scripting language for querying crypto wallets 📖🔍 it has a small (but expressive) grammar, so anyone can quickly write a short program and run it in a safe, sandboxed runtime environment⚡️",
+      'For my Outliers demo project, I wanted to combine my passion for programming languages and crypto. I noticed that there were very few tools available for Web2 developers who wanted to incorporate Web3 elements, such as tokengating, without learning blockchain fundamentals and a framework like ethers.js. I designed Unfold to avoid this unnecessary complexity.\n\nUnfold is a lightweight, domain-specific language for querying crypto wallets. It currently supports various operations, such as checking the ETH, ERC20, or ERC721 balance, on a single wallet address.\n\nThe primary benefit of Unfold is its simplicity in usage. You can learn the entire grammar in < 5 minutes, making it a perfect low-code environment for tokengating your storefront or community. Moreover, every runtime is sandboxed and isolated from the rest of the environment. This prevents malicious users from injecting Javascript into your websites.',
     projectLink: 'https://varunshenoy.com/unfold/',
     coverImage: '/projects/unfold/UnfoldCoverImage.png',
   },

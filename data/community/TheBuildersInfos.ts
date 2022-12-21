@@ -11,7 +11,7 @@ export const TheBuildersInfos: BuilderInfo[] = [
   {
     id: BUILDER_ID.ERFAN_ROSTAMI,
     twitterHandle: '_erfie',
-    profileImageUrl: '/builders/ErfanRostami.jfif',
+    profileImageUrl: '/builders/ErfanRostami.jpg',
     projectId: PROJECT_ID.CONVEXSWAP,
   },
   {
@@ -23,7 +23,7 @@ export const TheBuildersInfos: BuilderInfo[] = [
   {
     id: BUILDER_ID.JAN_RUETTINGER,
     twitterHandle: 'jan_ruettinger',
-    profileImageUrl: '/builders/JanRuetinger.jpg',
+    profileImageUrl: '/builders/JanRuettinger.jpg',
     projectId: PROJECT_ID.DATALEAP,
   },
   {

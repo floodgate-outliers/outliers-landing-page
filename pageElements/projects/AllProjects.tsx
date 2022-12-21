@@ -50,9 +50,9 @@ export const AllProjects: FC = () => {
   return (
     <div>
       <div className="flex flex-col">
-        {allProjectInfos.map(({ projectType, projects }, index) => {
+        {allProjectInfos.map(({ projectType, projects }) => {
           return (
-            <Fragment>
+            <Fragment key={projectType}>
               <hr className="header-divider" />
               <div key={projectType}>
                 <div className="mb-10 w-fit bg-off-black px-10 py-2">
@@ -68,9 +68,9 @@ export const AllProjects: FC = () => {
                     forceToAxis: true,
                   }}
                 >
-                  {projects.map((projectInfo, index) => {
+                  {projects.map((projectInfo) => {
                     return (
-                      <SwiperSlide key={index}>
+                      <SwiperSlide key={projectInfo.id}>
                         <ProjectCard {...projectInfo} />
                       </SwiperSlide>
                     );

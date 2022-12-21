@@ -1,7 +1,8 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import { TheMentorsInfos } from '../../data/community/TheMentorsInfo';
+import clsx from 'clsx';
 
 const ImageVariants: Variants = {
   initial: {
@@ -36,14 +37,14 @@ const NameVariants: Variants = {
 };
 
 export const TheMentors: FC = () => {
+  const [selectedMentor, setSelectedMentor] = useState('');
+
   return (
     <div>
       <h1 className="title-header">
         The Mentors{' '}
         <motion.span
           variants={TitleVariants}
-          initial="initial"
-          animate="animate"
           className="text-floodgate tablet:text-3xl"
         >
           (A.K.A Legends)
@@ -53,9 +54,8 @@ export const TheMentors: FC = () => {
         {TheMentorsInfos.map(
           ({ profileImageURL, name, company, bio, twitterHandle }) => {
             return (
-              <motion.div
-                initial="initial"
-                whileHover="hover"
+              <div
+                onMouseOver={() => setSelectedMentor(name)}
                 key={twitterHandle}
                 className="w-80 tablet:w-full tablet:border-2 tablet:py-5 tablet:px-6"
               >
@@ -71,7 +71,10 @@ export const TheMentors: FC = () => {
                         src={profileImageURL}
                         alt="profile"
                         fill
-                        className="border-4 border-off-black object-cover object-top grayscale transition-all hover:grayscale-0 tablet:border-2"
+                        className={clsx(
+                          'border-4 border-off-black object-cover object-top transition-all tablet:border-2',
+                          selectedMentor === name ? 'grayscale-0' : 'grayscale'
+                        )}
                       />
                     </div>
                   </a>
@@ -81,6 +84,8 @@ export const TheMentors: FC = () => {
                       target="_blank"
                       rel="noreferrer"
                       variants={NameVariants}
+                      initial="initial"
+                      animate={selectedMentor === name ? 'hover' : 'initial'}
                       className="mt-5 inline-block text-2xl font-bold underline tablet:mt-0"
                     >
                       {name}
@@ -90,7 +95,7 @@ export const TheMentors: FC = () => {
                 </div>
 
                 <p className="mt-5 text-lg tablet:mt-7 tablet:text-xl">{bio}</p>
-              </motion.div>
+              </div>
             );
           }
         )}

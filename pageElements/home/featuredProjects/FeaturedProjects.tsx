@@ -70,13 +70,14 @@ export const FeaturedProjects: FC = () => {
           <SwiperSlide className="my-auto">
             <div className="flex h-full w-fit cursor-pointer flex-col justify-center text-3xl font-bold tablet:ml-20">
               <Link href="/projects">
-                <motion.p
+                <motion.div
                   variants={seeMoreVariants}
                   initial="initial"
                   whileHover="hover"
+                  className="flex flex-row items-center gap-x-3"
                 >
-                  See More &#707;
-                </motion.p>
+                  <p>See More </p> <p>&#707;</p>
+                </motion.div>
               </Link>
             </div>
           </SwiperSlide>

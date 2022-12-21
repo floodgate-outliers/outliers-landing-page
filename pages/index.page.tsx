@@ -1,5 +1,5 @@
 // import Head from 'next/head';
-import { ComingSoonCTA } from 'pageElements/home/ComingSoonCTA';
+// import { ComingSoonCTA } from 'pageElements/home/ComingSoonCTA';
 import { FeaturedProjects } from 'pageElements/home/featuredProjects/FeaturedProjects';
 import { AlumniQuotes } from '../pageElements/home/alumniQuotes/AlumniQuotes';
 import { FeaturedSpeakers } from '../pageElements/home/featuredSpeakers/FeaturedSpeakers';
