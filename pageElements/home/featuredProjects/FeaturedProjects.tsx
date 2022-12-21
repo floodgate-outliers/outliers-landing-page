@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 import { ProjectInfo } from 'types/Project.type';
 import { getProjectInfoById } from 'data/projects/SummerProjects';
-import { FeaturedProjectIds } from 'data/projects/FeaturedProjectIds';
+import { FeaturedProjectIds } from 'data/Ids';
 
 const FeaturedProjectsInfo: ProjectInfo[] = FeaturedProjectIds.map((p) =>
   getProjectInfoById(p)

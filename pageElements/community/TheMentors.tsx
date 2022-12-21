@@ -4,16 +4,7 @@ import { motion, Variants } from 'framer-motion';
 import { TheMentorsInfos } from '../../data/community/TheMentorsInfo';
 import clsx from 'clsx';
 
-const ImageVariants: Variants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-  },
-};
-
-const TitleVariants: Variants = {
+const HiddenDescriptorVariants: Variants = {
   initial: {
     opacity: 0,
   },
@@ -44,7 +35,7 @@ export const TheMentors: FC = () => {
       <h1 className="title-header">
         The Mentors{' '}
         <motion.span
-          variants={TitleVariants}
+          variants={HiddenDescriptorVariants}
           className="text-floodgate tablet:text-3xl"
         >
           (A.K.A Legends)
