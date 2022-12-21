@@ -14,6 +14,18 @@ import clsx from 'clsx';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 import { PROJECT_ID } from 'data/Ids';
 
+const HiddenDescriptorVariants: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      delay: 1.5,
+    },
+  },
+};
+
 // Shuffle function
 // Taken from:
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -81,7 +93,15 @@ export const TheBuilders: FC = () => {
 
   return (
     <div>
-      <h2 className="title-header">The Outliers</h2>
+      <h2 className="title-header">
+        The Outliers{' '}
+        <motion.span
+          variants={HiddenDescriptorVariants}
+          className="text-floodgate tablet:text-3xl"
+        >
+          (12 of 25 And Counting...)
+        </motion.span>
+      </h2>
       <div className="grid grid-cols-2 gap-x-20 laptop:grid-cols-1">
         <div className="grid grid-cols-4 justify-between gap-5">
           {shuffledBuildersWithProjectsArray.map(
@@ -100,7 +120,6 @@ export const TheBuilders: FC = () => {
                   )}
                 >
                   <Image
-                    priority
                     fill
                     src={profileImageUrl}
                     alt=""
@@ -110,7 +129,6 @@ export const TheBuilders: FC = () => {
               </div>
             )
           )}
-          <p className="my-auto ml-3 text-5xl font-bold laptop:text-3xl">...</p>
         </div>
         <div className="laptop:mt-10">
           <AnimatePresence mode="wait">
@@ -130,7 +148,6 @@ export const TheBuilders: FC = () => {
                     <div className="flex flex-row items-center gap-x-10">
                       <div className="relative h-24 w-24 flex-shrink-0 border-2 border-off-black">
                         <Image
-                          priority
                           fill
                           src={selectedProjectData.coverImage}
                           alt=""

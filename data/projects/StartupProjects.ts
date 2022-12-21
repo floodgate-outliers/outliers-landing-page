@@ -34,11 +34,25 @@ export const StartupProjects: ProjectInfo[] = [
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Nexus',
     builders: [BUILDER_ID.DANIEL_MARIN],
-    oneLiner: 'Decentralized Cloud Networks, Hyperscaled Blockchains',
-    mainImage: '/projects/nexus/NexusMainImage.png',
+    oneLiner:
+      'A Decentralized Cloud Computing Network. Hyperscaling Ethereum with computation, storage and I/O',
+    mainImage: '/projects/nexus/NexusMainImage.jpg',
     description:
-      'Nexus is a network of externally-aware, self-executing, replicated state machines, designed to hyperscale Ethereum with enhanced computation, storage, and I/O. Decentralized Cloud Networks (DCNs), or simply Clouds, are externally-aware, self-executing, replicated state machines. They provide blockchain applications with dedicated off-chain computational power, replicated storage and event-driven I/O capabilities with external systems.',
+      'Nexus, is a Decentralized Cloud Computing Network. It is a network of application-specific, externally-aware, decentralized cloud networks, designed to hyper scale Ethereum applications with extended computation, storage and I/O. Nexus thus provides a platform for Decentralized Cloud Functions, the Web3 analog of Web2 cloud functions in traditional serverless cloud computing.',
     projectLink: 'https://www.nexus.xyz/',
-    coverImage: '/projects/nexus/NexusMainImage.png',
+    coverImage: '/projects/nexus/NexusCoverImage.png',
   },
+  // {
+  //   id: PROJECT_ID.DAEDALUS_WALLET,
+  //   projectType: PROJECT_TYPE.STARTUP,
+  //   projectName: 'Daedalus Wallet',
+  //   builders: [BUILDER_ID.WENITTE_APIOU],
+  //   oneLiner:
+  //     'The Daedalus Wallet is the first mobile wallet for the Aptos and Sui blockchains',
+  //   mainImage: '/projects/daedalus/DaedalusMainImage.jpg',
+  //   description:
+  //     'Nexus, is a Decentralized Cloud Computing Network. It is a network of application-specific, externally-aware, decentralized cloud networks, designed to hyper scale Ethereum applications with extended computation, storage and I/O. Nexus thus provides a platform for Decentralized Cloud Functions, the Web3 analog of Web2 cloud functions in traditional serverless cloud computing.',
+  //   projectLink: 'https://www.nexus.xyz/',
+  //   coverImage: '/projects/daedalus/DaedalusCoverImage.png',
+  // },
 ];

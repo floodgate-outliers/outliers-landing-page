@@ -38,6 +38,7 @@ a {
   color: var(--off-black);
   scroll-behavior: smooth;
   text-decoration: none;
+  white-space: pre-wrap;
 }
 
 input {

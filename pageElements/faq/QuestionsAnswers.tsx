@@ -9,6 +9,7 @@ const answerVariants: Variants = {
     margin: '0px',
     transition: {
       duration: 0.25,
+      type: 'tween',
     },
   },
   show: {
@@ -17,6 +18,7 @@ const answerVariants: Variants = {
     margin: '1.25rem 0.75rem',
     transition: {
       delay: 0.25,
+      type: 'tween',
     },
   },
 };

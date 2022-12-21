@@ -11,7 +11,7 @@ export const TheBuildersInfos: BuilderInfo[] = [
   {
     id: BUILDER_ID.ERFAN_ROSTAMI,
     twitterHandle: '_erfie',
-    profileImageUrl: '/builders/ErfanRostami.jfif',
+    profileImageUrl: '/builders/ErfanRostami.jpg',
     projectId: PROJECT_ID.CONVEXSWAP,
   },
   {
@@ -23,7 +23,7 @@ export const TheBuildersInfos: BuilderInfo[] = [
   {
     id: BUILDER_ID.JAN_RUETTINGER,
     twitterHandle: 'jan_ruettinger',
-    profileImageUrl: '/builders/JanRuetinger.jpg',
+    profileImageUrl: '/builders/JanRuettinger.jpg',
     projectId: PROJECT_ID.DATALEAP,
   },
   {
@@ -76,7 +76,7 @@ export const TheBuildersInfos: BuilderInfo[] = [
     id: BUILDER_ID.WENITTE_APIOU,
     twitterHandle: 'wenitte0',
     profileImageUrl: '/builders/WenitteApiou.jfif',
-    // projectId: PROJECT_ID.DAEDALUS,
+    // projectId: PROJECT_ID.DAEDALUS_WALLET,
   },
   {
     id: BUILDER_ID.YUMA_TANAKA,

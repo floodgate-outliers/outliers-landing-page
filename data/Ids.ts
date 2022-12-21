@@ -18,12 +18,21 @@ export enum BUILDER_ID {
 // Note the ids also act as URL paths to the project details
 export enum PROJECT_ID {
   CONVEXSWAP = 'convexswap',
-  DAEDALUS = 'daedalus',
+  DAEDALUS_WALLET = 'daedalus_wallet',
   DATALEAP = 'dataleap',
   NEXUS = 'nexus',
   NORDLE = 'nordle',
+  PHILOTES = 'philotes',
   REVERSIBILITY_ON_ETHEREUM = 'reversibility_on_ethereum',
   SMALL_BRAIN_GAMES = 'small_brain_games',
   THUNDER_LIZARD_NFT = 'thunder_lizard_nft',
   UNFOLD = 'unfold',
 }
+
+export const FeaturedProjectIds: PROJECT_ID[] = [
+  PROJECT_ID.REVERSIBILITY_ON_ETHEREUM,
+  PROJECT_ID.DATALEAP,
+  PROJECT_ID.SMALL_BRAIN_GAMES,
+  PROJECT_ID.CONVEXSWAP,
+  PROJECT_ID.NORDLE,
+];
