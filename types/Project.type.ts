@@ -1,4 +1,5 @@
 import { BUILDER_ID, PROJECT_ID } from 'data/Ids';
+import { ReactElement } from 'react';
 
 export enum PROJECT_TYPE {
   SUMMER = 'summer',
@@ -12,7 +13,7 @@ export interface ProjectInfo {
   projectName: string;
   builders: BUILDER_ID[];
   oneLiner: string;
-  description: string;
+  description: string | ReactElement;
   coverImage: string;
   mainImage: string;
   projectLink?: string;

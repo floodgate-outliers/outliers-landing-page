@@ -3,6 +3,7 @@ import { FC, Fragment } from 'react';
 import { ProjectInfo } from 'types/Project.type';
 import { motion, Variants } from 'framer-motion';
 import { getBuilderInfoById } from 'data/community/TheBuildersInfos';
+import { parseTextForLinks } from 'utils/parseTextForLinks';
 
 const ProjectNameVariants: Variants = {
   initial: {
@@ -119,7 +120,9 @@ export const ProjectDetails: FC<ProjectInfo> = ({
             className="object-cover"
           />
         </div>
-        <p className="whitespace-pre-wrap text-xl">{description}</p>
+        <p className="whitespace-pre-wrap text-xl">
+          {parseTextForLinks(description)}
+        </p>
       </div>
     </div>
   );
