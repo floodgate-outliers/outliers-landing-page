@@ -9,25 +9,22 @@ import { Mousewheel } from 'swiper';
 import Link from 'next/link';
 import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 import { ProjectInfo } from 'types/Project.type';
-import {
-  getProjectInfoById,
-  SummerProjects,
-} from 'data/projects/SummerProjects';
-import { PROJECT_ID } from 'data/Ids';
+import { getProjectInfoById } from 'data/projects/SummerProjects';
 import { FeaturedProjectIds } from 'data/projects/FeaturedProjectIds';
 
 const FeaturedProjectsInfo: ProjectInfo[] = FeaturedProjectIds.map((p) =>
   getProjectInfoById(p)
 );
 
-const seeMoreVariants: Variants = {
+const SeeMoreVariants: Variants = {
   initial: {
-    x: 0,
     color: 'var(--off-black)',
+    x: 0,
   },
   hover: {
-    x: 10,
     color: 'var(--floodgate)',
+    x: 10,
+    textDecoration: 'underline',
   },
 };
 
@@ -71,12 +68,13 @@ export const FeaturedProjects: FC = () => {
             <div className="flex h-full w-fit cursor-pointer flex-col justify-center text-3xl font-bold tablet:ml-20">
               <Link href="/projects">
                 <motion.div
-                  variants={seeMoreVariants}
+                  variants={SeeMoreVariants}
                   initial="initial"
                   whileHover="hover"
-                  className="flex flex-row items-center gap-x-3"
+                  className="mt-10 flex w-fit cursor-pointer flex-row whitespace-pre text-3xl"
                 >
-                  <p>See More </p> <p>&#707;</p>
+                  <p className="text-inherit">See More </p>
+                  <p className="text-inherit">&#707;</p>
                 </motion.div>
               </Link>
             </div>

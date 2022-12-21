@@ -79,14 +79,15 @@ export const CommunityOverview: FC = () => {
       </div>
       <div className="mt-20">
         <Link href="/community">
-          <motion.p
+          <motion.div
             variants={MeetVariants}
             initial="initial"
             whileHover="hover"
-            className="mt-10 w-fit cursor-pointer text-3xl"
+            className="mt-10 flex w-fit cursor-pointer flex-row whitespace-pre text-3xl"
           >
-            Meet the Community &#707;
-          </motion.p>
+            <p className="text-inherit">Meet the Community </p>
+            <p className="text-inherit">&#707;</p>
+          </motion.div>
         </Link>
       </div>
     </div>

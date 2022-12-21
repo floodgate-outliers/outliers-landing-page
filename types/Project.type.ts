@@ -13,7 +13,7 @@ export interface ProjectInfo {
   projectName: string;
   builders: BUILDER_ID[];
   oneLiner: string;
-  description: string | ReactElement;
+  description: string;
   coverImage: string;
   mainImage: string;
   projectLink?: string;
