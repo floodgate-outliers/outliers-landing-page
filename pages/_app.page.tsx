@@ -22,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
         variants={ComponentVariants}
         initial="hidden"
         animate="visible"
+        className="min-h-screen"
       >
         <Component {...pageProps} />
       </motion.div>
