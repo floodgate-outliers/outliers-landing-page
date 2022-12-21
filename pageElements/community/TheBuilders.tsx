@@ -120,7 +120,6 @@ export const TheBuilders: FC = () => {
                   )}
                 >
                   <Image
-                    priority
                     fill
                     src={profileImageUrl}
                     alt=""
@@ -149,7 +148,6 @@ export const TheBuilders: FC = () => {
                     <div className="flex flex-row items-center gap-x-10">
                       <div className="relative h-24 w-24 flex-shrink-0 border-2 border-off-black">
                         <Image
-                          priority
                           fill
                           src={selectedProjectData.coverImage}
                           alt=""

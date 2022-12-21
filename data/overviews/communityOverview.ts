@@ -2,6 +2,7 @@ import { Overview } from 'types/Overview';
 
 export const CommunityOverview: Overview = {
   title: 'The Community',
+  imageUrl: '/community/BuildersAndMentors.jpg',
   quote:
     'The best part about Outliers is the A+ community of like-minded builders who are continuously pushing the bounds in crypto.',
   description:

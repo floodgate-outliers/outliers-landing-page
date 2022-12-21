@@ -2,6 +2,7 @@ import { Overview } from 'types/Overview';
 
 export const ProgramOverview: Overview = {
   title: 'The Program',
+  imageUrl: '/community/OutliersThunderLizards.jpeg',
   quote:
     'A cornerstone of Outliers is our 10-week, summer program designed to educate and empower exceptional young builders in crypto.',
   description:

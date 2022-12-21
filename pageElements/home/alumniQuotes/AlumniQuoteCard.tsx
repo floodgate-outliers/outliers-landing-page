@@ -27,7 +27,6 @@ export const AlumniQuoteCard: FC<AlumniQuote> = ({
           <div className="flex flex-row gap-x-5">
             <div className="desktop:h-18 desktop:w-18 relative h-20 w-20 border-2">
               <Image
-                priority
                 fill
                 src={profileImageUrl}
                 alt="profile"

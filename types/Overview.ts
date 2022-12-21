@@ -6,6 +6,7 @@ export interface Detail {
 
 export interface Overview {
   title: string;
+  imageUrl: string;
   quote: string;
   description: string;
   details: Detail[];

@@ -76,7 +76,7 @@ export const TheBuildersInfos: BuilderInfo[] = [
     id: BUILDER_ID.WENITTE_APIOU,
     twitterHandle: 'wenitte0',
     profileImageUrl: '/builders/WenitteApiou.jfif',
-    projectId: PROJECT_ID.DAEDALUS_WALLET,
+    // projectId: PROJECT_ID.DAEDALUS_WALLET,
   },
   {
     id: BUILDER_ID.YUMA_TANAKA,

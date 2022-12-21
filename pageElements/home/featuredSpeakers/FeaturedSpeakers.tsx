@@ -58,19 +58,9 @@ export const FeaturedSpeakers: FC = () => {
                     </p>
                     <div>
                       <div className="relative h-56 w-56 desktop:h-52 desktop:w-52 laptop:h-48 laptop:w-48 tablet:h-44 tablet:w-44 [&>img]:box-border [&>img]:rounded-full [&>img]:border-4 [&>img]:border-off-black mobile:[&>img]:border-2">
-                        <Image
-                          priority
-                          fill
-                          src={profileImageURL}
-                          alt="profile"
-                        />
+                        <Image fill src={profileImageURL} alt="profile" />
                         <div className="absolute bottom-0 right-0 h-[75px] w-[75px] rounded-full desktop:h-16 desktop:w-16 [&>img]:rounded-[inherit]">
-                          <Image
-                            priority
-                            fill
-                            src={companyImageURL}
-                            alt="company"
-                          />
+                          <Image fill src={companyImageURL} alt="company" />
                         </div>
                       </div>
                     </div>
