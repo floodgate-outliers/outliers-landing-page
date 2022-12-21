@@ -27,4 +27,17 @@ export const HackProjects: ProjectInfo[] = [
     projectLink: 'https://nordle-website.vercel.app/',
     coverImage: '/projects/nordle/NordleCoverImage.png',
   },
+  {
+    id: PROJECT_ID.PHILOTES,
+    projectType: PROJECT_TYPE.HACK,
+    projectName: 'Philotes',
+    builders: [BUILDER_ID.JAN_RUETTINGER, BUILDER_ID.YUMA_TANAKA],
+    oneLiner:
+      'Get randomly matched for 1-on-1 chats with members in your Discord community.',
+    mainImage: '/projects/philotes/PhilotesMainImage.gif',
+    description:
+      "A core aspect of any community is the bonds between each of the members. Typically, this happens organically when groups meet up in person for a scheduled meeting, relaxing lunch, or a spontaneous hike. However, this is a luxury for the communities that exist online. In fact, for communities like the Outliers where members span across multiple states and even countries, this is flat-out impossible in the early days.\n\nThis is why we built Philotes.\n\nPhilotes is a Discord bot that automatically matches community members for 1-on-1 chats. Leaders of online communities no longer need to take on the burden of strengthening individual bonds in their community. Instead they can just send one command: /matchOnce. As communities, especially those in crypto, become more dependent on Discord, we hope Philotes can add the magic touch.\n\nActually, we built Philotes because Donut isn't on Discord 😤",
+    projectLink: 'https://bot.outliers.build/',
+    coverImage: '/projects/philotes/PhilotesCoverImage.png',
+  },
 ];

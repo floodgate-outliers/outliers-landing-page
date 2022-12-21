@@ -22,6 +22,7 @@ export enum PROJECT_ID {
   DATALEAP = 'dataleap',
   NEXUS = 'nexus',
   NORDLE = 'nordle',
+  PHILOTES = 'philotes',
   REVERSIBILITY_ON_ETHEREUM = 'reversibility_on_ethereum',
   SMALL_BRAIN_GAMES = 'small_brain_games',
   THUNDER_LIZARD_NFT = 'thunder_lizard_nft',
