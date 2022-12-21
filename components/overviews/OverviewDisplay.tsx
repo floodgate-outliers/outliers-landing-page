@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Overview } from 'types/Overview';
 import { parseTextForEmphasis } from 'utils/parseTextForEmphasis';
 import Image from 'next/image';
