@@ -4,7 +4,7 @@ import { formatBuildersNames } from 'data/community/TheBuildersInfos';
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { ProjectInfo } from 'types/Project.type';
 
 const viewProjectVariants: Variants = {
