@@ -30,7 +30,7 @@ export const RightChevronLink: FC<RightChevronLinkProps> = ({ link, text }) => {
         className="flex w-max cursor-pointer flex-row gap-x-2 whitespace-pre text-3xl"
       >
         <p className="text-inherit">{text}</p>
-        <p className="text-inherit">&#707;</p>
+        <p className="text-inherit">{'>'}</p>
       </motion.div>
     </Link>
   );
