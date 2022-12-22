@@ -42,17 +42,18 @@ export const StartupProjects: ProjectInfo[] = [
     projectLink: 'https://www.nexus.xyz/',
     coverImage: '/projects/nexus/NexusCoverImage.png',
   },
-  // {
-  //   id: PROJECT_ID.DAEDALUS_WALLET,
-  //   projectType: PROJECT_TYPE.STARTUP,
-  //   projectName: 'Daedalus Wallet',
-  //   builders: [BUILDER_ID.WENITTE_APIOU],
-  //   oneLiner:
-  //     'The Daedalus Wallet is the first mobile wallet for the Aptos and Sui blockchains',
-  //   mainImage: '/projects/daedalus/DaedalusMainImage.jpg',
-  //   description:
-  //     'Nexus, is a Decentralized Cloud Computing Network. It is a network of application-specific, externally-aware, decentralized cloud networks, designed to hyper scale Ethereum applications with extended computation, storage and I/O. Nexus thus provides a platform for Decentralized Cloud Functions, the Web3 analog of Web2 cloud functions in traditional serverless cloud computing.',
-  //   projectLink: 'https://www.nexus.xyz/',
-  //   coverImage: '/projects/daedalus/DaedalusCoverImage.png',
-  // },
+  {
+    id: PROJECT_ID.DAEDALUS_WALLET,
+    projectType: PROJECT_TYPE.STARTUP,
+    projectName: 'Daedalus Wallet',
+    builders: [BUILDER_ID.WENITTE_APIOU],
+    oneLiner:
+      'The Daedalus Wallet is the first mobile wallet for the Aptos and Sui blockchains',
+    mainImage: '/projects/daedalus/DaedalusMainImage.jfif',
+    description:
+      'Crypto has a significant user experience problem. We will need to reimagine the way cryptocurrency is transacted in order to onboard the next 100M users into Web3. The Daedalus wallet app, now available on the App Store and Play Store, lets users connect to the decentralized web and brings their assets from Aptos, Sui, Ethereum , and Solana under one roof.',
+    projectLink:
+      'https://play.google.com/store/apps/details?id=com.daedalusfi.wallet',
+    coverImage: '/projects/daedalus/DaedalusCoverImage.jfif',
+  },
 ];
