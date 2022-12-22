@@ -19,7 +19,7 @@ export const AlumniQuoteCard: FC<AlumniQuote> = ({
     >
       <CardWithShadow
         scale
-        shadowSize="small"
+        // shadowSize="small"
         animateWhile="hover"
         backgroundColor="off-white"
       >

@@ -22,7 +22,6 @@
     "react-dom": "18.2.0",
     "react-indiana-drag-scroll": "^2.2.0",
     "react-responsive": "^9.0.0",
-    "swiper": "^8.4.5",
     "yup": "^0.32.11"
   },
   "devDependencies": {

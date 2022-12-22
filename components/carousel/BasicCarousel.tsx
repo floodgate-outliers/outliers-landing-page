@@ -1,19 +1,14 @@
-import { FC, ReactElement, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { FC, ReactElement } from 'react';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
 type BasicCarouselProps = {
-  id: string;
   carouselElements: ReactElement[];
 };
 
-export const BasicCarousel: FC<BasicCarouselProps> = ({
-  id,
-  carouselElements,
-}) => {
+export const BasicCarousel: FC<BasicCarouselProps> = ({ carouselElements }) => {
   return (
     <ScrollContainer horizontal className="!overflow-x-auto py-5">
-      <div id={id} className="flex w-fit flex-row gap-x-10 px-width-clamp">
+      <div className="flex w-fit flex-row gap-x-12 px-width-clamp">
         {carouselElements.map((e) => (
           <div key={e.key}>{e}</div>
         ))}

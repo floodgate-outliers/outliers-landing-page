@@ -8,8 +8,6 @@ import { SplashScreen } from '../pageElements/home/SplashScreen';
 import { DeadlineCTA } from 'pageElements/home/DeadlineCTA';
 import { OverviewDisplay } from 'components/overviews/OverviewDisplay';
 import { ProgramOverview } from 'data/overviews/programOverview';
-import { motion, Variants } from 'framer-motion';
-import Link from 'next/link';
 import { CommunityOverview } from 'data/overviews/communityOverview';
 import { RightChevronLink } from 'components/buttons/RightChevronLink';
 
@@ -45,10 +43,10 @@ export default function HomePage() {
       <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <CoreValues />
       </div>
-      <div className="overflow-hidden border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
+      <div className="border-b-2 border-b-gray py-20 tablet:pt-24 tablet:pb-20">
         <FeaturedSpeakers />
       </div>
-      <div className="overflow-hidden border-b-2 px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
+      <div className="border-b-2 py-20 tablet:pt-24 tablet:pb-20">
         <AlumniQuotes />
       </div>
       <div className="px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
