@@ -81,7 +81,7 @@ export const SplashScreen: FC = () => {
         className="mt-2 mb-5 mobile:mb-10 mobile:pr-7"
       >
         <p className="text-3xl mobile:text-2xl">
-          The community of exceptional young builders in crypto
+          The community for exceptional young builders in crypto
         </p>
       </motion.div>
       <motion.div
