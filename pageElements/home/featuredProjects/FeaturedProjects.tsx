@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, ReactElement, useEffect, useState } from 'react';
 import { FeaturedProjectCard } from './FeaturedProjectCard';
 import { motion, Variants } from 'framer-motion';
 
@@ -11,6 +11,8 @@ import { useMediaQueryContext } from 'contexts/MediaQueryContext';
 import { ProjectInfo } from 'types/Project.type';
 import { getProjectInfoById } from 'data/projects/SummerProjects';
 import { FeaturedProjectIds } from 'data/Ids';
+import { BasicCarousel } from 'components/carousel/BasicCarousel';
+import { RightChevronLink } from 'components/buttons/RightChevronLink';
 
 const FeaturedProjectsInfo: ProjectInfo[] = FeaturedProjectIds.map((p) =>
   getProjectInfoById(p)
@@ -47,11 +49,26 @@ export const FeaturedProjects: FC = () => {
     }
   }, [isDesktop, isLaptop, isTablet, isMobile]);
 
+  const FeaturedProjectComponents: ReactElement[] = FeaturedProjectsInfo.map(
+    (projectInfo) => (
+      <FeaturedProjectCard key={projectInfo.id} {...projectInfo} />
+    )
+  );
+
   return (
     <div>
-      <h2 className="title-header">Featured Projects</h2>
+      <h2 className="title-header px-width-clamp">Featured Projects</h2>
       <div>
-        <Swiper
+        <BasicCarousel
+          id="featured-project-carousel"
+          carouselElements={[
+            ...FeaturedProjectComponents,
+            <div className="flex h-full flex-row items-center pr-10">
+              <RightChevronLink link="/projects" text="See More" />
+            </div>,
+          ]}
+        />
+        {/* <Swiper
           className="!overflow-visible"
           slidesPerView={slidesPerView}
           modules={[Mousewheel]}
@@ -79,7 +96,7 @@ export const FeaturedProjects: FC = () => {
               </Link>
             </div>
           </SwiperSlide>
-        </Swiper>
+        </Swiper> */}
       </div>
     </div>
   );
