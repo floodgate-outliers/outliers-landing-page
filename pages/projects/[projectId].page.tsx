@@ -37,7 +37,7 @@ const ProjectDetailsPage: FC<ProjectDetailsPageStaticProps> = ({
         <meta
           property="og:url"
           content={
-            process.env.NEXT_PUBLIC_ORIGIN + '/projects/' + projectInfo.id
+            process.env.NEXT_PUBLIC_ORIGIN! + '/projects/' + projectInfo.id
           }
         />
         <meta
@@ -47,14 +47,14 @@ const ProjectDetailsPage: FC<ProjectDetailsPageStaticProps> = ({
         <meta property="og:description" content={projectInfo.oneLiner} />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_ORIGIN}/OutliersCover.png`}
+          content={`${process.env.NEXT_PUBLIC_ORIGIN!}/OutliersCover.png`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
           content={
-            process.env.NEXT_PUBLIC_ORIGIN + '/projects/' + projectInfo.id
+            process.env.NEXT_PUBLIC_ORIGIN! + '/projects/' + projectInfo.id
           }
         />
         <meta
@@ -64,7 +64,7 @@ const ProjectDetailsPage: FC<ProjectDetailsPageStaticProps> = ({
         <meta property="twitter:description" content={projectInfo.oneLiner} />
         <meta
           property="twitter:image"
-          content={`${process.env.NEXT_PUBLIC_ORIGIN}/OutliersCover.png`}
+          content={`${process.env.NEXT_PUBLIC_ORIGIN!}/OutliersCover.png`}
         />
       </Head>
       <ProjectDetails {...projectInfo} />

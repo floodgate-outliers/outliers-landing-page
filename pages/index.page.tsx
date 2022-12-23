@@ -10,7 +10,6 @@ import { OverviewDisplay } from 'components/overviews/OverviewDisplay';
 import { ProgramOverview } from 'data/overviews/programOverview';
 import { CommunityOverview } from 'data/overviews/communityOverview';
 import { RightChevronLink } from 'components/buttons/RightChevronLink';
-import Head from 'next/head';
 import { BasicMetaTags } from 'components/metaTags/BasicMetaTags';
 
 export default function HomePage() {

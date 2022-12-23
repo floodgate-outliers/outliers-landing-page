@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { FC, Fragment } from 'react';
+import { FC } from 'react';
 
 type BasicMetaTagsProps = {
   title: string;
@@ -19,7 +19,7 @@ export const BasicMetaTags: FC<BasicMetaTagsProps> = ({ title, route }) => {
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
-        content={process.env.NEXT_PUBLIC_ORIGIN + route}
+        content={process.env.NEXT_PUBLIC_ORIGIN! + route}
       />
       <meta property="og:title" content={title} />
       <meta
@@ -28,13 +28,13 @@ export const BasicMetaTags: FC<BasicMetaTagsProps> = ({ title, route }) => {
       />
       <meta
         property="og:image"
-        content={`${process.env.NEXT_PUBLIC_ORIGIN}/OutliersCover.png`}
+        content={`${process.env.NEXT_PUBLIC_ORIGIN!}/OutliersCover.png`}
       />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta
         property="twitter:url"
-        content={process.env.NEXT_PUBLIC_ORIGIN + route}
+        content={process.env.NEXT_PUBLIC_ORIGIN! + route}
       />
       <meta property="twitter:title" content={title} />
       <meta
@@ -43,7 +43,7 @@ export const BasicMetaTags: FC<BasicMetaTagsProps> = ({ title, route }) => {
       />
       <meta
         property="twitter:image"
-        content={`${process.env.NEXT_PUBLIC_ORIGIN}/OutliersCover.png`}
+        content={`${process.env.NEXT_PUBLIC_ORIGIN!}/OutliersCover.png`}
       />
     </Head>
   );
