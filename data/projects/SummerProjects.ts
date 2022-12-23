@@ -47,13 +47,13 @@ export const SummerProjects: ProjectInfo[] = [
   {
     id: PROJECT_ID.THUNDER_LIZARD_NFT,
     projectType: PROJECT_TYPE.SUMMER,
-    projectName: 'Thunder Lizard NFT',
+    projectName: 'Thunderlizard NFT Collection',
     builders: [BUILDER_ID.JOYCE_JIANG],
     oneLiner:
-      'NFT representing the incredible builders in the Outliers program',
+      'A transfer-restricted generative NFT collection that serves as an access token for the Outliers cohort.',
     mainImage: '/projects/thunderLizardNFT/ThunderLizardMainImage.png',
     description:
-      'Outliers is a 10-week, summer program to empower exceptional builder builders in Crypto and Web3. Through curriculum and technical projects, Outliers equips builders from across the country with the resources, knowledge, and community necessary to build and scale a successful Web3 venture.',
+      'This generative NFT Collection has a total of over 5000 unique thunderlizard avatars, featuring 65 different trait options, reserved for the Outliers cohort. Smart contract in Solidity, minting web page developed in ReactJS.',
     projectLink: 'https://outliersnft.xyz/',
     coverImage: '/projects/thunderLizardNFT/ThunderLizardCoverImage.gif',
   },
