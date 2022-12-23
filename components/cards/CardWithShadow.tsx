@@ -7,7 +7,7 @@ import clsx from 'clsx';
 type CardWithShadowProps = {
   children: ReactNode;
   id?: string;
-  backgroundColor?: 'off-white' | 'light-gray';
+  backgroundColor?: 'off-white' | 'light-gray' | 'white';
   animateWhile: 'hover' | 'inView' | 'always' | 'never';
   scale?: boolean;
   transition?: Transition;
@@ -18,7 +18,7 @@ type CardWithShadowProps = {
 export const CardWithShadow: FC<CardWithShadowProps> = ({
   children,
   id,
-  backgroundColor = 'off-white',
+  backgroundColor = 'white',
   scale = false,
   animateWhile = 'always',
   transition,

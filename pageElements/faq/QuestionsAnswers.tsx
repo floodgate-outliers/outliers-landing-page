@@ -29,7 +29,7 @@ export const QuestionsAnswers: FC = () => {
   return (
     <div>
       <h1 className="title-header">Frequently Asked Questions</h1>
-      <div className="flex flex-col border-4 border-off-black tablet:border-2">
+      <div className="flex flex-col border-4 border-off-black bg-white tablet:border-2">
         {FAQs.map(({ question, answer }, index) => {
           return (
             <div

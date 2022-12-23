@@ -1,6 +1,8 @@
 // import Head from 'next/head';
 import { ContactForm } from 'pageElements/contact/ContactForm';
 
+// This page has been removed from the public
+// To add, change the extension to contact.page.tsx
 export default function ContactPage() {
   return (
     <div>

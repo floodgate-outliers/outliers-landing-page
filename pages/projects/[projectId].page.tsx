@@ -2,6 +2,7 @@ import { HackProjects } from 'data/projects/HackProjects';
 import { StartupProjects } from 'data/projects/StartupProjects';
 import { SummerProjects } from 'data/projects/SummerProjects';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
 import { FC, useEffect } from 'react';
@@ -27,6 +28,45 @@ const ProjectDetailsPage: FC<ProjectDetailsPageStaticProps> = ({
 
   return (
     <div className="page-container">
+      <Head>
+        <title>Outliers | {projectInfo.projectName}</title>
+        <meta name="title" content={`Outliers | ${projectInfo.projectName}`} />
+        <meta name="description" content={projectInfo.oneLiner} />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={
+            process.env.NEXT_PUBLIC_ORIGIN + '/projects/' + projectInfo.id
+          }
+        />
+        <meta
+          property="og:title"
+          content={`Outliers | ${projectInfo.projectName}`}
+        />
+        <meta property="og:description" content={projectInfo.oneLiner} />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_ORIGIN}/OutliersCover.png`}
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content={
+            process.env.NEXT_PUBLIC_ORIGIN + '/projects/' + projectInfo.id
+          }
+        />
+        <meta
+          property="twitter:title"
+          content={`Outliers | ${projectInfo.projectName}`}
+        />
+        <meta property="twitter:description" content={projectInfo.oneLiner} />
+        <meta
+          property="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_ORIGIN}/OutliersCover.png`}
+        />
+      </Head>
       <ProjectDetails {...projectInfo} />
     </div>
   );

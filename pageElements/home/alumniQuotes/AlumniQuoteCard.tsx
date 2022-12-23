@@ -17,12 +17,7 @@ export const AlumniQuoteCard: FC<AlumniQuote> = ({
       rel="noreferrer"
       className="block w-[700px] desktop:w-[600px] laptop:w-[500px] tablet:w-[400px] mobile:w-[325px]"
     >
-      <CardWithShadow
-        scale
-        // shadowSize="small"
-        animateWhile="hover"
-        backgroundColor="off-white"
-      >
+      <CardWithShadow scale animateWhile="hover">
         <div className="flex h-fit cursor-pointer flex-col gap-y-5">
           <div className="flex flex-row gap-x-5">
             <div className="desktop:h-18 desktop:w-18 relative h-20 w-20 border-2">

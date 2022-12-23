@@ -143,10 +143,10 @@ export const CoreValues: FC = () => {
 
   return (
     <div>
-      <h2 className="title-header">We Believe...</h2>
+      <h2 className="title-header">We Believe</h2>
       <div
         className={
-          'flex h-[700px] flex-row overflow-hidden border-4 border-off-black bg-off-white desktop:h-[600px] laptop:h-[500px] tablet:h-[400px] mobile:h-auto mobile:flex-col mobile:border-2'
+          'flex h-[700px] flex-row overflow-hidden border-4 border-off-black bg-white bg-off-white desktop:h-[600px] laptop:h-[500px] tablet:h-[400px] mobile:h-auto mobile:flex-col mobile:border-2'
         }
       >
         {CoreValuesSections.map(({ id, coreValue, subtitle, text }) => {

@@ -10,10 +10,13 @@ import { OverviewDisplay } from 'components/overviews/OverviewDisplay';
 import { ProgramOverview } from 'data/overviews/programOverview';
 import { CommunityOverview } from 'data/overviews/communityOverview';
 import { RightChevronLink } from 'components/buttons/RightChevronLink';
+import Head from 'next/head';
+import { BasicMetaTags } from 'components/metaTags/BasicMetaTags';
 
 export default function HomePage() {
   return (
     <div>
+      <BasicMetaTags title="Outliers" route="/" />
       <div className="border-b-2 border-b-gray px-width-clamp py-20 tablet:pt-24 tablet:pb-20">
         <SplashScreen />
       </div>

@@ -25,7 +25,7 @@ export const FeaturedProjectCard: FC<ProjectInfo> = ({
 }) => {
   return (
     <Link href={`/projects/${id}`}>
-      <CardWithShadow animateWhile="hover">
+      <CardWithShadow backgroundColor="white" animateWhile="hover">
         <motion.div
           initial="initial"
           whileHover="hover"
