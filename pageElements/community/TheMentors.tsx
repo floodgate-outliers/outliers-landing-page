@@ -36,7 +36,9 @@ export const TheMentors: FC = () => {
         The Mentors{' '}
         <motion.span
           variants={HiddenDescriptorVariants}
-          className="text-floodgate tablet:text-3xl"
+          initial="intitial"
+          animate="animate"
+          className="inline-block text-floodgate opacity-0 tablet:text-3xl"
         >
           (A.K.A Legends)
         </motion.span>

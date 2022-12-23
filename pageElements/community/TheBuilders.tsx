@@ -94,12 +94,12 @@ export const TheBuilders: FC = () => {
   return (
     <div>
       <h2 className="title-header">
-        The Outliers{' '}
+        The Outliers <br className="hidden tablet:block" />
         <motion.span
           variants={HiddenDescriptorVariants}
           className="text-floodgate tablet:text-3xl"
         >
-          (12 of 25 And Counting...)
+          (12 of 30 And Counting...)
         </motion.span>
       </h2>
       <div className="grid grid-cols-2 gap-x-20 laptop:grid-cols-1">
