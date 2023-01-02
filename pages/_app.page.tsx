@@ -3,15 +3,18 @@ import type { AppProps } from 'next/app';
 import { MediaQueryContextProvider } from 'contexts/MediaQueryContext';
 import { BasicNavbar } from 'components/navbars/BasicNavbar';
 import { BasicFooter } from 'components/footers/BasicFooter';
+import PlausibleProvider from 'next-plausible';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <MediaQueryContextProvider>
-      <BasicNavbar />
-      <div className="min-h-screen">
-        <Component {...pageProps} />
-      </div>
-      <BasicFooter />
-    </MediaQueryContextProvider>
+    <PlausibleProvider domain="outliers.build" trackLocalhost={true}>
+      <MediaQueryContextProvider>
+        <BasicNavbar />
+        <div className="min-h-screen">
+          <Component {...pageProps} />
+        </div>
+        <BasicFooter />
+      </MediaQueryContextProvider>
+    </PlausibleProvider>
   );
 }
