@@ -6,7 +6,7 @@ export const DeadlineCTA: FC = () => {
     <div className="text-center">
       <h2 className="title-header mb-0">
         Applications Due <br className="hidden mobile:block" />
-        January 25,2023
+        January 27,2023
       </h2>
       <a
         href={process.env.NEXT_PUBLIC_APPLICATION_LINK}
