@@ -1,6 +1,6 @@
 // import Head from 'next/head';
 import { BasicContactInfo } from 'pageElements/contact/BasicContactInfo';
-import { ContactForm } from 'pageElements/contact/ContactForm';
+// import { ContactForm } from 'pageElements/contact/ContactForm';
 
 export default function ContactPage() {
   return (
