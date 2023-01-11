@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
-import { Overview } from 'types/Overview';
+import { Overview } from 'types/Overview.type';
 import { parseTextForEmphasis } from 'utils/parseTextForEmphasis';
 import Image from 'next/image';
 

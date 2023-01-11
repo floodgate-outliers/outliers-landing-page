@@ -1,4 +1,4 @@
-import { Overview } from 'types/Overview';
+import { Overview } from 'types/Overview.type';
 
 export const ProgramOverview: Overview = {
   title: 'The Program',

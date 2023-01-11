@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { motion, Variants } from 'framer-motion';
 
+const ANIMATION_DURATION = 0.75;
+
 const TitleVariants: Variants = {
   hidden: {
     opacity: 0,
@@ -13,7 +15,7 @@ const TitleVariants: Variants = {
     opacity: 1,
     y: '0px',
     transition: {
-      duration: 1,
+      duration: ANIMATION_DURATION,
     },
   },
 };
@@ -28,7 +30,7 @@ const TagLineVariants: Variants = {
     y: '0px',
     transition: {
       // delay: 1,
-      duration: 1,
+      duration: ANIMATION_DURATION,
     },
   },
 };
@@ -42,8 +44,8 @@ const VCVariants: Variants = {
     opacity: 1,
     y: '0px',
     transition: {
-      delay: 1,
-      duration: 1,
+      delay: ANIMATION_DURATION,
+      duration: ANIMATION_DURATION,
     },
   },
 };
@@ -55,8 +57,8 @@ const ApplyButtonVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 2,
-      duration: 1,
+      delay: 2 * ANIMATION_DURATION,
+      duration: ANIMATION_DURATION,
     },
   },
 };
