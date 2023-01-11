@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { MediaQueryContextProvider } from 'contexts/MediaQueryContext';
-import { BasicNavbar } from 'components/navbars/BasicNavbar';
+import { BasicNavbar } from 'components/navbars/BasicNavbar/BasicNavbar';
 import { BasicFooter } from 'components/footers/BasicFooter';
 import PlausibleProvider from 'next-plausible';
 
