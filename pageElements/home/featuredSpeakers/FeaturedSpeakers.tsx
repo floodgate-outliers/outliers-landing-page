@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { SpeakerInfo } from 'types/Community';
+import { SpeakerInfo } from 'types/Community.type';
 import { TheSpeakersInfos } from 'data/community/TheSpeakersInfos';
 import { FeaturedSpeakerCard } from './FeaturedSpeakerCard';
 import { BasicCarousel } from 'components/carousel/BasicCarousel';

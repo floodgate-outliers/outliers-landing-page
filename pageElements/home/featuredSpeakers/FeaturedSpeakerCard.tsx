@@ -1,7 +1,7 @@
 import { CardWithShadow } from 'components/cards/CardWithShadow';
 import Image from 'next/image';
 import { FC } from 'react';
-import { SpeakerInfo } from 'types/Community';
+import { SpeakerInfo } from 'types/Community.type';
 
 type FeaturedSpeakerCardProps = {
   index: number;

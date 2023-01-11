@@ -1,5 +1,5 @@
 import { BUILDER_ID, PROJECT_ID } from 'data/Ids';
-import { BuilderInfo } from 'types/Community';
+import { BuilderInfo } from 'types/Community.type';
 
 export const TheBuildersInfos: BuilderInfo[] = [
   {
