@@ -11,7 +11,7 @@ export const StartupProjects: ProjectInfo[] = [
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
       'Dataleap is a fully managed data warehouse for web3. We reduce the time needed to build customized data pipelines from weeks to minutes. More info coming soon...',
-    projectLink: 'https://www.dataleap.dev/',
+    projectLink: 'http://dataleap.xyz/',
     coverImage: '/projects/dataleap/DataleapCoverImage.jpg',
   },
   {
