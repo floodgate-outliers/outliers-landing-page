@@ -7,12 +7,12 @@ export const StartupProjects: ProjectInfo[] = [
     projectType: PROJECT_TYPE.STARTUP,
     projectName: 'Dataleap',
     builders: [BUILDER_ID.JAN_RUETTINGER, BUILDER_ID.JAN_DAMM],
-    oneLiner: 'The home for web3 data engineers',
+    oneLiner: 'Building the web3 data catalog',
     mainImage: '/projects/dataleap/DataleapMainImage.png',
     description:
-      'Dataleap is a fully managed data warehouse for web3. We reduce the time needed to build customized data pipelines from weeks to minutes.',
+      'Dataleap is a fully managed data warehouse for web3. We reduce the time needed to build customized data pipelines from weeks to minutes. More info coming soon...',
     projectLink: 'https://www.dataleap.dev/',
-    coverImage: '/projects/dataleap/DataleapMainImage.png',
+    coverImage: '/projects/dataleap/DataleapCoverImage.jpg',
   },
   {
     id: PROJECT_ID.REVERSIBILITY_ON_ETHEREUM,
