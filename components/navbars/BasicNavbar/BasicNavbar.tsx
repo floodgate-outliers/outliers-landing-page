@@ -18,10 +18,10 @@ const pageLinks: PageLink[] = [
     text: 'FAQ',
     link: '/faq',
   },
-  // {
-  //   text: 'CONTACT',
-  //   link: '/contact',
-  // },
+  {
+    text: 'CONTACT',
+    link: '/contact',
+  },
 ];
 
 export const BasicNavbar: FC = () => {
