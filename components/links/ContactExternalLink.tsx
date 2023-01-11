@@ -33,7 +33,7 @@ export const ContactExternalLink: FC<ContactExternalLinkProps> = ({
       variants={linkVariants}
       initial="initial"
       whileHover="hover"
-      className="text-2xl tablet:text-xl"
+      className="w-fit text-2xl tablet:text-xl"
     >
       <span>{emoji}</span> <span className="mr-5 underline">{text}</span>
       <span>{extraText}</span>
