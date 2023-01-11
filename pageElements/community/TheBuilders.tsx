@@ -7,7 +7,7 @@ import { getProjectInfoById } from 'data/projects/SummerProjects';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC, useEffect, useState } from 'react';
-import { BuilderInfo } from 'types/Community';
+import { BuilderInfo } from 'types/Community.type';
 import { ProjectInfo } from 'types/Project.type';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import clsx from 'clsx';

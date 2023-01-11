@@ -1,4 +1,4 @@
-import { Overview } from 'types/Overview';
+import { Overview } from 'types/Overview.type';
 
 export const CommunityOverview: Overview = {
   title: 'The Community',
