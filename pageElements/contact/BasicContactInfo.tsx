@@ -1,8 +1,8 @@
-import { FC, ReactElement } from 'react';
-import { motion, Variants } from 'framer-motion';
-import { useMediaQuery } from 'react-responsive';
-import { useMediaQueryContext } from 'contexts/MediaQueryContext';
-import { ContactExternalLink } from 'components/links/ContactExternalLink';
+import { FC, ReactElement } from "react";
+import { motion, Variants } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
+import { useMediaQueryContext } from "contexts/MediaQueryContext";
+import { ContactExternalLink } from "components/links/ContactExternalLink";
 
 export const BasicContactInfo: FC = () => {
   return (
@@ -23,7 +23,8 @@ export const BasicContactInfo: FC = () => {
           href="https://mobile.twitter.com/outlierdao"
         />
       </div>
-      <div className="my-20 flex flex-row items-center">
+      {/* TODO'24: Uncomment and replace with correct info session link + times */}
+      {/* <div className="my-20 flex flex-row items-center">
         <div className="h-1 flex-grow bg-off-black" />
         <p className="title-header mx-10 mb-0">OR</p>
         <div className="h-1 flex-grow bg-off-black" />
@@ -45,7 +46,7 @@ export const BasicContactInfo: FC = () => {
           href="https://lu.ma/syp9eipm"
           extraText="(1/25 @ 4:00pm PT)"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
