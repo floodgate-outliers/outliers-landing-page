@@ -1,17 +1,17 @@
-import { motion, Variants } from 'framer-motion';
-import { BasicButton } from 'components/buttons/BasicButton';
-import { FC } from 'react';
-import Link from 'next/link';
-import { PageLink } from 'types/Navbar.type';
+import { motion, Variants } from "framer-motion";
+import { BasicButton } from "components/buttons/BasicButton";
+import { FC } from "react";
+import Link from "next/link";
+import { PageLink } from "types/Navbar.type";
 
 const LinkVariants: Variants = {
   initial: {
     y: 0,
-    color: 'var(--off-black)',
+    color: "var(--off-black)",
   },
   hover: {
     y: -3,
-    color: 'var(--floodgate)',
+    color: "var(--floodgate)",
   },
 };
 
@@ -40,7 +40,8 @@ export const BasicDesktopNavbarOptions: FC<BasicDesktopNavbarOptionsProps> = ({
           </Link>
         );
       })}
-      <a
+      {/* TODO'24: Uncomment to allow for applying */}
+      {/* <a
         href={process.env.NEXT_PUBLIC_APPLICATION_LINK}
         target="_blank"
         rel="noreferrer"
@@ -48,7 +49,7 @@ export const BasicDesktopNavbarOptions: FC<BasicDesktopNavbarOptionsProps> = ({
         <BasicButton type="button" color="blue">
           <p className="-my-1 -mx-2 text-off-white">Apply</p>
         </BasicButton>
-      </a>
+      </a> */}
     </div>
   );
 };

@@ -1,10 +1,10 @@
-import clsx from 'clsx';
-import React, { FC, ReactElement } from 'react';
-import { motion, Variants } from 'framer-motion';
+import clsx from "clsx";
+import React, { FC, ReactElement } from "react";
+import { motion, Variants } from "framer-motion";
 
 type BasicButtonProps = {
-  type: 'button' | 'submit' | undefined;
-  color: 'blue' | 'transparent';
+  type: "button" | "submit" | undefined;
+  color: "blue" | "transparent";
   children: ReactElement | string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
@@ -12,7 +12,7 @@ type BasicButtonProps = {
 };
 
 export const BasicButton: FC<BasicButtonProps> = ({
-  type = 'button',
+  type = "button",
   color,
   children,
   onClick,
@@ -38,13 +38,13 @@ export const BasicButton: FC<BasicButtonProps> = ({
       type={type}
       variants={buttonVariants}
       initial="initial"
-      animate={disabled ? 'disabled' : 'initial'}
-      whileHover="hover"
+      animate={disabled ? "disabled" : "initial"}
+      whileHover={disabled ? "disabled" : "hover"}
       disabled={disabled}
       onClick={onClick}
       className={clsx(
-        'px-8 py-3 text-xl',
-        color === 'blue' ? 'bg-floodgate text-off-white' : 'bg-transparent'
+        "px-8 py-3 text-xl",
+        color === "blue" ? "bg-floodgate text-off-white" : "bg-transparent"
       )}
     >
       {children}

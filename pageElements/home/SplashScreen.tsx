@@ -1,19 +1,19 @@
-import { BasicButton } from 'components/buttons/BasicButton';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FC } from 'react';
-import { motion, Variants } from 'framer-motion';
+import { BasicButton } from "components/buttons/BasicButton";
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
+import { motion, Variants } from "framer-motion";
 
 const ANIMATION_DURATION = 0.75;
 
 const TitleVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: '-20px',
+    y: "-20px",
   },
   visible: {
     opacity: 1,
-    y: '0px',
+    y: "0px",
     transition: {
       duration: ANIMATION_DURATION,
     },
@@ -23,11 +23,11 @@ const TitleVariants: Variants = {
 const TagLineVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: '20px',
+    y: "20px",
   },
   visible: {
     opacity: 1,
-    y: '0px',
+    y: "0px",
     transition: {
       // delay: 1,
       duration: ANIMATION_DURATION,
@@ -38,11 +38,11 @@ const TagLineVariants: Variants = {
 const VCVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: '10px',
+    y: "10px",
   },
   visible: {
     opacity: 1,
-    y: '0px',
+    y: "0px",
     transition: {
       delay: ANIMATION_DURATION,
       duration: ANIMATION_DURATION,
@@ -123,8 +123,15 @@ export const SplashScreen: FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <BasicButton type="button" color="blue" onClick={undefined}>
-            Apply Now
+          <BasicButton
+            // TODO'24: Don't explicitly disable button to allow for applications
+            disabled={true}
+            type="button"
+            color="blue"
+            onClick={undefined}
+          >
+            {/* TODO'24: Replace text with 'Apply Now' */}
+            2023 Applications Closed
           </BasicButton>
         </a>
       </motion.div>

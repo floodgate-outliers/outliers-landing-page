@@ -1,7 +1,7 @@
-import { JoinCTA } from 'pageElements/community/JoinCTA';
-import { TheMentors } from 'pageElements/community/TheMentors';
-import { TheBuilders } from 'pageElements/community/TheBuilders';
-import { BasicMetaTags } from 'components/metaTags/BasicMetaTags';
+import { JoinCTA } from "pageElements/community/JoinCTA";
+import { TheMentors } from "pageElements/community/TheMentors";
+import { TheBuilders } from "pageElements/community/TheBuilders";
+import { BasicMetaTags } from "components/metaTags/BasicMetaTags";
 
 export default function CommunityPage() {
   return (
@@ -21,10 +21,11 @@ export default function CommunityPage() {
       <div>
         <TheBuilders />
       </div>
-      <hr className="header-divider" />
-      <div>
+      {/* TODO'24: Uncomment to allow for applying */}
+      {/* <hr className="header-divider" /> */}
+      {/* <div>
         <JoinCTA />
-      </div>
+      </div> */}
     </div>
   );
 }

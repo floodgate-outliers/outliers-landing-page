@@ -1,8 +1,8 @@
-import { FC, useEffect, useState } from 'react';
-import { PageLink } from 'types/Navbar.type';
-import { AnimatePresence, motion, Variants } from 'framer-motion';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { FC, useEffect, useState } from "react";
+import { PageLink } from "types/Navbar.type";
+import { AnimatePresence, motion, Variants } from "framer-motion";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const MobileOptionsContainerVariants: Variants = {
   hidden: {
@@ -32,7 +32,7 @@ export const BasicMobileNavbarOptions: FC<BasicMobileNavbarOptionsProps> = ({
     setShowOptions(false);
   }, [router.pathname]);
 
-  const MOBILE_NAVBAR_OPTIONS_DIV_ID = 'mobile-navbar-options';
+  const MOBILE_NAVBAR_OPTIONS_DIV_ID = "mobile-navbar-options";
 
   // Close the navbar options if the click is outside the navbar
   const checkClickLocation = (e: MouseEvent) => {
@@ -44,8 +44,8 @@ export const BasicMobileNavbarOptions: FC<BasicMobileNavbarOptionsProps> = ({
 
   useEffect(() => {
     if (showOptions) {
-      document.addEventListener('click', checkClickLocation);
-      return () => document.removeEventListener('click', checkClickLocation);
+      document.addEventListener("click", checkClickLocation);
+      return () => document.removeEventListener("click", checkClickLocation);
     }
   }, [showOptions]);
 
@@ -65,7 +65,8 @@ export const BasicMobileNavbarOptions: FC<BasicMobileNavbarOptionsProps> = ({
             </Link>
           );
         })}
-        <a
+        {/* TODO'24: Uncomment to allow for applying */}
+        {/* <a
           href={process.env.NEXT_PUBLIC_APPLICATION_LINK}
           target="_blank"
           rel="noreferrer"
@@ -73,7 +74,7 @@ export const BasicMobileNavbarOptions: FC<BasicMobileNavbarOptionsProps> = ({
           <p className="cursor-pointer text-2xl font-bold text-floodgate">
             APPLY
           </p>
-        </a>
+        </a> */}
       </motion.div>
     );
   };
